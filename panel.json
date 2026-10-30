@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generado": "2026-10-30T14:34:57-06:00",
+ "generado": "2026-10-30T15:01:33-06:00",
  "excel": "datos_cr_2026-10-30.xlsx",
  "ventana": {
   "desde": "2016-10-30",
@@ -859,7 +859,7 @@
    "pilar": "seguridad",
    "fuente": "OIJ",
    "periodicidad": "Anual",
-   "nota": "Anual: homicidios del año calendario completo, fechados al 30 de junio (fecha de referencia de la población del INEC, para que en los gráficos cada punto caiga dentro de su año). Tasa = homicidios / población al 30 de junio x 100 000. La tasa del país usa la población del BCCR (código 92929, la misma estimación a mitad de año del PIB per cápita y de todas las tasas por 100 mil del panel; en 2022 es 5.104.907, mientras que el anuario del INEC trae el conteo del censo, 5.044.197); las de provincias y cantones, la del INEC, la única desagregada. Sin BCCR_TOKEN la del país también usa la del INEC. Las columnas por cantón salen sólo del archivo manual fuentes/oij_homicidios.csv; las provincias y el país, del archivo manual o, si falta el año, del cuadro 'Homicidios dolosos atendidos por el OIJ según provincia' del anuario del INEC. La población por cantón es la del cuadro 'Proyecciones de población según provincia, cantón y distrito' del anuario (2022 en adelante) y, para otros años, de fuentes/inec_poblacion_canton.csv.",
+   "nota": "Por cantón: Datos Abiertos del OIJ (Estadísticas Policiales, un Excel por año en sitiooij.poder-judicial.go.cr, una fila por homicidio) en los años con los doce meses (2016 a 2019 y 2023), con 0 en los cantones sin filas; fuentes/oij_homicidios.csv manda en los años que traiga. Donde el anuario del INEC trae el año (2022 en adelante), el país y las provincias son los del anuario (2023: 906, tres más que la suma de cantones de Datos Abiertos). Tasas por cantón sólo donde hay población por cantón del INEC (anuario, 2022 en adelante; 2023 es el único año con cantones y población). Anual: homicidios del año calendario completo, fechados al 30 de junio (fecha de referencia de la población del INEC, para que en los gráficos cada punto caiga dentro de su año). Tasa = homicidios / población al 30 de junio x 100 000. La tasa del país usa la población del BCCR (código 92929, la misma estimación a mitad de año del PIB per cápita y de todas las tasas por 100 mil del panel; en 2022 es 5.104.907, mientras que el anuario del INEC trae el conteo del censo, 5.044.197); las de provincias y cantones, la del INEC, la única desagregada. Sin BCCR_TOKEN la del país también usa la del INEC. Las columnas por cantón salen sólo del archivo manual fuentes/oij_homicidios.csv; las provincias y el país, del archivo manual o, si falta el año, del cuadro 'Homicidios dolosos atendidos por el OIJ según provincia' del anuario del INEC. La población por cantón es la del cuadro 'Proyecciones de población según provincia, cantón y distrito' del anuario (2022 en adelante) y, para otros años, de fuentes/inec_poblacion_canton.csv.",
    "graficos": [
     {
      "titulo": "Tasa de homicidios dolosos del país (por 100 mil habitantes)",
@@ -1385,6 +1385,41 @@
      ],
      "eje_y": "Personas",
      "tipo": "linea"
+    }
+   ]
+  },
+  {
+   "id": "33_Policias",
+   "titulo": "Policías por habitante",
+   "pilar": "seguridad",
+   "fuente": "MSP",
+   "periodicidad": "Anual",
+   "nota": "Anual, fechado al 30 de junio, toda la serie del archivo (no se recorta a la ventana). Puestos policiales del MSP = fila Policial del cuadro 'Cantidad de puestos por clase' de las memorias institucionales del MSP (2011-2012 a 2016-2017): son puestos (plazas) de la Ley de Presupuesto de cada año, no personas en servicio, y suman todos los cuerpos del ministerio (Fuerza Pública, Policía de Control de Drogas, Vigilancia Aérea, Guardacostas y, desde 2017, Fronteras y Escuela Nacional de Policía). Las memorias 2018 a 2024 no traen ese cuadro ni el número de oficiales de Fuerza Pública. Por 100 mil = puestos / población del BCCR (92929) x 100 000. Tasa de homicidios: anuario del INEC (cuadro 12.6) y, donde no hay anuario, el total de Datos Abiertos del OIJ de los años completos. Documentos: Ministerio de Seguridad Pública, Memoria institucional 2011-2012, cuadro Cantidad de puestos por clase, fila Policial (puestos de la Ley 9019 de Presupuesto 2012; todos los cuerpos policiales del MSP) (https://www.seguridadpublica.go.cr/transparencia/planes/cumpl_plan_inst/inf_anual_mem_inst/memoria_2011-2012.pdf), p. 13 (cuadro 1; página 15 del PDF); Ministerio de Seguridad Pública, Memoria institucional 2012-2013, cuadro Cantidad de puestos por clase, fila Policial (puestos de la Ley 9103 de Presupuesto 2013; todos los cuerpos policiales del MSP) (https://www.seguridadpublica.go.cr/transparencia/planes/cumpl_plan_inst/inf_anual_mem_inst/memoria_2012-2013.pdf), p. 10 (cuadro N. 1); Ministerio de Seguridad Pública, Memoria institucional 2013-2014, cuadro Cantidad de puestos por clase, fila Policial (puestos de la Ley 9193 de Presupuesto 2014; todos los cuerpos policiales del MSP) (https:",
+   "graficos": [
+    {
+     "titulo": "Policías por 100 mil habitantes frente a la tasa de homicidios",
+     "columnas": [
+      "policias_puestos_policiales_del_msp_por_100_mil_habitantes_c",
+      "policias_tasa_de_homicidios_dolosos_por_100_mil_habitantes_c"
+     ],
+     "eje_y": "Por 100 mil habitantes",
+     "tipo": "linea",
+     "etiquetas": {
+      "policias_puestos_policiales_del_msp_por_100_mil_habitantes_c": "Puestos policiales del MSP",
+      "policias_tasa_de_homicidios_dolosos_por_100_mil_habitantes_c": "Homicidios dolosos"
+     }
+    },
+    {
+     "titulo": "Policías: oficiales de Fuerza Pública y puestos policiales del MSP",
+     "columnas": [
+      "policias_puestos_policiales_del_msp_ley_de_presupuesto"
+     ],
+     "eje_y": "Personas o puestos",
+     "tipo": "barras",
+     "etiquetas": {
+      "policias_puestos_policiales_del_msp_ley_de_presupuesto": "Puestos policiales del MSP"
+     },
+     "base": "anual"
     }
    ]
   }
@@ -41979,9 +42014,9 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
+   "id": "sugef_usd_persona_dolares_extranjero_residente_dimex_millone",
    "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Física nacional (millones de colones)",
+   "columna": "Dólares, Extranjero residente (DIMEX) (millones de colones)",
    "pilar": "credito",
    "fuente": "SUGEF",
    "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
@@ -41991,264 +42026,264 @@
    "tipo_valor": "nivel",
    "ultimo": {
     "fecha": "2026-09-30",
-    "valor": 2660941.9457
+    "valor": 254284.8755
    },
    "hace_un_anio": {
     "fecha": "2025-09-30",
-    "valor": 2943597.4434
+    "valor": 292390.5102
    },
    "variacion_interanual": {
-    "absoluta": -282655.4977,
-    "porcentual": -9.6024
+    "absoluta": -38105.6347,
+    "porcentual": -13.0324
    },
    "minimo_ventana": {
     "fecha": "2026-08-31",
-    "valor": 2621713.6198
+    "valor": 249947.9259
    },
    "maximo_ventana": {
-    "fecha": "2022-05-31",
-    "valor": 3469783.8495
+    "fecha": "2022-06-30",
+    "valor": 374264.424
    },
    "serie": [
     [
      "2021-10-31",
-     3343458.3483
+     354940.6289
     ],
     [
      "2021-11-30",
-     3297134.6748
+     347237.5113
     ],
     [
      "2021-12-31",
-     3342142.0542
+     349784.4601
     ],
     [
      "2022-01-31",
-     3327305.4854
+     348759.7836
     ],
     [
      "2022-02-28",
-     3312058.8348
+     349241.9593
     ],
     [
      "2022-03-31",
-     3392193.2785
+     359178.795
     ],
     [
      "2022-04-30",
-     3394365.2523
+     360520.1626
     ],
     [
      "2022-05-31",
-     3469783.8495
+     371296.9584
     ],
     [
      "2022-06-30",
-     3454882.6075
+     374264.424
     ],
     [
      "2022-07-31",
-     3355865.9723
+     362201.604
     ],
     [
      "2022-08-31",
-     3231337.583
+     349583.1323
     ],
     [
      "2022-09-30",
-     3138312.8499
+     339301.7017
     ],
     [
      "2022-10-31",
-     3099002.1905
+     334130.5217
     ],
     [
      "2022-11-30",
-     3016961.753
+     323751.4287
     ],
     [
      "2022-12-31",
-     2995261.8142
+     322269.7977
     ],
     [
      "2023-01-31",
-     2773364.8972
+     297751.4403
     ],
     [
      "2023-02-28",
-     2802101.7845
+     300526.5263
     ],
     [
      "2023-03-31",
-     2714608.8741
+     289689.7263
     ],
     [
      "2023-04-30",
-     2751752.7104
+     292908.0398
     ],
     [
      "2023-05-31",
-     2742525.9657
+     292771.9123
     ],
     [
      "2023-06-30",
-     2769481.644
+     295722.7721
     ],
     [
      "2023-07-31",
-     2794797.6337
+     297212.6375
     ],
     [
      "2023-08-31",
-     2768399.245
+     294037.9572
     ],
     [
      "2023-09-30",
-     2817399.5353
+     295659.0576
     ],
     [
      "2023-10-31",
-     2817184.9083
+     294186.0237
     ],
     [
      "2023-11-30",
-     2842104.8722
+     296900.1481
     ],
     [
      "2023-12-31",
-     2807895.1525
+     292887.1119
     ],
     [
      "2024-01-31",
-     2789203.1759
+     286987.1813
     ],
     [
      "2024-02-29",
-     2773834.4551
+     286018.4096
     ],
     [
      "2024-03-31",
-     2737690.8903
+     281052.2908
     ],
     [
      "2024-04-30",
-     2754867.492
+     282219.2438
     ],
     [
      "2024-05-31",
-     2889512.4988
+     293789.7158
     ],
     [
      "2024-06-30",
-     2897829.7374
+     294204.5748
     ],
     [
      "2024-07-31",
-     2904173.8665
+     295239.4775
     ],
     [
      "2024-08-31",
-     2893364.8892
+     292560.3524
     ],
     [
      "2024-09-30",
-     2920240.8669
+     297412.5547
     ],
     [
      "2024-10-31",
-     2886802.4811
+     294459.3923
     ],
     [
      "2024-11-30",
-     2896197.0166
+     293379.3559
     ],
     [
      "2024-12-31",
-     2902824.0534
+     293631.3034
     ],
     [
      "2025-01-31",
-     2899812.7402
+     292823.7776
     ],
     [
      "2025-02-28",
-     2886558.38
+     293143.5678
     ],
     [
      "2025-03-31",
-     2867011.3506
+     289604.3907
     ],
     [
      "2025-04-30",
-     2908721.5533
+     292849.4251
     ],
     [
      "2025-05-31",
-     2925309.7668
+     294688.0956
     ],
     [
      "2025-06-30",
-     2923156.2356
+     294994.5615
     ],
     [
      "2025-07-31",
-     2937954.4076
+     294592.5589
     ],
     [
      "2025-08-31",
-     2944888.2451
+     294175.8164
     ],
     [
      "2025-09-30",
-     2943597.4434
+     292390.5102
     ],
     [
      "2025-10-31",
-     2941870.6981
+     290420.8536
     ],
     [
      "2025-11-30",
-     2919965.2259
+     286223.7995
     ],
     [
      "2025-12-31",
-     2935568.755
+     288613.4828
     ],
     [
      "2026-01-31",
-     2923614.7156
+     286202.0091
     ],
     [
      "2026-02-28",
-     2763628.4454
+     269953.5743
     ],
     [
      "2026-03-31",
-     2717647.7613
+     263781.7174
     ],
     [
      "2026-04-30",
-     2647475.1678
+     257868.4812
     ],
     [
      "2026-05-31",
-     2666376.4995
+     257402.6985
     ],
     [
      "2026-06-30",
-     2648964.397
+     254018.4636
     ],
     [
      "2026-07-31",
-     2634378.0065
+     252343.5776
     ],
     [
      "2026-08-31",
-     2621713.6198
+     249947.9259
     ],
     [
      "2026-09-30",
-     2660941.9457
+     254284.8755
     ]
    ]
   },
@@ -42527,9 +42562,9 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_extranjero_residente_dimex_millone",
+   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
    "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Extranjero residente (DIMEX) (millones de colones)",
+   "columna": "Dólares, Física nacional (millones de colones)",
    "pilar": "credito",
    "fuente": "SUGEF",
    "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
@@ -42539,264 +42574,264 @@
    "tipo_valor": "nivel",
    "ultimo": {
     "fecha": "2026-09-30",
-    "valor": 254284.8755
+    "valor": 2660941.9457
    },
    "hace_un_anio": {
     "fecha": "2025-09-30",
-    "valor": 292390.5102
+    "valor": 2943597.4434
    },
    "variacion_interanual": {
-    "absoluta": -38105.6347,
-    "porcentual": -13.0324
+    "absoluta": -282655.4977,
+    "porcentual": -9.6024
    },
    "minimo_ventana": {
     "fecha": "2026-08-31",
-    "valor": 249947.9259
+    "valor": 2621713.6198
    },
    "maximo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 374264.424
+    "fecha": "2022-05-31",
+    "valor": 3469783.8495
    },
    "serie": [
     [
      "2021-10-31",
-     354940.6289
+     3343458.3483
     ],
     [
      "2021-11-30",
-     347237.5113
+     3297134.6748
     ],
     [
      "2021-12-31",
-     349784.4601
+     3342142.0542
     ],
     [
      "2022-01-31",
-     348759.7836
+     3327305.4854
     ],
     [
      "2022-02-28",
-     349241.9593
+     3312058.8348
     ],
     [
      "2022-03-31",
-     359178.795
+     3392193.2785
     ],
     [
      "2022-04-30",
-     360520.1626
+     3394365.2523
     ],
     [
      "2022-05-31",
-     371296.9584
+     3469783.8495
     ],
     [
      "2022-06-30",
-     374264.424
+     3454882.6075
     ],
     [
      "2022-07-31",
-     362201.604
+     3355865.9723
     ],
     [
      "2022-08-31",
-     349583.1323
+     3231337.583
     ],
     [
      "2022-09-30",
-     339301.7017
+     3138312.8499
     ],
     [
      "2022-10-31",
-     334130.5217
+     3099002.1905
     ],
     [
      "2022-11-30",
-     323751.4287
+     3016961.753
     ],
     [
      "2022-12-31",
-     322269.7977
+     2995261.8142
     ],
     [
      "2023-01-31",
-     297751.4403
+     2773364.8972
     ],
     [
      "2023-02-28",
-     300526.5263
+     2802101.7845
     ],
     [
      "2023-03-31",
-     289689.7263
+     2714608.8741
     ],
     [
      "2023-04-30",
-     292908.0398
+     2751752.7104
     ],
     [
      "2023-05-31",
-     292771.9123
+     2742525.9657
     ],
     [
      "2023-06-30",
-     295722.7721
+     2769481.644
     ],
     [
      "2023-07-31",
-     297212.6375
+     2794797.6337
     ],
     [
      "2023-08-31",
-     294037.9572
+     2768399.245
     ],
     [
      "2023-09-30",
-     295659.0576
+     2817399.5353
     ],
     [
      "2023-10-31",
-     294186.0237
+     2817184.9083
     ],
     [
      "2023-11-30",
-     296900.1481
+     2842104.8722
     ],
     [
      "2023-12-31",
-     292887.1119
+     2807895.1525
     ],
     [
      "2024-01-31",
-     286987.1813
+     2789203.1759
     ],
     [
      "2024-02-29",
-     286018.4096
+     2773834.4551
     ],
     [
      "2024-03-31",
-     281052.2908
+     2737690.8903
     ],
     [
      "2024-04-30",
-     282219.2438
+     2754867.492
     ],
     [
      "2024-05-31",
-     293789.7158
+     2889512.4988
     ],
     [
      "2024-06-30",
-     294204.5748
+     2897829.7374
     ],
     [
      "2024-07-31",
-     295239.4775
+     2904173.8665
     ],
     [
      "2024-08-31",
-     292560.3524
+     2893364.8892
     ],
     [
      "2024-09-30",
-     297412.5547
+     2920240.8669
     ],
     [
      "2024-10-31",
-     294459.3923
+     2886802.4811
     ],
     [
      "2024-11-30",
-     293379.3559
+     2896197.0166
     ],
     [
      "2024-12-31",
-     293631.3034
+     2902824.0534
     ],
     [
      "2025-01-31",
-     292823.7776
+     2899812.7402
     ],
     [
      "2025-02-28",
-     293143.5678
+     2886558.38
     ],
     [
      "2025-03-31",
-     289604.3907
+     2867011.3506
     ],
     [
      "2025-04-30",
-     292849.4251
+     2908721.5533
     ],
     [
      "2025-05-31",
-     294688.0956
+     2925309.7668
     ],
     [
      "2025-06-30",
-     294994.5615
+     2923156.2356
     ],
     [
      "2025-07-31",
-     294592.5589
+     2937954.4076
     ],
     [
      "2025-08-31",
-     294175.8164
+     2944888.2451
     ],
     [
      "2025-09-30",
-     292390.5102
+     2943597.4434
     ],
     [
      "2025-10-31",
-     290420.8536
+     2941870.6981
     ],
     [
      "2025-11-30",
-     286223.7995
+     2919965.2259
     ],
     [
      "2025-12-31",
-     288613.4828
+     2935568.755
     ],
     [
      "2026-01-31",
-     286202.0091
+     2923614.7156
     ],
     [
      "2026-02-28",
-     269953.5743
+     2763628.4454
     ],
     [
      "2026-03-31",
-     263781.7174
+     2717647.7613
     ],
     [
      "2026-04-30",
-     257868.4812
+     2647475.1678
     ],
     [
      "2026-05-31",
-     257402.6985
+     2666376.4995
     ],
     [
      "2026-06-30",
-     254018.4636
+     2648964.397
     ],
     [
      "2026-07-31",
-     252343.5776
+     2634378.0065
     ],
     [
      "2026-08-31",
-     249947.9259
+     2621713.6198
     ],
     [
      "2026-09-30",
-     254284.8755
+     2660941.9457
     ]
    ]
   },
@@ -43071,6 +43106,280 @@
     [
      "2026-09-30",
      5163538.9408
+    ]
+   ]
+  },
+  {
+   "id": "sugef_usd_persona_dolares_empresa_extranjera_no_financiera_m",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Empresa extranjera no financiera (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 92891.9134
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 97010.513
+   },
+   "variacion_interanual": {
+    "absoluta": -4118.5996,
+    "porcentual": -4.2455
+   },
+   "minimo_ventana": {
+    "fecha": "2026-08-31",
+    "valor": 74923.8284
+   },
+   "maximo_ventana": {
+    "fecha": "2024-08-31",
+    "valor": 121612.4527
+   },
+   "serie": [
+    [
+     "2021-10-31",
+     82009.8387
+    ],
+    [
+     "2021-11-30",
+     79583.1343
+    ],
+    [
+     "2021-12-31",
+     90094.3592
+    ],
+    [
+     "2022-01-31",
+     88513.1406
+    ],
+    [
+     "2022-02-28",
+     87104.2753
+    ],
+    [
+     "2022-03-31",
+     97216.862
+    ],
+    [
+     "2022-04-30",
+     89698.732
+    ],
+    [
+     "2022-05-31",
+     92972.1871
+    ],
+    [
+     "2022-06-30",
+     96820.2488
+    ],
+    [
+     "2022-07-31",
+     90574.1066
+    ],
+    [
+     "2022-08-31",
+     92580.2722
+    ],
+    [
+     "2022-09-30",
+     93397.8725
+    ],
+    [
+     "2022-10-31",
+     97698.2307
+    ],
+    [
+     "2022-11-30",
+     99608.4154
+    ],
+    [
+     "2022-12-31",
+     112218.9452
+    ],
+    [
+     "2023-01-31",
+     97034.6911
+    ],
+    [
+     "2023-02-28",
+     99003.8534
+    ],
+    [
+     "2023-03-31",
+     92360.2165
+    ],
+    [
+     "2023-04-30",
+     95484.0216
+    ],
+    [
+     "2023-05-31",
+     106747.2076
+    ],
+    [
+     "2023-06-30",
+     105069.924
+    ],
+    [
+     "2023-07-31",
+     104031.8363
+    ],
+    [
+     "2023-08-31",
+     106657.962
+    ],
+    [
+     "2023-09-30",
+     109290.319
+    ],
+    [
+     "2023-10-31",
+     107312.8851
+    ],
+    [
+     "2023-11-30",
+     111760.3479
+    ],
+    [
+     "2023-12-31",
+     104898.2903
+    ],
+    [
+     "2024-01-31",
+     111982.1762
+    ],
+    [
+     "2024-02-29",
+     110837.2174
+    ],
+    [
+     "2024-03-31",
+     107968.0773
+    ],
+    [
+     "2024-04-30",
+     105031.4466
+    ],
+    [
+     "2024-05-31",
+     117779.6454
+    ],
+    [
+     "2024-06-30",
+     120921.4158
+    ],
+    [
+     "2024-07-31",
+     121021.0984
+    ],
+    [
+     "2024-08-31",
+     121612.4527
+    ],
+    [
+     "2024-09-30",
+     119720.8893
+    ],
+    [
+     "2024-10-31",
+     108493.2318
+    ],
+    [
+     "2024-11-30",
+     104921.8086
+    ],
+    [
+     "2024-12-31",
+     112325.5206
+    ],
+    [
+     "2025-01-31",
+     112406.7864
+    ],
+    [
+     "2025-02-28",
+     105955.243
+    ],
+    [
+     "2025-03-31",
+     100586.6193
+    ],
+    [
+     "2025-04-30",
+     93741.0336
+    ],
+    [
+     "2025-05-31",
+     91085.288
+    ],
+    [
+     "2025-06-30",
+     90516.0741
+    ],
+    [
+     "2025-07-31",
+     85895.6451
+    ],
+    [
+     "2025-08-31",
+     86105.501
+    ],
+    [
+     "2025-09-30",
+     97010.513
+    ],
+    [
+     "2025-10-31",
+     99545.9872
+    ],
+    [
+     "2025-11-30",
+     83269.6951
+    ],
+    [
+     "2025-12-31",
+     105586.7861
+    ],
+    [
+     "2026-01-31",
+     86927.8185
+    ],
+    [
+     "2026-02-28",
+     86967.853
+    ],
+    [
+     "2026-03-31",
+     83390.0654
+    ],
+    [
+     "2026-04-30",
+     79186.3052
+    ],
+    [
+     "2026-05-31",
+     76761.1744
+    ],
+    [
+     "2026-06-30",
+     75587.8118
+    ],
+    [
+     "2026-07-31",
+     82202.1137
+    ],
+    [
+     "2026-08-31",
+     74923.8284
+    ],
+    [
+     "2026-09-30",
+     92891.9134
     ]
    ]
   },
@@ -43619,280 +43928,6 @@
     [
      "2026-09-30",
      0.0
-    ]
-   ]
-  },
-  {
-   "id": "sugef_usd_persona_dolares_empresa_extranjera_no_financiera_m",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Empresa extranjera no financiera (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 92891.9134
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 97010.513
-   },
-   "variacion_interanual": {
-    "absoluta": -4118.5996,
-    "porcentual": -4.2455
-   },
-   "minimo_ventana": {
-    "fecha": "2026-08-31",
-    "valor": 74923.8284
-   },
-   "maximo_ventana": {
-    "fecha": "2024-08-31",
-    "valor": 121612.4527
-   },
-   "serie": [
-    [
-     "2021-10-31",
-     82009.8387
-    ],
-    [
-     "2021-11-30",
-     79583.1343
-    ],
-    [
-     "2021-12-31",
-     90094.3592
-    ],
-    [
-     "2022-01-31",
-     88513.1406
-    ],
-    [
-     "2022-02-28",
-     87104.2753
-    ],
-    [
-     "2022-03-31",
-     97216.862
-    ],
-    [
-     "2022-04-30",
-     89698.732
-    ],
-    [
-     "2022-05-31",
-     92972.1871
-    ],
-    [
-     "2022-06-30",
-     96820.2488
-    ],
-    [
-     "2022-07-31",
-     90574.1066
-    ],
-    [
-     "2022-08-31",
-     92580.2722
-    ],
-    [
-     "2022-09-30",
-     93397.8725
-    ],
-    [
-     "2022-10-31",
-     97698.2307
-    ],
-    [
-     "2022-11-30",
-     99608.4154
-    ],
-    [
-     "2022-12-31",
-     112218.9452
-    ],
-    [
-     "2023-01-31",
-     97034.6911
-    ],
-    [
-     "2023-02-28",
-     99003.8534
-    ],
-    [
-     "2023-03-31",
-     92360.2165
-    ],
-    [
-     "2023-04-30",
-     95484.0216
-    ],
-    [
-     "2023-05-31",
-     106747.2076
-    ],
-    [
-     "2023-06-30",
-     105069.924
-    ],
-    [
-     "2023-07-31",
-     104031.8363
-    ],
-    [
-     "2023-08-31",
-     106657.962
-    ],
-    [
-     "2023-09-30",
-     109290.319
-    ],
-    [
-     "2023-10-31",
-     107312.8851
-    ],
-    [
-     "2023-11-30",
-     111760.3479
-    ],
-    [
-     "2023-12-31",
-     104898.2903
-    ],
-    [
-     "2024-01-31",
-     111982.1762
-    ],
-    [
-     "2024-02-29",
-     110837.2174
-    ],
-    [
-     "2024-03-31",
-     107968.0773
-    ],
-    [
-     "2024-04-30",
-     105031.4466
-    ],
-    [
-     "2024-05-31",
-     117779.6454
-    ],
-    [
-     "2024-06-30",
-     120921.4158
-    ],
-    [
-     "2024-07-31",
-     121021.0984
-    ],
-    [
-     "2024-08-31",
-     121612.4527
-    ],
-    [
-     "2024-09-30",
-     119720.8893
-    ],
-    [
-     "2024-10-31",
-     108493.2318
-    ],
-    [
-     "2024-11-30",
-     104921.8086
-    ],
-    [
-     "2024-12-31",
-     112325.5206
-    ],
-    [
-     "2025-01-31",
-     112406.7864
-    ],
-    [
-     "2025-02-28",
-     105955.243
-    ],
-    [
-     "2025-03-31",
-     100586.6193
-    ],
-    [
-     "2025-04-30",
-     93741.0336
-    ],
-    [
-     "2025-05-31",
-     91085.288
-    ],
-    [
-     "2025-06-30",
-     90516.0741
-    ],
-    [
-     "2025-07-31",
-     85895.6451
-    ],
-    [
-     "2025-08-31",
-     86105.501
-    ],
-    [
-     "2025-09-30",
-     97010.513
-    ],
-    [
-     "2025-10-31",
-     99545.9872
-    ],
-    [
-     "2025-11-30",
-     83269.6951
-    ],
-    [
-     "2025-12-31",
-     105586.7861
-    ],
-    [
-     "2026-01-31",
-     86927.8185
-    ],
-    [
-     "2026-02-28",
-     86967.853
-    ],
-    [
-     "2026-03-31",
-     83390.0654
-    ],
-    [
-     "2026-04-30",
-     79186.3052
-    ],
-    [
-     "2026-05-31",
-     76761.1744
-    ],
-    [
-     "2026-06-30",
-     75587.8118
-    ],
-    [
-     "2026-07-31",
-     82202.1137
-    ],
-    [
-     "2026-08-31",
-     74923.8284
-    ],
-    [
-     "2026-09-30",
-     92891.9134
     ]
    ]
   },
@@ -67656,7 +67691,7 @@
    "columna": "Homicidios dolosos total país",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -67674,14 +67709,30 @@
     "porcentual": -0.9112
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 656.0
+    "fecha": "2019-06-30",
+    "valor": 563.0
    },
    "maximo_ventana": {
     "fecha": "2023-06-30",
     "valor": 906.0
    },
    "serie": [
+    [
+     "2016-06-30",
+     626.0
+    ],
+    [
+     "2017-06-30",
+     658.0
+    ],
+    [
+     "2018-06-30",
+     641.0
+    ],
+    [
+     "2019-06-30",
+     563.0
+    ],
     [
      "2022-06-30",
      656.0
@@ -67706,7 +67757,7 @@
    "columna": "Tasa de homicidios total país (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -67724,14 +67775,30 @@
     "porcentual": null
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 12.8504
+    "fecha": "2019-06-30",
+    "valor": 11.213
    },
    "maximo_ventana": {
     "fecha": "2023-06-30",
     "valor": 17.6405
    },
    "serie": [
+    [
+     "2016-06-30",
+     12.8207
+    ],
+    [
+     "2017-06-30",
+     13.3373
+    ],
+    [
+     "2018-06-30",
+     12.868
+    ],
+    [
+     "2019-06-30",
+     11.213
+    ],
     [
      "2022-06-30",
      12.8504
@@ -67783,6 +67850,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
      "2022-06-30",
      5044197.0
     ],
@@ -67824,14 +67907,30 @@
     "porcentual": 0.522
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 5104906.8366
+    "fecha": "2016-06-30",
+    "valor": 4882722.9688
    },
    "maximo_ventana": {
     "fecha": "2025-06-30",
     "valor": 5191823.08
    },
    "serie": [
+    [
+     "2016-06-30",
+     4882722.9688
+    ],
+    [
+     "2017-06-30",
+     4933518.8706
+    ],
+    [
+     "2018-06-30",
+     4981349.0094
+    ],
+    [
+     "2019-06-30",
+     5020970.0892
+    ],
     [
      "2022-06-30",
      5104906.8366
@@ -67856,7 +67955,7 @@
    "columna": "Homicidios San José",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -67883,6 +67982,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     262.0
+    ],
+    [
+     "2017-06-30",
+     249.0
+    ],
+    [
+     "2018-06-30",
+     211.0
+    ],
+    [
+     "2019-06-30",
+     180.0
+    ],
+    [
      "2022-06-30",
      118.0
     ],
@@ -67906,7 +68021,7 @@
    "columna": "Tasa San José (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -67933,6 +68048,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
      "2022-06-30",
      7.3696
     ],
@@ -67956,7 +68087,7 @@
    "columna": "Homicidios Alajuela",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -67974,14 +68105,30 @@
     "porcentual": -3.7736
    },
    "minimo_ventana": {
-    "fecha": "2025-06-30",
-    "valor": 102.0
+    "fecha": "2016-06-30",
+    "valor": 54.0
    },
    "maximo_ventana": {
     "fecha": "2022-06-30",
     "valor": 109.0
    },
    "serie": [
+    [
+     "2016-06-30",
+     54.0
+    ],
+    [
+     "2017-06-30",
+     107.0
+    ],
+    [
+     "2018-06-30",
+     97.0
+    ],
+    [
+     "2019-06-30",
+     68.0
+    ],
     [
      "2022-06-30",
      109.0
@@ -68006,7 +68153,7 @@
    "columna": "Tasa Alajuela (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -68033,6 +68180,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
      "2022-06-30",
      10.5267
     ],
@@ -68056,7 +68219,7 @@
    "columna": "Homicidios Cartago",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -68083,6 +68246,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     45.0
+    ],
+    [
+     "2017-06-30",
+     48.0
+    ],
+    [
+     "2018-06-30",
+     65.0
+    ],
+    [
+     "2019-06-30",
+     49.0
+    ],
+    [
      "2022-06-30",
      43.0
     ],
@@ -68106,7 +68285,7 @@
    "columna": "Tasa Cartago (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -68133,6 +68312,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
      "2022-06-30",
      7.8886
     ],
@@ -68156,7 +68351,7 @@
    "columna": "Homicidios Heredia",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -68174,14 +68369,30 @@
     "porcentual": -10.2564
    },
    "minimo_ventana": {
-    "fecha": "2025-06-30",
-    "valor": 35.0
+    "fecha": "2016-06-30",
+    "valor": 33.0
    },
    "maximo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 47.0
+    "fecha": "2018-06-30",
+    "valor": 51.0
    },
    "serie": [
+    [
+     "2016-06-30",
+     33.0
+    ],
+    [
+     "2017-06-30",
+     36.0
+    ],
+    [
+     "2018-06-30",
+     51.0
+    ],
+    [
+     "2019-06-30",
+     36.0
+    ],
     [
      "2022-06-30",
      47.0
@@ -68206,7 +68417,7 @@
    "columna": "Tasa Heredia (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -68233,6 +68444,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
      "2022-06-30",
      9.8097
     ],
@@ -68256,7 +68483,7 @@
    "columna": "Homicidios Guanacaste",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -68274,14 +68501,30 @@
     "porcentual": 6.7568
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 60.0
+    "fecha": "2018-06-30",
+    "valor": 22.0
    },
    "maximo_ventana": {
     "fecha": "2023-06-30",
     "valor": 101.0
    },
    "serie": [
+    [
+     "2016-06-30",
+     44.0
+    ],
+    [
+     "2017-06-30",
+     47.0
+    ],
+    [
+     "2018-06-30",
+     22.0
+    ],
+    [
+     "2019-06-30",
+     38.0
+    ],
     [
      "2022-06-30",
      60.0
@@ -68306,7 +68549,7 @@
    "columna": "Tasa Guanacaste (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -68333,6 +68576,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
      "2022-06-30",
      14.5346
     ],
@@ -68356,7 +68615,7 @@
    "columna": "Homicidios Puntarenas",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -68374,14 +68633,30 @@
     "porcentual": -15.5844
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 111.0
+    "fecha": "2017-06-30",
+    "valor": 44.0
    },
    "maximo_ventana": {
     "fecha": "2024-06-30",
     "valor": 154.0
    },
    "serie": [
+    [
+     "2016-06-30",
+     56.0
+    ],
+    [
+     "2017-06-30",
+     44.0
+    ],
+    [
+     "2018-06-30",
+     59.0
+    ],
+    [
+     "2019-06-30",
+     76.0
+    ],
     [
      "2022-06-30",
      111.0
@@ -68406,7 +68681,7 @@
    "columna": "Tasa Puntarenas (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -68433,6 +68708,22 @@
    },
    "serie": [
     [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
      "2022-06-30",
      22.1926
     ],
@@ -68456,7 +68747,7 @@
    "columna": "Homicidios Limón",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Casos",
@@ -68474,14 +68765,30 @@
     "porcentual": -4.9724
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 168.0
+    "fecha": "2019-06-30",
+    "valor": 116.0
    },
    "maximo_ventana": {
     "fecha": "2023-06-30",
     "valor": 213.0
    },
    "serie": [
+    [
+     "2016-06-30",
+     132.0
+    ],
+    [
+     "2017-06-30",
+     127.0
+    ],
+    [
+     "2018-06-30",
+     136.0
+    ],
+    [
+     "2019-06-30",
+     116.0
+    ],
     [
      "2022-06-30",
      168.0
@@ -68506,7 +68813,7 @@
    "columna": "Tasa Limón (por 100 mil habitantes)",
    "pilar": "seguridad",
    "fuente": "OIJ",
-   "codigo": "fuentes/oij_homicidios.csv (vacío); anuario INEC (6 archivos)",
+   "codigo": "fuentes/oij_homicidios.csv (vacío); Datos Abiertos OIJ; anuario INEC (6 archivos)",
    "nombre_fuente": "Homicidios dolosos (OIJ) y población (INEC)",
    "periodicidad": "Anual",
    "unidad": "Por 100 mil habitantes",
@@ -68532,6 +68839,22 @@
     "valor": 47.2052
    },
    "serie": [
+    [
+     "2016-06-30",
+     null
+    ],
+    [
+     "2017-06-30",
+     null
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
     [
      "2022-06-30",
      35.7156
@@ -88589,6 +88912,334 @@
      44.77
     ]
    ]
+  },
+  {
+   "id": "policias_puestos_policiales_del_msp_ley_de_presupuesto",
+   "hoja": "33_Policias",
+   "columna": "Puestos policiales del MSP (Ley de Presupuesto)",
+   "pilar": "seguridad",
+   "fuente": "MSP",
+   "codigo": "fuentes/policias.csv",
+   "nombre_fuente": "Puestos policiales del MSP (Ley de Presupuesto)",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2017-06-30",
+    "valor": 15619.0
+   },
+   "hace_un_anio": {
+    "fecha": "2016-06-30",
+    "valor": 14126.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1493.0,
+    "porcentual": 10.5692
+   },
+   "minimo_ventana": {
+    "fecha": "2015-06-30",
+    "valor": 14126.0
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 15619.0
+   },
+   "serie": [
+    [
+     "2012-06-30",
+     14201.0
+    ],
+    [
+     "2013-06-30",
+     14701.0
+    ],
+    [
+     "2014-06-30",
+     14560.0
+    ],
+    [
+     "2015-06-30",
+     14126.0
+    ],
+    [
+     "2016-06-30",
+     14126.0
+    ],
+    [
+     "2017-06-30",
+     15619.0
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
+     "2022-06-30",
+     null
+    ],
+    [
+     "2023-06-30",
+     null
+    ],
+    [
+     "2024-06-30",
+     null
+    ],
+    [
+     "2025-06-30",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "policias_puestos_policiales_del_msp_por_100_mil_habitantes_c",
+   "hoja": "33_Policias",
+   "columna": "Puestos policiales del MSP por 100 mil habitantes (calculada)",
+   "pilar": "seguridad",
+   "fuente": "MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2017-06-30",
+    "valor": 316.5894
+   },
+   "hace_un_anio": {
+    "fecha": "2016-06-30",
+    "valor": 289.3058
+   },
+   "variacion_interanual": {
+    "absoluta": 27.2837,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 289.3058
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 316.5894
+   },
+   "serie": [
+    [
+     "2012-06-30",
+     305.1036
+    ],
+    [
+     "2013-06-30",
+     311.9184
+    ],
+    [
+     "2014-06-30",
+     305.1274
+    ],
+    [
+     "2015-06-30",
+     292.5534
+    ],
+    [
+     "2016-06-30",
+     289.3058
+    ],
+    [
+     "2017-06-30",
+     316.5894
+    ],
+    [
+     "2018-06-30",
+     null
+    ],
+    [
+     "2019-06-30",
+     null
+    ],
+    [
+     "2022-06-30",
+     null
+    ],
+    [
+     "2023-06-30",
+     null
+    ],
+    [
+     "2024-06-30",
+     null
+    ],
+    [
+     "2025-06-30",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "policias_tasa_de_homicidios_dolosos_por_100_mil_habitantes_c",
+   "hoja": "33_Policias",
+   "columna": "Tasa de homicidios dolosos (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 16.7571
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 16.9995
+   },
+   "variacion_interanual": {
+    "absoluta": -0.2424,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 11.213
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 17.6405
+   },
+   "serie": [
+    [
+     "2012-06-30",
+     null
+    ],
+    [
+     "2013-06-30",
+     null
+    ],
+    [
+     "2014-06-30",
+     null
+    ],
+    [
+     "2015-06-30",
+     null
+    ],
+    [
+     "2016-06-30",
+     12.8207
+    ],
+    [
+     "2017-06-30",
+     13.3373
+    ],
+    [
+     "2018-06-30",
+     12.868
+    ],
+    [
+     "2019-06-30",
+     11.213
+    ],
+    [
+     "2022-06-30",
+     12.8504
+    ],
+    [
+     "2023-06-30",
+     17.6405
+    ],
+    [
+     "2024-06-30",
+     16.9995
+    ],
+    [
+     "2025-06-30",
+     16.7571
+    ]
+   ]
+  },
+  {
+   "id": "policias_poblacion_al_30_de_junio_bccr",
+   "hoja": "33_Policias",
+   "columna": "Población al 30 de junio (BCCR)",
+   "pilar": "seguridad",
+   "fuente": "MSP",
+   "codigo": "SDDE 92929",
+   "nombre_fuente": "Población al 30 de junio (BCCR)",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 5164859.9393
+   },
+   "variacion_interanual": {
+    "absoluta": 26963.1406,
+    "porcentual": 0.522
+   },
+   "minimo_ventana": {
+    "fecha": "2012-06-30",
+    "valor": 4654484.6519
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "serie": [
+    [
+     "2012-06-30",
+     4654484.6519
+    ],
+    [
+     "2013-06-30",
+     4713091.6396
+    ],
+    [
+     "2014-06-30",
+     4771777.9431
+    ],
+    [
+     "2015-06-30",
+     4828520.2997
+    ],
+    [
+     "2016-06-30",
+     4882722.9688
+    ],
+    [
+     "2017-06-30",
+     4933518.8706
+    ],
+    [
+     "2018-06-30",
+     4981349.0094
+    ],
+    [
+     "2019-06-30",
+     5020970.0892
+    ],
+    [
+     "2022-06-30",
+     5104906.8366
+    ],
+    [
+     "2023-06-30",
+     5135911.6221
+    ],
+    [
+     "2024-06-30",
+     5164859.9393
+    ],
+    [
+     "2025-06-30",
+     5191823.08
+    ]
+   ]
   }
  ],
  "tablas": [
@@ -88596,6 +89247,10 @@
    "id": "oij_cantones",
    "hoja": "24_OIJ_homicidios",
    "anios": [
+    2016,
+    2017,
+    2018,
+    2019,
     2022,
     2023,
     2024,
@@ -88606,14 +89261,22 @@
      "canton": "San José",
      "provincia": "San José",
      "homicidios": [
+      85.0,
+      105.0,
+      88.0,
+      72.0,
       null,
-      null,
+      82.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      23.3443,
       null,
       null
      ]
@@ -88622,14 +89285,22 @@
      "canton": "Escazú",
      "provincia": "San José",
      "homicidios": [
+      11.0,
+      6.0,
+      7.0,
+      5.0,
       null,
-      null,
+      8.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      11.335,
       null,
       null
      ]
@@ -88638,14 +89309,22 @@
      "canton": "Desamparados",
      "provincia": "San José",
      "homicidios": [
+      26.0,
+      32.0,
+      22.0,
+      18.0,
       null,
-      null,
+      26.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      10.6945,
       null,
       null
      ]
@@ -88654,14 +89333,22 @@
      "canton": "Puriscal",
      "provincia": "San José",
      "homicidios": [
+      1.0,
+      0.0,
+      1.0,
+      1.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      2.5706,
       null,
       null
      ]
@@ -88670,14 +89357,22 @@
      "canton": "Tarrazú",
      "provincia": "San José",
      "homicidios": [
+      0.0,
+      1.0,
+      1.0,
+      0.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      5.5677,
       null,
       null
      ]
@@ -88686,14 +89381,22 @@
      "canton": "Aserrí",
      "provincia": "San José",
      "homicidios": [
+      14.0,
+      10.0,
+      10.0,
+      6.0,
       null,
-      null,
+      7.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      11.2012,
       null,
       null
      ]
@@ -88702,14 +89405,22 @@
      "canton": "Mora",
      "provincia": "San José",
      "homicidios": [
+      3.0,
+      1.0,
+      1.0,
+      0.0,
       null,
-      null,
+      2.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      6.9823,
       null,
       null
      ]
@@ -88718,14 +89429,22 @@
      "canton": "Goicoechea",
      "provincia": "San José",
      "homicidios": [
+      27.0,
+      16.0,
+      22.0,
+      16.0,
       null,
-      null,
+      20.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      14.37,
       null,
       null
      ]
@@ -88734,14 +89453,22 @@
      "canton": "Santa Ana",
      "provincia": "San José",
      "homicidios": [
+      7.0,
+      4.0,
+      1.0,
+      4.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      1.6331,
       null,
       null
      ]
@@ -88750,14 +89477,22 @@
      "canton": "Alajuelita",
      "provincia": "San José",
      "homicidios": [
+      21.0,
+      27.0,
+      10.0,
+      15.0,
       null,
-      null,
+      23.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      23.9795,
       null,
       null
      ]
@@ -88766,14 +89501,22 @@
      "canton": "Vázquez de Coronado",
      "provincia": "San José",
      "homicidios": [
+      3.0,
+      14.0,
+      4.0,
+      6.0,
       null,
-      null,
+      7.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      9.816,
       null,
       null
      ]
@@ -88782,14 +89525,22 @@
      "canton": "Acosta",
      "provincia": "San José",
      "homicidios": [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -88798,14 +89549,22 @@
      "canton": "Tibás",
      "provincia": "San José",
      "homicidios": [
+      34.0,
+      12.0,
+      22.0,
+      16.0,
       null,
-      null,
+      7.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      8.2526,
       null,
       null
      ]
@@ -88814,14 +89573,22 @@
      "canton": "Moravia",
      "provincia": "San José",
      "homicidios": [
+      12.0,
+      8.0,
+      1.0,
+      1.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      4.8787,
       null,
       null
      ]
@@ -88830,14 +89597,22 @@
      "canton": "Montes de Oca",
      "provincia": "San José",
      "homicidios": [
+      6.0,
+      6.0,
+      2.0,
+      4.0,
       null,
-      null,
+      6.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      9.8007,
       null,
       null
      ]
@@ -88846,14 +89621,22 @@
      "canton": "Turrubares",
      "provincia": "San José",
      "homicidios": [
+      1.0,
+      0.0,
+      1.0,
+      1.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -88862,14 +89645,22 @@
      "canton": "Dota",
      "provincia": "San José",
      "homicidios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -88878,14 +89669,22 @@
      "canton": "Curridabat",
      "provincia": "San José",
      "homicidios": [
+      7.0,
+      2.0,
+      9.0,
+      7.0,
       null,
-      null,
+      6.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      7.5945,
       null,
       null
      ]
@@ -88894,14 +89693,22 @@
      "canton": "Pérez Zeledón",
      "provincia": "San José",
      "homicidios": [
+      3.0,
+      5.0,
+      6.0,
+      6.0,
       null,
-      null,
+      13.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      9.683,
       null,
       null
      ]
@@ -88910,14 +89717,22 @@
      "canton": "León Cortés",
      "provincia": "San José",
      "homicidios": [
+      1.0,
+      0.0,
+      3.0,
+      0.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      22.4239,
       null,
       null
      ]
@@ -88926,14 +89741,22 @@
      "canton": "Alajuela",
      "provincia": "Alajuela",
      "homicidios": [
+      24.0,
+      35.0,
+      48.0,
+      37.0,
       null,
-      null,
+      44.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      13.6202,
       null,
       null
      ]
@@ -88942,14 +89765,22 @@
      "canton": "San Ramón",
      "provincia": "Alajuela",
      "homicidios": [
+      3.0,
+      6.0,
+      13.0,
+      3.0,
       null,
-      null,
+      13.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      14.2314,
       null,
       null
      ]
@@ -88958,14 +89789,22 @@
      "canton": "Grecia",
      "provincia": "Alajuela",
      "homicidios": [
+      1.0,
+      2.0,
+      3.0,
+      0.0,
       null,
-      null,
+      4.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      5.006,
       null,
       null
      ]
@@ -88974,14 +89813,22 @@
      "canton": "San Mateo",
      "provincia": "Alajuela",
      "homicidios": [
+      0.0,
+      5.0,
+      0.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -88990,14 +89837,22 @@
      "canton": "Atenas",
      "provincia": "Alajuela",
      "homicidios": [
+      1.0,
+      0.0,
+      3.0,
+      0.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      9.93,
       null,
       null
      ]
@@ -89006,14 +89861,22 @@
      "canton": "Naranjo",
      "provincia": "Alajuela",
      "homicidios": [
+      1.0,
+      3.0,
+      5.0,
+      3.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      6.0211,
       null,
       null
      ]
@@ -89022,14 +89885,22 @@
      "canton": "Palmares",
      "provincia": "Alajuela",
      "homicidios": [
+      1.0,
+      9.0,
+      2.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89038,14 +89909,22 @@
      "canton": "Poás",
      "provincia": "Alajuela",
      "homicidios": [
+      0.0,
+      5.0,
+      0.0,
+      0.0,
       null,
-      null,
+      2.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      5.7092,
       null,
       null
      ]
@@ -89054,14 +89933,22 @@
      "canton": "Orotina",
      "provincia": "Alajuela",
      "homicidios": [
+      1.0,
+      11.0,
+      6.0,
+      1.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      12.1135,
       null,
       null
      ]
@@ -89070,14 +89957,22 @@
      "canton": "San Carlos",
      "provincia": "Alajuela",
      "homicidios": [
+      12.0,
+      14.0,
+      8.0,
+      18.0,
       null,
-      null,
+      19.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      9.1307,
       null,
       null
      ]
@@ -89086,14 +89981,22 @@
      "canton": "Zarcero",
      "provincia": "Alajuela",
      "homicidios": [
+      0.0,
+      6.0,
+      1.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89102,14 +90005,22 @@
      "canton": "Sarchí",
      "provincia": "Alajuela",
      "homicidios": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89118,14 +90029,22 @@
      "canton": "Upala",
      "provincia": "Alajuela",
      "homicidios": [
+      2.0,
+      5.0,
+      5.0,
+      5.0,
       null,
-      null,
+      2.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      3.5598,
       null,
       null
      ]
@@ -89134,14 +90053,22 @@
      "canton": "Los Chiles",
      "provincia": "Alajuela",
      "homicidios": [
+      4.0,
+      2.0,
+      1.0,
+      0.0,
       null,
-      null,
+      6.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      16.5411,
       null,
       null
      ]
@@ -89150,14 +90077,22 @@
      "canton": "Guatuso",
      "provincia": "Alajuela",
      "homicidios": [
+      4.0,
+      2.0,
+      1.0,
+      0.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      15.2015,
       null,
       null
      ]
@@ -89166,14 +90101,22 @@
      "canton": "Río Cuarto",
      "provincia": "Alajuela",
      "homicidios": [
+      0.0,
+      2.0,
+      0.0,
+      1.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      5.7029,
       null,
       null
      ]
@@ -89182,14 +90125,22 @@
      "canton": "Cartago",
      "provincia": "Cartago",
      "homicidios": [
+      19.0,
+      15.0,
+      23.0,
+      11.0,
       null,
-      null,
+      21.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      12.9233,
       null,
       null
      ]
@@ -89198,14 +90149,22 @@
      "canton": "Paraíso",
      "provincia": "Cartago",
      "homicidios": [
+      2.0,
+      2.0,
+      5.0,
+      9.0,
       null,
-      null,
+      17.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      27.7586,
       null,
       null
      ]
@@ -89214,14 +90173,22 @@
      "canton": "La Unión",
      "provincia": "Cartago",
      "homicidios": [
+      15.0,
+      22.0,
+      20.0,
+      16.0,
       null,
-      null,
+      15.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      13.2345,
       null,
       null
      ]
@@ -89230,14 +90197,22 @@
      "canton": "Jiménez",
      "provincia": "Cartago",
      "homicidios": [
+      2.0,
+      0.0,
+      1.0,
+      1.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      6.3095,
       null,
       null
      ]
@@ -89246,14 +90221,22 @@
      "canton": "Turrialba",
      "provincia": "Cartago",
      "homicidios": [
+      1.0,
+      1.0,
+      3.0,
+      3.0,
       null,
-      null,
+      10.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      14.4457,
       null,
       null
      ]
@@ -89262,14 +90245,22 @@
      "canton": "Alvarado",
      "provincia": "Cartago",
      "homicidios": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
       null,
-      null,
+      2.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      13.1955,
       null,
       null
      ]
@@ -89278,14 +90269,22 @@
      "canton": "Oreamuno",
      "provincia": "Cartago",
      "homicidios": [
+      2.0,
+      2.0,
+      7.0,
+      3.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      6.1673,
       null,
       null
      ]
@@ -89294,14 +90293,22 @@
      "canton": "El Guarco",
      "provincia": "Cartago",
      "homicidios": [
+      4.0,
+      6.0,
+      6.0,
+      5.0,
       null,
-      null,
+      4.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      8.8777,
       null,
       null
      ]
@@ -89310,14 +90317,22 @@
      "canton": "Heredia",
      "provincia": "Heredia",
      "homicidios": [
+      8.0,
+      10.0,
+      15.0,
+      9.0,
       null,
-      null,
+      17.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      11.7365,
       null,
       null
      ]
@@ -89326,14 +90341,22 @@
      "canton": "Barva",
      "provincia": "Heredia",
      "homicidios": [
+      4.0,
+      1.0,
+      2.0,
+      3.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      2.0812,
       null,
       null
      ]
@@ -89342,14 +90365,22 @@
      "canton": "Santo Domingo",
      "provincia": "Heredia",
      "homicidios": [
+      2.0,
+      0.0,
+      7.0,
+      0.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      6.0514,
       null,
       null
      ]
@@ -89358,14 +90389,22 @@
      "canton": "Santa Bárbara",
      "provincia": "Heredia",
      "homicidios": [
+      2.0,
+      3.0,
+      2.0,
+      4.0,
       null,
-      null,
+      2.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      4.5039,
       null,
       null
      ]
@@ -89374,14 +90413,22 @@
      "canton": "San Rafael",
      "provincia": "Heredia",
      "homicidios": [
+      4.0,
+      3.0,
+      2.0,
+      5.0,
       null,
-      null,
+      4.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      7.149,
       null,
       null
      ]
@@ -89390,14 +90437,22 @@
      "canton": "San Isidro",
      "provincia": "Heredia",
      "homicidios": [
+      0.0,
+      3.0,
+      3.0,
+      1.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89406,14 +90461,22 @@
      "canton": "Belén",
      "provincia": "Heredia",
      "homicidios": [
+      1.0,
+      2.0,
+      2.0,
+      1.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89422,14 +90485,22 @@
      "canton": "Flores",
      "provincia": "Heredia",
      "homicidios": [
+      3.0,
+      1.0,
+      0.0,
+      0.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      4.5764,
       null,
       null
      ]
@@ -89438,14 +90509,22 @@
      "canton": "San Pablo",
      "provincia": "Heredia",
      "homicidios": [
+      2.0,
+      0.0,
+      0.0,
+      1.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      3.2939,
       null,
       null
      ]
@@ -89454,14 +90533,22 @@
      "canton": "Sarapiquí",
      "provincia": "Heredia",
      "homicidios": [
+      7.0,
+      13.0,
+      18.0,
+      12.0,
       null,
-      null,
+      19.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      20.4275,
       null,
       null
      ]
@@ -89470,14 +90557,22 @@
      "canton": "Liberia",
      "provincia": "Guanacaste",
      "homicidios": [
+      11.0,
+      15.0,
+      5.0,
+      7.0,
       null,
-      null,
+      16.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      20.0279,
       null,
       null
      ]
@@ -89486,14 +90581,22 @@
      "canton": "Nicoya",
      "provincia": "Guanacaste",
      "homicidios": [
+      5.0,
+      5.0,
+      7.0,
+      2.0,
       null,
-      null,
+      28.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      48.0039,
       null,
       null
      ]
@@ -89502,14 +90605,22 @@
      "canton": "Santa Cruz",
      "provincia": "Guanacaste",
      "homicidios": [
+      10.0,
+      4.0,
+      2.0,
+      3.0,
       null,
-      null,
+      24.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      33.5182,
       null,
       null
      ]
@@ -89518,14 +90629,22 @@
      "canton": "Bagaces",
      "provincia": "Guanacaste",
      "homicidios": [
+      1.0,
+      2.0,
+      0.0,
+      1.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      11.9269,
       null,
       null
      ]
@@ -89534,14 +90653,22 @@
      "canton": "Carrillo",
      "provincia": "Guanacaste",
      "homicidios": [
+      4.0,
+      6.0,
+      1.0,
+      2.0,
       null,
-      null,
+      11.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      22.6417,
       null,
       null
      ]
@@ -89550,14 +90677,22 @@
      "canton": "Cañas",
      "provincia": "Guanacaste",
      "homicidios": [
+      1.0,
+      2.0,
+      1.0,
+      2.0,
       null,
-      null,
+      6.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      18.5324,
       null,
       null
      ]
@@ -89566,14 +90701,22 @@
      "canton": "Abangares",
      "provincia": "Guanacaste",
      "homicidios": [
+      6.0,
+      2.0,
+      1.0,
+      1.0,
       null,
-      null,
+      5.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      24.9673,
       null,
       null
      ]
@@ -89582,14 +90725,22 @@
      "canton": "Tilarán",
      "provincia": "Guanacaste",
      "homicidios": [
+      0.0,
+      1.0,
+      2.0,
+      0.0,
       null,
-      null,
+      2.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      8.0785,
       null,
       null
      ]
@@ -89598,14 +90749,22 @@
      "canton": "Nandayure",
      "provincia": "Guanacaste",
      "homicidios": [
+      0.0,
+      0.0,
+      0.0,
+      5.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      8.7171,
       null,
       null
      ]
@@ -89614,14 +90773,22 @@
      "canton": "La Cruz",
      "provincia": "Guanacaste",
      "homicidios": [
+      6.0,
+      10.0,
+      3.0,
+      15.0,
       null,
-      null,
+      4.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      14.5825,
       null,
       null
      ]
@@ -89630,14 +90797,22 @@
      "canton": "Hojancha",
      "provincia": "Guanacaste",
      "homicidios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89646,14 +90821,22 @@
      "canton": "Puntarenas",
      "provincia": "Puntarenas",
      "homicidios": [
+      21.0,
+      20.0,
+      21.0,
+      30.0,
       null,
-      null,
+      68.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      47.8778,
       null,
       null
      ]
@@ -89662,14 +90845,22 @@
      "canton": "Esparza",
      "provincia": "Puntarenas",
      "homicidios": [
+      1.0,
+      1.0,
+      4.0,
+      6.0,
       null,
-      null,
+      5.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      14.3654,
       null,
       null
      ]
@@ -89678,14 +90869,22 @@
      "canton": "Buenos Aires",
      "provincia": "Puntarenas",
      "homicidios": [
+      1.0,
+      2.0,
+      0.0,
+      3.0,
       null,
-      null,
+      1.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      1.8426,
       null,
       null
      ]
@@ -89694,14 +90893,22 @@
      "canton": "Montes de Oro",
      "provincia": "Puntarenas",
      "homicidios": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
       null,
-      null,
+      3.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      20.24,
       null,
       null
      ]
@@ -89710,14 +90917,22 @@
      "canton": "Osa",
      "provincia": "Puntarenas",
      "homicidios": [
+      4.0,
+      0.0,
+      3.0,
+      1.0,
       null,
-      null,
+      5.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      16.9434,
       null,
       null
      ]
@@ -89726,14 +90941,22 @@
      "canton": "Quepos",
      "provincia": "Puntarenas",
      "homicidios": [
+      6.0,
+      3.0,
+      1.0,
+      6.0,
       null,
-      null,
+      15.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      43.6292,
       null,
       null
      ]
@@ -89742,14 +90965,22 @@
      "canton": "Golfito",
      "provincia": "Puntarenas",
      "homicidios": [
+      6.0,
+      4.0,
+      11.0,
+      8.0,
       null,
-      null,
+      5.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      15.6103,
       null,
       null
      ]
@@ -89758,14 +90989,22 @@
      "canton": "Coto Brus",
      "provincia": "Puntarenas",
      "homicidios": [
+      0.0,
+      1.0,
+      0.0,
+      1.0,
       null,
-      null,
+      2.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      5.5687,
       null,
       null
      ]
@@ -89774,14 +91013,22 @@
      "canton": "Parrita",
      "provincia": "Puntarenas",
      "homicidios": [
+      0.0,
+      3.0,
+      3.0,
+      5.0,
       null,
-      null,
+      17.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      77.409,
       null,
       null
      ]
@@ -89790,14 +91037,22 @@
      "canton": "Corredores",
      "provincia": "Puntarenas",
      "homicidios": [
+      11.0,
+      9.0,
+      9.0,
+      10.0,
       null,
-      null,
+      16.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      30.2357,
       null,
       null
      ]
@@ -89806,14 +91061,22 @@
      "canton": "Garabito",
      "provincia": "Puntarenas",
      "homicidios": [
+      5.0,
+      1.0,
+      7.0,
+      6.0,
       null,
-      null,
+      13.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      46.893,
       null,
       null
      ]
@@ -89822,14 +91085,22 @@
      "canton": "Monte Verde",
      "provincia": "Puntarenas",
      "homicidios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89838,14 +91109,22 @@
      "canton": "Puerto Jiménez",
      "provincia": "Puntarenas",
      "homicidios": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
       null,
-      null,
+      0.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      0.0,
       null,
       null
      ]
@@ -89854,14 +91133,22 @@
      "canton": "Limón",
      "provincia": "Limón",
      "homicidios": [
+      56.0,
+      44.0,
+      58.0,
+      42.0,
       null,
-      null,
+      91.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      98.316,
       null,
       null
      ]
@@ -89870,14 +91157,22 @@
      "canton": "Pococí",
      "provincia": "Limón",
      "homicidios": [
+      30.0,
+      44.0,
+      32.0,
+      33.0,
       null,
-      null,
+      31.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      20.144,
       null,
       null
      ]
@@ -89886,14 +91181,22 @@
      "canton": "Siquirres",
      "provincia": "Limón",
      "homicidios": [
+      10.0,
+      7.0,
+      21.0,
+      10.0,
       null,
-      null,
+      21.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      36.8511,
       null,
       null
      ]
@@ -89902,14 +91205,22 @@
      "canton": "Talamanca",
      "provincia": "Limón",
      "homicidios": [
+      8.0,
+      8.0,
+      5.0,
+      8.0,
       null,
-      null,
+      10.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      22.1917,
       null,
       null
      ]
@@ -89918,14 +91229,22 @@
      "canton": "Matina",
      "provincia": "Limón",
      "homicidios": [
+      18.0,
+      11.0,
+      10.0,
+      12.0,
       null,
-      null,
+      50.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      110.9226,
       null,
       null
      ]
@@ -89934,14 +91253,22 @@
      "canton": "Guácimo",
      "provincia": "Limón",
      "homicidios": [
+      10.0,
+      13.0,
+      10.0,
+      11.0,
       null,
-      null,
+      10.0,
       null,
       null
      ],
      "tasa": [
       null,
       null,
+      null,
+      null,
+      null,
+      17.3472,
       null,
       null
      ]
