@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generado": "2026-10-30T11:38:45-06:00",
+ "generado": "2026-10-30T12:21:13-06:00",
  "excel": "datos_cr_2026-10-30.xlsx",
  "ventana": {
   "desde": "2016-10-30",
@@ -933,7 +933,7 @@
    "pilar": "panorama",
    "fuente": "BCCR, SDDE",
    "periodicidad": "Anual y Trimestral",
-   "nota": "El BCCR cambió el año de referencia de las cuentas nacionales (series en base 2017 y empalmes); el script detecta la base como el año en que el PIB real coincide con el nominal y anota en cada fila de Resumen el primer y último año disponible de cada código (ver README, sección Panorama). Lo anual es toda la serie disponible; lo trimestral, la ventana de --years. La variación interanual trimestral se calcula sobre la serie original (96741): cada trimestre contra el mismo trimestre del año anterior; la publicada por el BCCR (97405) se incluye para comparar, igual que la anual (92534). La desestacionalizada y la tendencia ciclo son 97165 y 96995: el catálogo no dice cuál es cuál y el script las asigna por suavidad (ver Resumen). Fechas: 31 de diciembre para lo anual, fin de trimestre para lo trimestral (el IV trimestre y el año comparten fila). Año base detectado: 2022 (PIB real = PIB nominal). Código 92533: primer dato 1991-12-31, último 2027-12-31; descargado 1991 a 2025.",
+   "nota": "Cuentas nacionales de la generación vigente del SDDE (códigos E0422, cuadros 912 a 993; el cuadro 920 dice 'año de referencia 2022'); el script detecta la base como el año en que el PIB real coincide con el nominal y anota en cada fila de Resumen el primer y último año disponible de cada código (ver README, sección Panorama). Lo anual es toda la serie disponible; lo trimestral, la ventana de --years. La variación interanual trimestral se calcula sobre la serie original (96741): cada trimestre contra el mismo trimestre del año anterior; la publicada por el BCCR (97405) se incluye para comparar, igual que la anual (92534). La desestacionalizada y la tendencia ciclo son 97165 y 96995: el catálogo no dice cuál es cuál y el script las asigna por suavidad (ver Resumen). Fechas: 31 de diciembre para lo anual, fin de trimestre para lo trimestral (el IV trimestre y el año comparten fila). Año base detectado: 2022 (PIB real = PIB nominal). Código 92533: primer dato 1991-12-31, último 2027-12-31; descargado 1991 a 2025.",
    "graficos": [
     {
      "titulo": "PIB real, variación anual (%), toda la serie",
@@ -980,7 +980,7 @@
    "pilar": "panorama",
    "fuente": "BCCR, SDDE",
    "periodicidad": "Anual",
-   "nota": "El BCCR cambió el año de referencia de las cuentas nacionales (series en base 2017 y empalmes); el script detecta la base como el año en que el PIB real coincide con el nominal y anota en cada fila de Resumen el primer y último año disponible de cada código (ver README, sección Panorama). INDB = ingreso nacional disponible bruto. La población 92929 viene en miles de habitantes y el script la pasa a personas. Anual, toda la serie, fecha 31 de diciembre. Un per cápita o un valor en dólares corrientes nunca va solo: se acompaña de la versión a precios constantes en colones. La brecha = (PIB per cápita − ingreso nacional disponible bruto per cápita) / PIB per cápita × 100, ambos a precios constantes: cuánto de lo producido no se queda en el país (utilidades remitidas al exterior e intereses de la deuda externa, netos de remesas y otras transferencias). La fuente la publica en miles de habitantes; el script la multiplica por 1000. Población 2025: BCCR 5,191,823 vs. INEC (hoja 24) 5,191,823, diferencia +0 (+0.00 %). Código 92929: primer dato 1991-12-31, último 2027-12-31; descargado 1991 a 2025.",
+   "nota": "Cuentas nacionales de la generación vigente del SDDE (códigos E0422, cuadros 912 a 993; el cuadro 920 dice 'año de referencia 2022'); el script detecta la base como el año en que el PIB real coincide con el nominal y anota en cada fila de Resumen el primer y último año disponible de cada código (ver README, sección Panorama). INDB = ingreso nacional disponible bruto. La población 92929 viene en miles de habitantes y el script la pasa a personas. Anual, toda la serie, fecha 31 de diciembre. Un per cápita o un valor en dólares corrientes nunca va solo: se acompaña de la versión a precios constantes en colones. La brecha = (PIB per cápita − ingreso nacional disponible bruto per cápita) / PIB per cápita × 100, ambos a precios constantes: cuánto de lo producido no se queda en el país (utilidades remitidas al exterior e intereses de la deuda externa, netos de remesas y otras transferencias). La fuente la publica en miles de habitantes; el script la multiplica por 1000. Población 2025: BCCR 5,191,823 vs. INEC (hoja 24) 5,191,823, diferencia +0 (+0.00 %). Código 92929: primer dato 1991-12-31, último 2027-12-31; descargado 1991 a 2025.",
    "graficos": [
     {
      "titulo": "PIB e ingreso nacional disponible bruto per cápita, a precios constantes (colones), toda la serie",
@@ -41774,280 +41774,6 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Física nacional (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 2660941.9457
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 2943597.4434
-   },
-   "variacion_interanual": {
-    "absoluta": -282655.4977,
-    "porcentual": -9.6024
-   },
-   "minimo_ventana": {
-    "fecha": "2026-08-31",
-    "valor": 2621713.6198
-   },
-   "maximo_ventana": {
-    "fecha": "2022-05-31",
-    "valor": 3469783.8495
-   },
-   "serie": [
-    [
-     "2021-10-31",
-     3343458.3483
-    ],
-    [
-     "2021-11-30",
-     3297134.6748
-    ],
-    [
-     "2021-12-31",
-     3342142.0542
-    ],
-    [
-     "2022-01-31",
-     3327305.4854
-    ],
-    [
-     "2022-02-28",
-     3312058.8348
-    ],
-    [
-     "2022-03-31",
-     3392193.2785
-    ],
-    [
-     "2022-04-30",
-     3394365.2523
-    ],
-    [
-     "2022-05-31",
-     3469783.8495
-    ],
-    [
-     "2022-06-30",
-     3454882.6075
-    ],
-    [
-     "2022-07-31",
-     3355865.9723
-    ],
-    [
-     "2022-08-31",
-     3231337.583
-    ],
-    [
-     "2022-09-30",
-     3138312.8499
-    ],
-    [
-     "2022-10-31",
-     3099002.1905
-    ],
-    [
-     "2022-11-30",
-     3016961.753
-    ],
-    [
-     "2022-12-31",
-     2995261.8142
-    ],
-    [
-     "2023-01-31",
-     2773364.8972
-    ],
-    [
-     "2023-02-28",
-     2802101.7845
-    ],
-    [
-     "2023-03-31",
-     2714608.8741
-    ],
-    [
-     "2023-04-30",
-     2751752.7104
-    ],
-    [
-     "2023-05-31",
-     2742525.9657
-    ],
-    [
-     "2023-06-30",
-     2769481.644
-    ],
-    [
-     "2023-07-31",
-     2794797.6337
-    ],
-    [
-     "2023-08-31",
-     2768399.245
-    ],
-    [
-     "2023-09-30",
-     2817399.5353
-    ],
-    [
-     "2023-10-31",
-     2817184.9083
-    ],
-    [
-     "2023-11-30",
-     2842104.8722
-    ],
-    [
-     "2023-12-31",
-     2807895.1525
-    ],
-    [
-     "2024-01-31",
-     2789203.1759
-    ],
-    [
-     "2024-02-29",
-     2773834.4551
-    ],
-    [
-     "2024-03-31",
-     2737690.8903
-    ],
-    [
-     "2024-04-30",
-     2754867.492
-    ],
-    [
-     "2024-05-31",
-     2889512.4988
-    ],
-    [
-     "2024-06-30",
-     2897829.7374
-    ],
-    [
-     "2024-07-31",
-     2904173.8665
-    ],
-    [
-     "2024-08-31",
-     2893364.8892
-    ],
-    [
-     "2024-09-30",
-     2920240.8669
-    ],
-    [
-     "2024-10-31",
-     2886802.4811
-    ],
-    [
-     "2024-11-30",
-     2896197.0166
-    ],
-    [
-     "2024-12-31",
-     2902824.0534
-    ],
-    [
-     "2025-01-31",
-     2899812.7402
-    ],
-    [
-     "2025-02-28",
-     2886558.38
-    ],
-    [
-     "2025-03-31",
-     2867011.3506
-    ],
-    [
-     "2025-04-30",
-     2908721.5533
-    ],
-    [
-     "2025-05-31",
-     2925309.7668
-    ],
-    [
-     "2025-06-30",
-     2923156.2356
-    ],
-    [
-     "2025-07-31",
-     2937954.4076
-    ],
-    [
-     "2025-08-31",
-     2944888.2451
-    ],
-    [
-     "2025-09-30",
-     2943597.4434
-    ],
-    [
-     "2025-10-31",
-     2941870.6981
-    ],
-    [
-     "2025-11-30",
-     2919965.2259
-    ],
-    [
-     "2025-12-31",
-     2935568.755
-    ],
-    [
-     "2026-01-31",
-     2923614.7156
-    ],
-    [
-     "2026-02-28",
-     2763628.4454
-    ],
-    [
-     "2026-03-31",
-     2717647.7613
-    ],
-    [
-     "2026-04-30",
-     2647475.1678
-    ],
-    [
-     "2026-05-31",
-     2666376.4995
-    ],
-    [
-     "2026-06-30",
-     2648964.397
-    ],
-    [
-     "2026-07-31",
-     2634378.0065
-    ],
-    [
-     "2026-08-31",
-     2621713.6198
-    ],
-    [
-     "2026-09-30",
-     2660941.9457
-    ]
-   ]
-  },
-  {
    "id": "sugef_usd_persona_dolares_extranjero_residente_dimex_millone",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Dólares, Extranjero residente (DIMEX) (millones de colones)",
@@ -42322,6 +42048,280 @@
    ]
   },
   {
+   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Física nacional (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 2660941.9457
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 2943597.4434
+   },
+   "variacion_interanual": {
+    "absoluta": -282655.4977,
+    "porcentual": -9.6024
+   },
+   "minimo_ventana": {
+    "fecha": "2026-08-31",
+    "valor": 2621713.6198
+   },
+   "maximo_ventana": {
+    "fecha": "2022-05-31",
+    "valor": 3469783.8495
+   },
+   "serie": [
+    [
+     "2021-10-31",
+     3343458.3483
+    ],
+    [
+     "2021-11-30",
+     3297134.6748
+    ],
+    [
+     "2021-12-31",
+     3342142.0542
+    ],
+    [
+     "2022-01-31",
+     3327305.4854
+    ],
+    [
+     "2022-02-28",
+     3312058.8348
+    ],
+    [
+     "2022-03-31",
+     3392193.2785
+    ],
+    [
+     "2022-04-30",
+     3394365.2523
+    ],
+    [
+     "2022-05-31",
+     3469783.8495
+    ],
+    [
+     "2022-06-30",
+     3454882.6075
+    ],
+    [
+     "2022-07-31",
+     3355865.9723
+    ],
+    [
+     "2022-08-31",
+     3231337.583
+    ],
+    [
+     "2022-09-30",
+     3138312.8499
+    ],
+    [
+     "2022-10-31",
+     3099002.1905
+    ],
+    [
+     "2022-11-30",
+     3016961.753
+    ],
+    [
+     "2022-12-31",
+     2995261.8142
+    ],
+    [
+     "2023-01-31",
+     2773364.8972
+    ],
+    [
+     "2023-02-28",
+     2802101.7845
+    ],
+    [
+     "2023-03-31",
+     2714608.8741
+    ],
+    [
+     "2023-04-30",
+     2751752.7104
+    ],
+    [
+     "2023-05-31",
+     2742525.9657
+    ],
+    [
+     "2023-06-30",
+     2769481.644
+    ],
+    [
+     "2023-07-31",
+     2794797.6337
+    ],
+    [
+     "2023-08-31",
+     2768399.245
+    ],
+    [
+     "2023-09-30",
+     2817399.5353
+    ],
+    [
+     "2023-10-31",
+     2817184.9083
+    ],
+    [
+     "2023-11-30",
+     2842104.8722
+    ],
+    [
+     "2023-12-31",
+     2807895.1525
+    ],
+    [
+     "2024-01-31",
+     2789203.1759
+    ],
+    [
+     "2024-02-29",
+     2773834.4551
+    ],
+    [
+     "2024-03-31",
+     2737690.8903
+    ],
+    [
+     "2024-04-30",
+     2754867.492
+    ],
+    [
+     "2024-05-31",
+     2889512.4988
+    ],
+    [
+     "2024-06-30",
+     2897829.7374
+    ],
+    [
+     "2024-07-31",
+     2904173.8665
+    ],
+    [
+     "2024-08-31",
+     2893364.8892
+    ],
+    [
+     "2024-09-30",
+     2920240.8669
+    ],
+    [
+     "2024-10-31",
+     2886802.4811
+    ],
+    [
+     "2024-11-30",
+     2896197.0166
+    ],
+    [
+     "2024-12-31",
+     2902824.0534
+    ],
+    [
+     "2025-01-31",
+     2899812.7402
+    ],
+    [
+     "2025-02-28",
+     2886558.38
+    ],
+    [
+     "2025-03-31",
+     2867011.3506
+    ],
+    [
+     "2025-04-30",
+     2908721.5533
+    ],
+    [
+     "2025-05-31",
+     2925309.7668
+    ],
+    [
+     "2025-06-30",
+     2923156.2356
+    ],
+    [
+     "2025-07-31",
+     2937954.4076
+    ],
+    [
+     "2025-08-31",
+     2944888.2451
+    ],
+    [
+     "2025-09-30",
+     2943597.4434
+    ],
+    [
+     "2025-10-31",
+     2941870.6981
+    ],
+    [
+     "2025-11-30",
+     2919965.2259
+    ],
+    [
+     "2025-12-31",
+     2935568.755
+    ],
+    [
+     "2026-01-31",
+     2923614.7156
+    ],
+    [
+     "2026-02-28",
+     2763628.4454
+    ],
+    [
+     "2026-03-31",
+     2717647.7613
+    ],
+    [
+     "2026-04-30",
+     2647475.1678
+    ],
+    [
+     "2026-05-31",
+     2666376.4995
+    ],
+    [
+     "2026-06-30",
+     2648964.397
+    ],
+    [
+     "2026-07-31",
+     2634378.0065
+    ],
+    [
+     "2026-08-31",
+     2621713.6198
+    ],
+    [
+     "2026-09-30",
+     2660941.9457
+    ]
+   ]
+  },
+  {
    "id": "sugef_usd_persona_dolares_otra_persona_extranjera_millones_d",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Dólares, Otra persona extranjera (millones de colones)",
@@ -42592,280 +42592,6 @@
     [
      "2026-09-30",
      46570.4462
-    ]
-   ]
-  },
-  {
-   "id": "sugef_usd_persona_dolares_empresa_nacional_millones_de_colon",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Empresa nacional (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 5163538.9408
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 5205832.4044
-   },
-   "variacion_interanual": {
-    "absoluta": -42293.4636,
-    "porcentual": -0.8124
-   },
-   "minimo_ventana": {
-    "fecha": "2023-03-31",
-    "valor": 4389621.1192
-   },
-   "maximo_ventana": {
-    "fecha": "2025-12-31",
-    "valor": 5288200.4075
-   },
-   "serie": [
-    [
-     "2021-10-31",
-     4596348.951
-    ],
-    [
-     "2021-11-30",
-     4541516.0673
-    ],
-    [
-     "2021-12-31",
-     4792125.7041
-    ],
-    [
-     "2022-01-31",
-     4836796.0762
-    ],
-    [
-     "2022-02-28",
-     4878624.3878
-    ],
-    [
-     "2022-03-31",
-     4991002.5686
-    ],
-    [
-     "2022-04-30",
-     5030821.2193
-    ],
-    [
-     "2022-05-31",
-     5133604.3994
-    ],
-    [
-     "2022-06-30",
-     5129851.7244
-    ],
-    [
-     "2022-07-31",
-     5016987.4629
-    ],
-    [
-     "2022-08-31",
-     4899416.7588
-    ],
-    [
-     "2022-09-30",
-     4780328.1053
-    ],
-    [
-     "2022-10-31",
-     4794087.7307
-    ],
-    [
-     "2022-11-30",
-     4710467.5563
-    ],
-    [
-     "2022-12-31",
-     4753714.5502
-    ],
-    [
-     "2023-01-31",
-     4438255.7672
-    ],
-    [
-     "2023-02-28",
-     4480727.3789
-    ],
-    [
-     "2023-03-31",
-     4389621.1192
-    ],
-    [
-     "2023-04-30",
-     4491735.6005
-    ],
-    [
-     "2023-05-31",
-     4479890.9511
-    ],
-    [
-     "2023-06-30",
-     4518442.8781
-    ],
-    [
-     "2023-07-31",
-     4545649.738
-    ],
-    [
-     "2023-08-31",
-     4478938.0832
-    ],
-    [
-     "2023-09-30",
-     4577702.6383
-    ],
-    [
-     "2023-10-31",
-     4557719.9998
-    ],
-    [
-     "2023-11-30",
-     4578571.2329
-    ],
-    [
-     "2023-12-31",
-     4586588.9306
-    ],
-    [
-     "2024-01-31",
-     4640498.5192
-    ],
-    [
-     "2024-02-29",
-     4610442.1845
-    ],
-    [
-     "2024-03-31",
-     4552038.4047
-    ],
-    [
-     "2024-04-30",
-     4658771.6491
-    ],
-    [
-     "2024-05-31",
-     4891846.2482
-    ],
-    [
-     "2024-06-30",
-     4899805.9399
-    ],
-    [
-     "2024-07-31",
-     4954756.4607
-    ],
-    [
-     "2024-08-31",
-     4948058.8507
-    ],
-    [
-     "2024-09-30",
-     4957461.2905
-    ],
-    [
-     "2024-10-31",
-     4865939.6894
-    ],
-    [
-     "2024-11-30",
-     4857758.496
-    ],
-    [
-     "2024-12-31",
-     4928202.3557
-    ],
-    [
-     "2025-01-31",
-     4963228.1907
-    ],
-    [
-     "2025-02-28",
-     5010679.6462
-    ],
-    [
-     "2025-03-31",
-     4996513.1608
-    ],
-    [
-     "2025-04-30",
-     5098384.3065
-    ],
-    [
-     "2025-05-31",
-     5107424.1322
-    ],
-    [
-     "2025-06-30",
-     5092506.1106
-    ],
-    [
-     "2025-07-31",
-     5127347.7544
-    ],
-    [
-     "2025-08-31",
-     5143449.5405
-    ],
-    [
-     "2025-09-30",
-     5205832.4044
-    ],
-    [
-     "2025-10-31",
-     5258360.0773
-    ],
-    [
-     "2025-11-30",
-     5202988.525
-    ],
-    [
-     "2025-12-31",
-     5288200.4075
-    ],
-    [
-     "2026-01-31",
-     5284869.4376
-    ],
-    [
-     "2026-02-28",
-     5032719.8895
-    ],
-    [
-     "2026-03-31",
-     4985562.8677
-    ],
-    [
-     "2026-04-30",
-     4933878.6932
-    ],
-    [
-     "2026-05-31",
-     5031831.7651
-    ],
-    [
-     "2026-06-30",
-     5083813.5381
-    ],
-    [
-     "2026-07-31",
-     5069509.7811
-    ],
-    [
-     "2026-08-31",
-     5093297.2154
-    ],
-    [
-     "2026-09-30",
-     5163538.9408
     ]
    ]
   },
@@ -43414,6 +43140,280 @@
     [
      "2026-09-30",
      23058.3738
+    ]
+   ]
+  },
+  {
+   "id": "sugef_usd_persona_dolares_empresa_nacional_millones_de_colon",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Empresa nacional (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 5163538.9408
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 5205832.4044
+   },
+   "variacion_interanual": {
+    "absoluta": -42293.4636,
+    "porcentual": -0.8124
+   },
+   "minimo_ventana": {
+    "fecha": "2023-03-31",
+    "valor": 4389621.1192
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 5288200.4075
+   },
+   "serie": [
+    [
+     "2021-10-31",
+     4596348.951
+    ],
+    [
+     "2021-11-30",
+     4541516.0673
+    ],
+    [
+     "2021-12-31",
+     4792125.7041
+    ],
+    [
+     "2022-01-31",
+     4836796.0762
+    ],
+    [
+     "2022-02-28",
+     4878624.3878
+    ],
+    [
+     "2022-03-31",
+     4991002.5686
+    ],
+    [
+     "2022-04-30",
+     5030821.2193
+    ],
+    [
+     "2022-05-31",
+     5133604.3994
+    ],
+    [
+     "2022-06-30",
+     5129851.7244
+    ],
+    [
+     "2022-07-31",
+     5016987.4629
+    ],
+    [
+     "2022-08-31",
+     4899416.7588
+    ],
+    [
+     "2022-09-30",
+     4780328.1053
+    ],
+    [
+     "2022-10-31",
+     4794087.7307
+    ],
+    [
+     "2022-11-30",
+     4710467.5563
+    ],
+    [
+     "2022-12-31",
+     4753714.5502
+    ],
+    [
+     "2023-01-31",
+     4438255.7672
+    ],
+    [
+     "2023-02-28",
+     4480727.3789
+    ],
+    [
+     "2023-03-31",
+     4389621.1192
+    ],
+    [
+     "2023-04-30",
+     4491735.6005
+    ],
+    [
+     "2023-05-31",
+     4479890.9511
+    ],
+    [
+     "2023-06-30",
+     4518442.8781
+    ],
+    [
+     "2023-07-31",
+     4545649.738
+    ],
+    [
+     "2023-08-31",
+     4478938.0832
+    ],
+    [
+     "2023-09-30",
+     4577702.6383
+    ],
+    [
+     "2023-10-31",
+     4557719.9998
+    ],
+    [
+     "2023-11-30",
+     4578571.2329
+    ],
+    [
+     "2023-12-31",
+     4586588.9306
+    ],
+    [
+     "2024-01-31",
+     4640498.5192
+    ],
+    [
+     "2024-02-29",
+     4610442.1845
+    ],
+    [
+     "2024-03-31",
+     4552038.4047
+    ],
+    [
+     "2024-04-30",
+     4658771.6491
+    ],
+    [
+     "2024-05-31",
+     4891846.2482
+    ],
+    [
+     "2024-06-30",
+     4899805.9399
+    ],
+    [
+     "2024-07-31",
+     4954756.4607
+    ],
+    [
+     "2024-08-31",
+     4948058.8507
+    ],
+    [
+     "2024-09-30",
+     4957461.2905
+    ],
+    [
+     "2024-10-31",
+     4865939.6894
+    ],
+    [
+     "2024-11-30",
+     4857758.496
+    ],
+    [
+     "2024-12-31",
+     4928202.3557
+    ],
+    [
+     "2025-01-31",
+     4963228.1907
+    ],
+    [
+     "2025-02-28",
+     5010679.6462
+    ],
+    [
+     "2025-03-31",
+     4996513.1608
+    ],
+    [
+     "2025-04-30",
+     5098384.3065
+    ],
+    [
+     "2025-05-31",
+     5107424.1322
+    ],
+    [
+     "2025-06-30",
+     5092506.1106
+    ],
+    [
+     "2025-07-31",
+     5127347.7544
+    ],
+    [
+     "2025-08-31",
+     5143449.5405
+    ],
+    [
+     "2025-09-30",
+     5205832.4044
+    ],
+    [
+     "2025-10-31",
+     5258360.0773
+    ],
+    [
+     "2025-11-30",
+     5202988.525
+    ],
+    [
+     "2025-12-31",
+     5288200.4075
+    ],
+    [
+     "2026-01-31",
+     5284869.4376
+    ],
+    [
+     "2026-02-28",
+     5032719.8895
+    ],
+    [
+     "2026-03-31",
+     4985562.8677
+    ],
+    [
+     "2026-04-30",
+     4933878.6932
+    ],
+    [
+     "2026-05-31",
+     5031831.7651
+    ],
+    [
+     "2026-06-30",
+     5083813.5381
+    ],
+    [
+     "2026-07-31",
+     5069509.7811
+    ],
+    [
+     "2026-08-31",
+     5093297.2154
+    ],
+    [
+     "2026-09-30",
+     5163538.9408
     ]
    ]
   },
