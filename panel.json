@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generado": "2026-10-30T12:21:13-06:00",
+ "generado": "2026-10-30T13:55:01-06:00",
  "excel": "datos_cr_2026-10-30.xlsx",
  "ventana": {
   "desde": "2016-10-30",
@@ -859,7 +859,7 @@
    "pilar": "seguridad",
    "fuente": "OIJ",
    "periodicidad": "Anual",
-   "nota": "Anual: homicidios del año calendario completo, fechados al 30 de junio (fecha de referencia de la población del INEC, para que en los gráficos cada punto caiga dentro de su año). Tasa = homicidios / población al 30 de junio x 100 000. Las columnas por cantón salen sólo del archivo manual fuentes/oij_homicidios.csv; las provincias y el país, del archivo manual o, si falta el año, del cuadro 'Homicidios dolosos atendidos por el OIJ según provincia' del anuario del INEC. La población por cantón es la del cuadro 'Proyecciones de población según provincia, cantón y distrito' del anuario (2022 en adelante) y, para otros años, de fuentes/inec_poblacion_canton.csv.",
+   "nota": "Anual: homicidios del año calendario completo, fechados al 30 de junio (fecha de referencia de la población del INEC, para que en los gráficos cada punto caiga dentro de su año). Tasa = homicidios / población al 30 de junio x 100 000. La tasa del país usa la población del BCCR (código 92929, la misma estimación a mitad de año del PIB per cápita y de todas las tasas por 100 mil del panel; en 2022 es 5.104.907, mientras que el anuario del INEC trae el conteo del censo, 5.044.197); las de provincias y cantones, la del INEC, la única desagregada. Sin BCCR_TOKEN la del país también usa la del INEC. Las columnas por cantón salen sólo del archivo manual fuentes/oij_homicidios.csv; las provincias y el país, del archivo manual o, si falta el año, del cuadro 'Homicidios dolosos atendidos por el OIJ según provincia' del anuario del INEC. La población por cantón es la del cuadro 'Proyecciones de población según provincia, cantón y distrito' del anuario (2022 en adelante) y, para otros años, de fuentes/inec_poblacion_canton.csv.",
    "graficos": [
     {
      "titulo": "Tasa de homicidios dolosos del país (por 100 mil habitantes)",
@@ -1179,6 +1179,150 @@
      "etiquetas": {
       "inec_ingresos_ingreso_promedio_mensual_hombres_colones_corri": "Hombres",
       "inec_ingresos_ingreso_promedio_mensual_mujeres_colones_corri": "Mujeres"
+     }
+    }
+   ]
+  },
+  {
+   "id": "31_Delitos",
+   "titulo": "Delitos, denuncias y violencia contra las mujeres",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "periodicidad": "Anual",
+   "nota": "Los delitos registrados por el OIJ y las causas del Poder Judicial son denuncias o casos entrados, no hechos: miden lo que llega a las autoridades y dependen de la propensión a denunciar (la cifra oculta), así que una subida puede ser más denuncia y no más delito. La única medida que no depende de denunciar es la victimización de la ENAHO (hoja 34). Anual, fechado al 30 de junio; cada cifra es del año calendario completo. Unidades: casos entrados (Poder Judicial: materia penal = entrada en las oficinas del Ministerio Público más los delitos de acción privada; violencia doméstica = casos entrados en primera instancia de la Ley 7586, donde se tramitan las medidas de protección), denuncias (Ley de Penalización de la Violencia contra las Mujeres, entrada al Ministerio Público; OIJ), víctimas (femicidios, según la Fiscalía Adjunta de Género y la Subcomisión de Prevención del Femicidio) y aprehensiones (MSP). Tasas nacionales con la población del BCCR (92929); provinciales con la población por provincia del anuario del INEC.",
+   "graficos": [
+    {
+     "titulo": "Casos entrados al Ministerio Público por provincia (por 100 mil habitantes)",
+     "columnas": [
+      "delitos_tasa_casos_penales_ministerio_publico_san_jose_por_1",
+      "delitos_tasa_casos_penales_ministerio_publico_alajuela_por_1",
+      "delitos_tasa_casos_penales_ministerio_publico_cartago_por_10",
+      "delitos_tasa_casos_penales_ministerio_publico_heredia_por_10",
+      "delitos_tasa_casos_penales_ministerio_publico_guanacaste_por",
+      "delitos_tasa_casos_penales_ministerio_publico_puntarenas_por",
+      "delitos_tasa_casos_penales_ministerio_publico_limon_por_100"
+     ],
+     "eje_y": "Por 100 mil habitantes",
+     "tipo": "linea",
+     "etiquetas": {
+      "delitos_tasa_casos_penales_ministerio_publico_san_jose_por_1": "San José",
+      "delitos_tasa_casos_penales_ministerio_publico_alajuela_por_1": "Alajuela",
+      "delitos_tasa_casos_penales_ministerio_publico_cartago_por_10": "Cartago",
+      "delitos_tasa_casos_penales_ministerio_publico_heredia_por_10": "Heredia",
+      "delitos_tasa_casos_penales_ministerio_publico_guanacaste_por": "Guanacaste",
+      "delitos_tasa_casos_penales_ministerio_publico_puntarenas_por": "Puntarenas",
+      "delitos_tasa_casos_penales_ministerio_publico_limon_por_100": "Limón"
+     }
+    },
+    {
+     "titulo": "Denuncias y casos por tipo (país, anual)",
+     "columnas": [
+      "delitos_casos_penales_ministerio_publico",
+      "delitos_casos_de_violencia_domestica",
+      "delitos_denuncias_ley_de_penalizacion_vcm",
+      "delitos_delitos_sexuales_fiscalias_de_adultos"
+     ],
+     "eje_y": "Casos",
+     "tipo": "linea",
+     "etiquetas": {
+      "delitos_casos_penales_ministerio_publico": "Penal (Ministerio Público)",
+      "delitos_casos_de_violencia_domestica": "Violencia doméstica",
+      "delitos_denuncias_ley_de_penalizacion_vcm": "Ley de Penalización VcM",
+      "delitos_delitos_sexuales_fiscalias_de_adultos": "Delitos sexuales"
+     }
+    },
+    {
+     "titulo": "Violencia contra las mujeres: femicidios por tipo",
+     "columnas": [
+      "delitos_femicidios_art_21_lpvcm_victimas",
+      "delitos_femicidios_en_otros_contextos_victimas"
+     ],
+     "eje_y": "Víctimas",
+     "tipo": "barras_apiladas",
+     "etiquetas": {
+      "delitos_femicidios_art_21_lpvcm_victimas": "Art. 21 LPVcM",
+      "delitos_femicidios_en_otros_contextos_victimas": "Otros contextos"
+     }
+    },
+    {
+     "titulo": "Aprehensiones de la Fuerza Pública por violencia doméstica y contra las mujeres",
+     "columnas": [
+      "delitos_aprehensiones_violencia_domestica_msp",
+      "delitos_aprehensiones_violencia_contra_mujeres_msp"
+     ],
+     "eje_y": "Aprehensiones",
+     "tipo": "linea",
+     "etiquetas": {
+      "delitos_aprehensiones_violencia_domestica_msp": "Violencia doméstica (Ley 7586)",
+      "delitos_aprehensiones_violencia_contra_mujeres_msp": "Contra las mujeres (Ley 8589)"
+     }
+    },
+    {
+     "titulo": "Tasas nacionales por 100 mil habitantes",
+     "columnas": [
+      "delitos_tasa_homicidios_dolosos_oij_por_100_mil_habitantes_c",
+      "delitos_tasa_delitos_sexuales_fiscalias_de_adultos_por_100_m"
+     ],
+     "eje_y": "Por 100 mil habitantes",
+     "tipo": "linea",
+     "etiquetas": {
+      "delitos_tasa_homicidios_dolosos_oij_por_100_mil_habitantes_c": "Homicidios dolosos",
+      "delitos_tasa_delitos_sexuales_fiscalias_de_adultos_por_100_m": "Delitos sexuales"
+     }
+    }
+   ]
+  },
+  {
+   "id": "32_Penitenciario",
+   "titulo": "Sistema penitenciario",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "periodicidad": "Anual",
+   "nota": "Anual, fechado al 30 de junio; las filas del archivo manual van en su fecha. Población atendida = todas las personas en los programas del sistema penitenciario (institucional, semi institucional, comunidad, penal juvenil y vigilancia electrónica); población penitenciaria = la columna así rotulada en el cuadro 12.9, cuya definición el cuadro no publica (no coincide con ninguna suma de programas del 12.8). Tasas calculadas con la población del BCCR (92929). Hacinamiento = población privada de libertad / capacidad instalada x 100 - 100 (sólo con fuentes/penitenciario.csv). Indiciados = prisión preventiva.",
+   "graficos": [
+    {
+     "titulo": "Población penitenciaria y capacidad instalada",
+     "columnas": [
+      "penitenciario_poblacion_penitenciaria_segun_el_cuadro_12_9_p",
+      "penitenciario_programa_institucional_centros_penales_persona"
+     ],
+     "eje_y": "Personas",
+     "tipo": "linea",
+     "etiquetas": {
+      "penitenciario_poblacion_penitenciaria_segun_el_cuadro_12_9_p": "Población penitenciaria (12.9)",
+      "penitenciario_programa_institucional_centros_penales_persona": "Programa institucional"
+     }
+    },
+    {
+     "titulo": "Tasa penitenciaria (por 100 mil habitantes)",
+     "columnas": [
+      "penitenciario_tasa_penitenciaria_por_100_mil_habitantes_calc",
+      "penitenciario_tasa_penitenciaria_publicada_por_100_mil_habit"
+     ],
+     "eje_y": "Por 100 mil habitantes",
+     "tipo": "linea",
+     "etiquetas": {
+      "penitenciario_tasa_penitenciaria_por_100_mil_habitantes_calc": "Calculada (BCCR)",
+      "penitenciario_tasa_penitenciaria_publicada_por_100_mil_habit": "Publicada (MJP / INEC)"
+     }
+    },
+    {
+     "titulo": "Población atendida por programa",
+     "columnas": [
+      "penitenciario_programa_institucional_centros_penales_persona",
+      "penitenciario_programa_semi_institucional_personas",
+      "penitenciario_programa_en_comunidad_personas",
+      "penitenciario_programa_penal_juvenil_personas",
+      "penitenciario_unidad_de_vigilancia_electronica_personas"
+     ],
+     "eje_y": "Personas",
+     "tipo": "barras_apiladas",
+     "etiquetas": {
+      "penitenciario_programa_institucional_centros_penales_persona": "Institucional",
+      "penitenciario_programa_semi_institucional_personas": "Semi institucional",
+      "penitenciario_programa_en_comunidad_personas": "Comunidad",
+      "penitenciario_programa_penal_juvenil_personas": "Penal juvenil",
+      "penitenciario_unidad_de_vigilancia_electronica_personas": "Vigilancia electrónica"
      }
     }
    ]
@@ -42048,6 +42192,280 @@
    ]
   },
   {
+   "id": "sugef_usd_persona_dolares_otra_persona_extranjera_millones_d",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Otra persona extranjera (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 46570.4462
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 45744.521
+   },
+   "variacion_interanual": {
+    "absoluta": 825.9251,
+    "porcentual": 1.8055
+   },
+   "minimo_ventana": {
+    "fecha": "2023-01-31",
+    "valor": 27221.3532
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 46645.066
+   },
+   "serie": [
+    [
+     "2021-10-31",
+     34710.3989
+    ],
+    [
+     "2021-11-30",
+     34460.1263
+    ],
+    [
+     "2021-12-31",
+     34578.2949
+    ],
+    [
+     "2022-01-31",
+     33886.8222
+    ],
+    [
+     "2022-02-28",
+     33936.1604
+    ],
+    [
+     "2022-03-31",
+     34482.769
+    ],
+    [
+     "2022-04-30",
+     34118.2887
+    ],
+    [
+     "2022-05-31",
+     36305.7788
+    ],
+    [
+     "2022-06-30",
+     36047.5947
+    ],
+    [
+     "2022-07-31",
+     35205.0416
+    ],
+    [
+     "2022-08-31",
+     33226.2271
+    ],
+    [
+     "2022-09-30",
+     32247.0885
+    ],
+    [
+     "2022-10-31",
+     31702.7197
+    ],
+    [
+     "2022-11-30",
+     29754.5475
+    ],
+    [
+     "2022-12-31",
+     28885.9233
+    ],
+    [
+     "2023-01-31",
+     27221.3532
+    ],
+    [
+     "2023-02-28",
+     28355.4474
+    ],
+    [
+     "2023-03-31",
+     27870.2434
+    ],
+    [
+     "2023-04-30",
+     28700.9273
+    ],
+    [
+     "2023-05-31",
+     28349.3419
+    ],
+    [
+     "2023-06-30",
+     27833.2167
+    ],
+    [
+     "2023-07-31",
+     29628.1158
+    ],
+    [
+     "2023-08-31",
+     30299.5639
+    ],
+    [
+     "2023-09-30",
+     30625.7567
+    ],
+    [
+     "2023-10-31",
+     31631.312
+    ],
+    [
+     "2023-11-30",
+     32612.4654
+    ],
+    [
+     "2023-12-31",
+     32075.6309
+    ],
+    [
+     "2024-01-31",
+     30971.1457
+    ],
+    [
+     "2024-02-29",
+     31853.9228
+    ],
+    [
+     "2024-03-31",
+     32052.3238
+    ],
+    [
+     "2024-04-30",
+     32921.9767
+    ],
+    [
+     "2024-05-31",
+     35251.0496
+    ],
+    [
+     "2024-06-30",
+     37617.6315
+    ],
+    [
+     "2024-07-31",
+     38411.4823
+    ],
+    [
+     "2024-08-31",
+     38555.5198
+    ],
+    [
+     "2024-09-30",
+     39077.374
+    ],
+    [
+     "2024-10-31",
+     38023.2518
+    ],
+    [
+     "2024-11-30",
+     38540.9498
+    ],
+    [
+     "2024-12-31",
+     40005.3607
+    ],
+    [
+     "2025-01-31",
+     40971.7099
+    ],
+    [
+     "2025-02-28",
+     41006.8214
+    ],
+    [
+     "2025-03-31",
+     41565.748
+    ],
+    [
+     "2025-04-30",
+     42378.813
+    ],
+    [
+     "2025-05-31",
+     43778.6505
+    ],
+    [
+     "2025-06-30",
+     45064.417
+    ],
+    [
+     "2025-07-31",
+     45230.7294
+    ],
+    [
+     "2025-08-31",
+     45663.0526
+    ],
+    [
+     "2025-09-30",
+     45744.521
+    ],
+    [
+     "2025-10-31",
+     45998.9427
+    ],
+    [
+     "2025-11-30",
+     45690.2227
+    ],
+    [
+     "2025-12-31",
+     46645.066
+    ],
+    [
+     "2026-01-31",
+     46582.6911
+    ],
+    [
+     "2026-02-28",
+     44397.2585
+    ],
+    [
+     "2026-03-31",
+     44517.4343
+    ],
+    [
+     "2026-04-30",
+     45139.4252
+    ],
+    [
+     "2026-05-31",
+     46172.1365
+    ],
+    [
+     "2026-06-30",
+     46367.3429
+    ],
+    [
+     "2026-07-31",
+     45617.4342
+    ],
+    [
+     "2026-08-31",
+     45499.4085
+    ],
+    [
+     "2026-09-30",
+     46570.4462
+    ]
+   ]
+  },
+  {
    "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Dólares, Física nacional (millones de colones)",
@@ -42322,9 +42740,9 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_otra_persona_extranjera_millones_d",
+   "id": "sugef_usd_persona_dolares_empresa_nacional_millones_de_colon",
    "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Otra persona extranjera (millones de colones)",
+   "columna": "Dólares, Empresa nacional (millones de colones)",
    "pilar": "credito",
    "fuente": "SUGEF",
    "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
@@ -42334,264 +42752,264 @@
    "tipo_valor": "nivel",
    "ultimo": {
     "fecha": "2026-09-30",
-    "valor": 46570.4462
+    "valor": 5163538.9408
    },
    "hace_un_anio": {
     "fecha": "2025-09-30",
-    "valor": 45744.521
+    "valor": 5205832.4044
    },
    "variacion_interanual": {
-    "absoluta": 825.9251,
-    "porcentual": 1.8055
+    "absoluta": -42293.4636,
+    "porcentual": -0.8124
    },
    "minimo_ventana": {
-    "fecha": "2023-01-31",
-    "valor": 27221.3532
+    "fecha": "2023-03-31",
+    "valor": 4389621.1192
    },
    "maximo_ventana": {
     "fecha": "2025-12-31",
-    "valor": 46645.066
+    "valor": 5288200.4075
    },
    "serie": [
     [
      "2021-10-31",
-     34710.3989
+     4596348.951
     ],
     [
      "2021-11-30",
-     34460.1263
+     4541516.0673
     ],
     [
      "2021-12-31",
-     34578.2949
+     4792125.7041
     ],
     [
      "2022-01-31",
-     33886.8222
+     4836796.0762
     ],
     [
      "2022-02-28",
-     33936.1604
+     4878624.3878
     ],
     [
      "2022-03-31",
-     34482.769
+     4991002.5686
     ],
     [
      "2022-04-30",
-     34118.2887
+     5030821.2193
     ],
     [
      "2022-05-31",
-     36305.7788
+     5133604.3994
     ],
     [
      "2022-06-30",
-     36047.5947
+     5129851.7244
     ],
     [
      "2022-07-31",
-     35205.0416
+     5016987.4629
     ],
     [
      "2022-08-31",
-     33226.2271
+     4899416.7588
     ],
     [
      "2022-09-30",
-     32247.0885
+     4780328.1053
     ],
     [
      "2022-10-31",
-     31702.7197
+     4794087.7307
     ],
     [
      "2022-11-30",
-     29754.5475
+     4710467.5563
     ],
     [
      "2022-12-31",
-     28885.9233
+     4753714.5502
     ],
     [
      "2023-01-31",
-     27221.3532
+     4438255.7672
     ],
     [
      "2023-02-28",
-     28355.4474
+     4480727.3789
     ],
     [
      "2023-03-31",
-     27870.2434
+     4389621.1192
     ],
     [
      "2023-04-30",
-     28700.9273
+     4491735.6005
     ],
     [
      "2023-05-31",
-     28349.3419
+     4479890.9511
     ],
     [
      "2023-06-30",
-     27833.2167
+     4518442.8781
     ],
     [
      "2023-07-31",
-     29628.1158
+     4545649.738
     ],
     [
      "2023-08-31",
-     30299.5639
+     4478938.0832
     ],
     [
      "2023-09-30",
-     30625.7567
+     4577702.6383
     ],
     [
      "2023-10-31",
-     31631.312
+     4557719.9998
     ],
     [
      "2023-11-30",
-     32612.4654
+     4578571.2329
     ],
     [
      "2023-12-31",
-     32075.6309
+     4586588.9306
     ],
     [
      "2024-01-31",
-     30971.1457
+     4640498.5192
     ],
     [
      "2024-02-29",
-     31853.9228
+     4610442.1845
     ],
     [
      "2024-03-31",
-     32052.3238
+     4552038.4047
     ],
     [
      "2024-04-30",
-     32921.9767
+     4658771.6491
     ],
     [
      "2024-05-31",
-     35251.0496
+     4891846.2482
     ],
     [
      "2024-06-30",
-     37617.6315
+     4899805.9399
     ],
     [
      "2024-07-31",
-     38411.4823
+     4954756.4607
     ],
     [
      "2024-08-31",
-     38555.5198
+     4948058.8507
     ],
     [
      "2024-09-30",
-     39077.374
+     4957461.2905
     ],
     [
      "2024-10-31",
-     38023.2518
+     4865939.6894
     ],
     [
      "2024-11-30",
-     38540.9498
+     4857758.496
     ],
     [
      "2024-12-31",
-     40005.3607
+     4928202.3557
     ],
     [
      "2025-01-31",
-     40971.7099
+     4963228.1907
     ],
     [
      "2025-02-28",
-     41006.8214
+     5010679.6462
     ],
     [
      "2025-03-31",
-     41565.748
+     4996513.1608
     ],
     [
      "2025-04-30",
-     42378.813
+     5098384.3065
     ],
     [
      "2025-05-31",
-     43778.6505
+     5107424.1322
     ],
     [
      "2025-06-30",
-     45064.417
+     5092506.1106
     ],
     [
      "2025-07-31",
-     45230.7294
+     5127347.7544
     ],
     [
      "2025-08-31",
-     45663.0526
+     5143449.5405
     ],
     [
      "2025-09-30",
-     45744.521
+     5205832.4044
     ],
     [
      "2025-10-31",
-     45998.9427
+     5258360.0773
     ],
     [
      "2025-11-30",
-     45690.2227
+     5202988.525
     ],
     [
      "2025-12-31",
-     46645.066
+     5288200.4075
     ],
     [
      "2026-01-31",
-     46582.6911
+     5284869.4376
     ],
     [
      "2026-02-28",
-     44397.2585
+     5032719.8895
     ],
     [
      "2026-03-31",
-     44517.4343
+     4985562.8677
     ],
     [
      "2026-04-30",
-     45139.4252
+     4933878.6932
     ],
     [
      "2026-05-31",
-     46172.1365
+     5031831.7651
     ],
     [
      "2026-06-30",
-     46367.3429
+     5083813.5381
     ],
     [
      "2026-07-31",
-     45617.4342
+     5069509.7811
     ],
     [
      "2026-08-31",
-     45499.4085
+     5093297.2154
     ],
     [
      "2026-09-30",
-     46570.4462
+     5163538.9408
     ]
    ]
   },
@@ -43140,280 +43558,6 @@
     [
      "2026-09-30",
      23058.3738
-    ]
-   ]
-  },
-  {
-   "id": "sugef_usd_persona_dolares_empresa_nacional_millones_de_colon",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Empresa nacional (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 5163538.9408
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 5205832.4044
-   },
-   "variacion_interanual": {
-    "absoluta": -42293.4636,
-    "porcentual": -0.8124
-   },
-   "minimo_ventana": {
-    "fecha": "2023-03-31",
-    "valor": 4389621.1192
-   },
-   "maximo_ventana": {
-    "fecha": "2025-12-31",
-    "valor": 5288200.4075
-   },
-   "serie": [
-    [
-     "2021-10-31",
-     4596348.951
-    ],
-    [
-     "2021-11-30",
-     4541516.0673
-    ],
-    [
-     "2021-12-31",
-     4792125.7041
-    ],
-    [
-     "2022-01-31",
-     4836796.0762
-    ],
-    [
-     "2022-02-28",
-     4878624.3878
-    ],
-    [
-     "2022-03-31",
-     4991002.5686
-    ],
-    [
-     "2022-04-30",
-     5030821.2193
-    ],
-    [
-     "2022-05-31",
-     5133604.3994
-    ],
-    [
-     "2022-06-30",
-     5129851.7244
-    ],
-    [
-     "2022-07-31",
-     5016987.4629
-    ],
-    [
-     "2022-08-31",
-     4899416.7588
-    ],
-    [
-     "2022-09-30",
-     4780328.1053
-    ],
-    [
-     "2022-10-31",
-     4794087.7307
-    ],
-    [
-     "2022-11-30",
-     4710467.5563
-    ],
-    [
-     "2022-12-31",
-     4753714.5502
-    ],
-    [
-     "2023-01-31",
-     4438255.7672
-    ],
-    [
-     "2023-02-28",
-     4480727.3789
-    ],
-    [
-     "2023-03-31",
-     4389621.1192
-    ],
-    [
-     "2023-04-30",
-     4491735.6005
-    ],
-    [
-     "2023-05-31",
-     4479890.9511
-    ],
-    [
-     "2023-06-30",
-     4518442.8781
-    ],
-    [
-     "2023-07-31",
-     4545649.738
-    ],
-    [
-     "2023-08-31",
-     4478938.0832
-    ],
-    [
-     "2023-09-30",
-     4577702.6383
-    ],
-    [
-     "2023-10-31",
-     4557719.9998
-    ],
-    [
-     "2023-11-30",
-     4578571.2329
-    ],
-    [
-     "2023-12-31",
-     4586588.9306
-    ],
-    [
-     "2024-01-31",
-     4640498.5192
-    ],
-    [
-     "2024-02-29",
-     4610442.1845
-    ],
-    [
-     "2024-03-31",
-     4552038.4047
-    ],
-    [
-     "2024-04-30",
-     4658771.6491
-    ],
-    [
-     "2024-05-31",
-     4891846.2482
-    ],
-    [
-     "2024-06-30",
-     4899805.9399
-    ],
-    [
-     "2024-07-31",
-     4954756.4607
-    ],
-    [
-     "2024-08-31",
-     4948058.8507
-    ],
-    [
-     "2024-09-30",
-     4957461.2905
-    ],
-    [
-     "2024-10-31",
-     4865939.6894
-    ],
-    [
-     "2024-11-30",
-     4857758.496
-    ],
-    [
-     "2024-12-31",
-     4928202.3557
-    ],
-    [
-     "2025-01-31",
-     4963228.1907
-    ],
-    [
-     "2025-02-28",
-     5010679.6462
-    ],
-    [
-     "2025-03-31",
-     4996513.1608
-    ],
-    [
-     "2025-04-30",
-     5098384.3065
-    ],
-    [
-     "2025-05-31",
-     5107424.1322
-    ],
-    [
-     "2025-06-30",
-     5092506.1106
-    ],
-    [
-     "2025-07-31",
-     5127347.7544
-    ],
-    [
-     "2025-08-31",
-     5143449.5405
-    ],
-    [
-     "2025-09-30",
-     5205832.4044
-    ],
-    [
-     "2025-10-31",
-     5258360.0773
-    ],
-    [
-     "2025-11-30",
-     5202988.525
-    ],
-    [
-     "2025-12-31",
-     5288200.4075
-    ],
-    [
-     "2026-01-31",
-     5284869.4376
-    ],
-    [
-     "2026-02-28",
-     5032719.8895
-    ],
-    [
-     "2026-03-31",
-     4985562.8677
-    ],
-    [
-     "2026-04-30",
-     4933878.6932
-    ],
-    [
-     "2026-05-31",
-     5031831.7651
-    ],
-    [
-     "2026-06-30",
-     5083813.5381
-    ],
-    [
-     "2026-07-31",
-     5069509.7811
-    ],
-    [
-     "2026-08-31",
-     5093297.2154
-    ],
-    [
-     "2026-09-30",
-     5163538.9408
     ]
    ]
   },
@@ -67520,7 +67664,7 @@
    },
    "minimo_ventana": {
     "fecha": "2022-06-30",
-    "valor": 13.005
+    "valor": 12.8504
    },
    "maximo_ventana": {
     "fecha": "2023-06-30",
@@ -67529,7 +67673,7 @@
    "serie": [
     [
      "2022-06-30",
-     13.005
+     12.8504
     ],
     [
      "2023-06-30",
@@ -67584,6 +67728,56 @@
     [
      "2023-06-30",
      5135912.0
+    ],
+    [
+     "2024-06-30",
+     5164859.9393
+    ],
+    [
+     "2025-06-30",
+     5191823.08
+    ]
+   ]
+  },
+  {
+   "id": "oij_homicidios_poblacion_total_pais_bccr_92929",
+   "hoja": "24_OIJ_homicidios",
+   "columna": "Población total país (BCCR, 92929)",
+   "pilar": "seguridad",
+   "fuente": "OIJ",
+   "codigo": "SDDE 92929",
+   "nombre_fuente": "Población al 30 de junio (BCCR, cuadros 912 y 925)",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 5164859.9393
+   },
+   "variacion_interanual": {
+    "absoluta": 26963.1406,
+    "porcentual": 0.522
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 5104906.8366
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     5104906.8366
+    ],
+    [
+     "2023-06-30",
+     5135911.6221
     ],
     [
      "2024-06-30",
@@ -78368,6 +78562,3206 @@
     [
      "2026-06-30",
      -1.4707
+    ]
+   ]
+  },
+  {
+   "id": "delitos_homicidios_dolosos_oij",
+   "hoja": "31_Delitos",
+   "columna": "Homicidios dolosos (OIJ)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.6",
+   "nombre_fuente": "Homicidios dolosos atendidos por el OIJ según provincia",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 870.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 878.0
+   },
+   "variacion_interanual": {
+    "absoluta": -8.0,
+    "porcentual": -0.9112
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 656.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 906.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     656.0
+    ],
+    [
+     "2023-06-30",
+     906.0
+    ],
+    [
+     "2024-06-30",
+     878.0
+    ],
+    [
+     "2025-06-30",
+     870.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_homicidios_dolosos_oij_por_100_mil_habitantes_c",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Homicidios dolosos (OIJ) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 16.7571
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 16.9995
+   },
+   "variacion_interanual": {
+    "absoluta": -0.2424,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 12.8504
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 17.6405
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     12.8504
+    ],
+    [
+     "2023-06-30",
+     17.6405
+    ],
+    [
+     "2024-06-30",
+     16.9995
+    ],
+    [
+     "2025-06-30",
+     16.7571
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 223220.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 212124.0
+   },
+   "variacion_interanual": {
+    "absoluta": 11096.0,
+    "porcentual": 5.2309
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 202432.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 241607.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     202432.0
+    ],
+    [
+     "2023-06-30",
+     241607.0
+    ],
+    [
+     "2024-06-30",
+     212124.0
+    ],
+    [
+     "2025-06-30",
+     223220.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_por_100_mil_ha",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 4299.4531
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 4107.062
+   },
+   "variacion_interanual": {
+    "absoluta": 192.3911,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 3965.4397
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 4704.2671
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     3965.4397
+    ],
+    [
+     "2023-06-30",
+     4704.2671
+    ],
+    [
+     "2024-06-30",
+     4107.062
+    ],
+    [
+     "2025-06-30",
+     4299.4531
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 50425.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 50578.0
+   },
+   "variacion_interanual": {
+    "absoluta": -153.0,
+    "porcentual": -0.3025
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 49911.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 53540.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     49911.0
+    ],
+    [
+     "2023-06-30",
+     53540.0
+    ],
+    [
+     "2024-06-30",
+     50578.0
+    ],
+    [
+     "2025-06-30",
+     50425.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_por_100_mil_habita",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 971.2388
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 979.2715
+   },
+   "variacion_interanual": {
+    "absoluta": -8.0327,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 971.2388
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1042.4634
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     977.7064
+    ],
+    [
+     "2023-06-30",
+     1042.4634
+    ],
+    [
+     "2024-06-30",
+     979.2715
+    ],
+    [
+     "2025-06-30",
+     971.2388
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_juveniles",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales juveniles",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal juvenil",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 17572.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 15291.0
+   },
+   "variacion_interanual": {
+    "absoluta": 2281.0,
+    "porcentual": 14.9173
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 10594.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 17572.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     10594.0
+    ],
+    [
+     "2023-06-30",
+     14081.0
+    ],
+    [
+     "2024-06-30",
+     15291.0
+    ],
+    [
+     "2025-06-30",
+     17572.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_delitos_sexuales_fiscalias_de_adultos",
+   "hoja": "31_Delitos",
+   "columna": "Delitos sexuales (fiscalías de adultos)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.10",
+   "nombre_fuente": "Casos entrados en las Fiscalías Penales de Adultos por delitos sexuales: Total",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 12075.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 12295.0
+   },
+   "variacion_interanual": {
+    "absoluta": -220.0,
+    "porcentual": -1.7893
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 9902.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 13731.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     9902.0
+    ],
+    [
+     "2023-06-30",
+     13731.0
+    ],
+    [
+     "2024-06-30",
+     12295.0
+    ],
+    [
+     "2025-06-30",
+     12075.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_delitos_sexuales_fiscalias_de_adultos_por_100_m",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Delitos sexuales (fiscalías de adultos) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 232.5773
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 238.051
+   },
+   "variacion_interanual": {
+    "absoluta": -5.4737,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 193.9702
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 267.3527
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     193.9702
+    ],
+    [
+     "2023-06-30",
+     267.3527
+    ],
+    [
+     "2024-06-30",
+     238.051
+    ],
+    [
+     "2025-06-30",
+     232.5773
+    ]
+   ]
+  },
+  {
+   "id": "delitos_violacion_fiscalias_de_adultos",
+   "hoja": "31_Delitos",
+   "columna": "Violación (fiscalías de adultos)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.10",
+   "nombre_fuente": "Casos entrados en las Fiscalías Penales de Adultos por delitos sexuales: Violación",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 1681.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 1664.0
+   },
+   "variacion_interanual": {
+    "absoluta": 17.0,
+    "porcentual": 1.0216
+   },
+   "minimo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 1664.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 2264.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1675.0
+    ],
+    [
+     "2023-06-30",
+     2264.0
+    ],
+    [
+     "2024-06-30",
+     1664.0
+    ],
+    [
+     "2025-06-30",
+     1681.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 25620.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 24517.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1103.0,
+    "porcentual": 4.4989
+   },
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 22926.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 25620.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     23163.0
+    ],
+    [
+     "2023-06-30",
+     22926.0
+    ],
+    [
+     "2024-06-30",
+     24517.0
+    ],
+    [
+     "2025-06-30",
+     25620.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_ley_de_penalizacion_vcm_por_100_mil_h",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias Ley de Penalización VcM (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 493.4683
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 474.6886
+   },
+   "variacion_interanual": {
+    "absoluta": 18.7797,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 446.3862
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 493.4683
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     453.7399
+    ],
+    [
+     "2023-06-30",
+     446.3862
+    ],
+    [
+     "2024-06-30",
+     474.6886
+    ],
+    [
+     "2025-06-30",
+     493.4683
+    ]
+   ]
+  },
+  {
+   "id": "delitos_femicidios_victimas",
+   "hoja": "31_Delitos",
+   "columna": "Femicidios (víctimas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.9",
+   "nombre_fuente": "Femicidios registrados: Total",
+   "periodicidad": "Anual",
+   "unidad": "Víctimas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 37.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 46.0
+   },
+   "variacion_interanual": {
+    "absoluta": -9.0,
+    "porcentual": -19.5652
+   },
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 24.0
+   },
+   "maximo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 46.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     25.0
+    ],
+    [
+     "2023-06-30",
+     24.0
+    ],
+    [
+     "2024-06-30",
+     46.0
+    ],
+    [
+     "2025-06-30",
+     37.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_femicidios_art_21_lpvcm_victimas",
+   "hoja": "31_Delitos",
+   "columna": "Femicidios art. 21 LPVcM (víctimas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.9",
+   "nombre_fuente": "Femicidios registrados: artículo 21 de la LPVcM",
+   "periodicidad": "Anual",
+   "unidad": "Víctimas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 24.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 23.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1.0,
+    "porcentual": 4.3478
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 11.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 24.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     11.0
+    ],
+    [
+     "2023-06-30",
+     13.0
+    ],
+    [
+     "2024-06-30",
+     23.0
+    ],
+    [
+     "2025-06-30",
+     24.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_femicidios_en_otros_contextos_victimas",
+   "hoja": "31_Delitos",
+   "columna": "Femicidios en otros contextos (víctimas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.9",
+   "nombre_fuente": "Femicidios registrados: en otros contextos",
+   "periodicidad": "Anual",
+   "unidad": "Víctimas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 13.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 23.0
+   },
+   "variacion_interanual": {
+    "absoluta": -10.0,
+    "porcentual": -43.4783
+   },
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 11.0
+   },
+   "maximo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 23.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     12.0
+    ],
+    [
+     "2023-06-30",
+     11.0
+    ],
+    [
+     "2024-06-30",
+     23.0
+    ],
+    [
+     "2025-06-30",
+     13.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_aprehensiones_violencia_domestica_msp",
+   "hoja": "31_Delitos",
+   "columna": "Aprehensiones violencia doméstica (MSP)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.5",
+   "nombre_fuente": "Actuaciones policiales en materia de violencia doméstica: Total",
+   "periodicidad": "Anual",
+   "unidad": "Aprehensiones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 9494.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 10491.0
+   },
+   "variacion_interanual": {
+    "absoluta": -997.0,
+    "porcentual": -9.5034
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 9494.0
+   },
+   "maximo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 10491.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     9772.0
+    ],
+    [
+     "2023-06-30",
+     9802.0
+    ],
+    [
+     "2024-06-30",
+     10491.0
+    ],
+    [
+     "2025-06-30",
+     9494.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_aprehensiones_violencia_contra_mujeres_msp",
+   "hoja": "31_Delitos",
+   "columna": "Aprehensiones violencia contra mujeres (MSP)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.6",
+   "nombre_fuente": "Actuaciones policiales en materia de violencia contra las mujeres: Total",
+   "periodicidad": "Anual",
+   "unidad": "Aprehensiones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 7297.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 6422.0
+   },
+   "variacion_interanual": {
+    "absoluta": 875.0,
+    "porcentual": 13.625
+   },
+   "minimo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 6422.0
+   },
+   "maximo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 7413.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     7413.0
+    ],
+    [
+     "2023-06-30",
+     6910.0
+    ],
+    [
+     "2024-06-30",
+     6422.0
+    ],
+    [
+     "2025-06-30",
+     7297.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_poblacion_al_30_de_junio_bccr",
+   "hoja": "31_Delitos",
+   "columna": "Población al 30 de junio (BCCR)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "SDDE 92929",
+   "nombre_fuente": "Población al 30 de junio (BCCR)",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 5164859.9393
+   },
+   "variacion_interanual": {
+    "absoluta": 26963.1406,
+    "porcentual": 0.522
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 5104906.8366
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     5104906.8366
+    ],
+    [
+     "2023-06-30",
+     5135911.6221
+    ],
+    [
+     "2024-06-30",
+     5164859.9393
+    ],
+    [
+     "2025-06-30",
+     5191823.08
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público) (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 76304.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 72878.0
+   },
+   "variacion_interanual": {
+    "absoluta": 3426.0,
+    "porcentual": 4.701
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 69609.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 80703.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     69609.0
+    ],
+    [
+     "2023-06-30",
+     80703.0
+    ],
+    [
+     "2024-06-30",
+     72878.0
+    ],
+    [
+     "2025-06-30",
+     76304.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_san_jose_por_1",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 4590.7152
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 4397.4276
+   },
+   "variacion_interanual": {
+    "absoluta": 193.2876,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 4347.3916
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 4885.8583
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     4347.3916
+    ],
+    [
+     "2023-06-30",
+     4885.8583
+    ],
+    [
+     "2024-06-30",
+     4397.4276
+    ],
+    [
+     "2025-06-30",
+     4590.7152
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 15311.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 15550.0
+   },
+   "variacion_interanual": {
+    "absoluta": -239.0,
+    "porcentual": -1.537
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 15311.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 19226.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     17208.0
+    ],
+    [
+     "2023-06-30",
+     19226.0
+    ],
+    [
+     "2024-06-30",
+     15550.0
+    ],
+    [
+     "2025-06-30",
+     15311.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_san_jose_por_100_m",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 921.1632
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 938.2804
+   },
+   "variacion_interanual": {
+    "absoluta": -17.1172,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 921.1632
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1163.9655
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1074.7161
+    ],
+    [
+     "2023-06-30",
+     1163.9655
+    ],
+    [
+     "2024-06-30",
+     938.2804
+    ],
+    [
+     "2025-06-30",
+     921.1632
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 6913.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 6909.0
+   },
+   "variacion_interanual": {
+    "absoluta": 4.0,
+    "porcentual": 0.0579
+   },
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 5654.0
+   },
+   "maximo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 6922.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     6922.0
+    ],
+    [
+     "2023-06-30",
+     5654.0
+    ],
+    [
+     "2024-06-30",
+     6909.0
+    ],
+    [
+     "2025-06-30",
+     6913.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público) (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 40251.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 37818.0
+   },
+   "variacion_interanual": {
+    "absoluta": 2433.0,
+    "porcentual": 6.4334
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 36836.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 45070.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     36836.0
+    ],
+    [
+     "2023-06-30",
+     45070.0
+    ],
+    [
+     "2024-06-30",
+     37818.0
+    ],
+    [
+     "2025-06-30",
+     40251.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_alajuela_por_1",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 3743.8303
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 3543.6667
+   },
+   "variacion_interanual": {
+    "absoluta": 200.1637,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 3543.6667
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 4256.3257
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     3557.439
+    ],
+    [
+     "2023-06-30",
+     4256.3257
+    ],
+    [
+     "2024-06-30",
+     3543.6667
+    ],
+    [
+     "2025-06-30",
+     3743.8303
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 10177.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 10299.0
+   },
+   "variacion_interanual": {
+    "absoluta": -122.0,
+    "porcentual": -1.1846
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 9734.0
+   },
+   "maximo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 10299.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     9734.0
+    ],
+    [
+     "2023-06-30",
+     10126.0
+    ],
+    [
+     "2024-06-30",
+     10299.0
+    ],
+    [
+     "2025-06-30",
+     10177.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_alajuela_por_100_m",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 946.5842
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 965.049
+   },
+   "variacion_interanual": {
+    "absoluta": -18.4648,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 940.0617
+   },
+   "maximo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 965.049
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     940.0617
+    ],
+    [
+     "2023-06-30",
+     956.2803
+    ],
+    [
+     "2024-06-30",
+     965.049
+    ],
+    [
+     "2025-06-30",
+     946.5842
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 6054.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 5900.0
+   },
+   "variacion_interanual": {
+    "absoluta": 154.0,
+    "porcentual": 2.6102
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 5027.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 6054.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     5027.0
+    ],
+    [
+     "2023-06-30",
+     5268.0
+    ],
+    [
+     "2024-06-30",
+     5900.0
+    ],
+    [
+     "2025-06-30",
+     6054.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público) (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 19479.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 18267.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1212.0,
+    "porcentual": 6.6349
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 16599.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 19766.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     16599.0
+    ],
+    [
+     "2023-06-30",
+     19766.0
+    ],
+    [
+     "2024-06-30",
+     18267.0
+    ],
+    [
+     "2025-06-30",
+     19479.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_cartago_por_10",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 3655.1943
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 3433.1492
+   },
+   "variacion_interanual": {
+    "absoluta": 222.0452,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 3045.174
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 3722.343
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     3045.174
+    ],
+    [
+     "2023-06-30",
+     3722.343
+    ],
+    [
+     "2024-06-30",
+     3433.1492
+    ],
+    [
+     "2025-06-30",
+     3655.1943
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 3912.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 3800.0
+   },
+   "variacion_interanual": {
+    "absoluta": 112.0,
+    "porcentual": 2.9474
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 3552.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 3912.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     3552.0
+    ],
+    [
+     "2023-06-30",
+     3712.0
+    ],
+    [
+     "2024-06-30",
+     3800.0
+    ],
+    [
+     "2025-06-30",
+     3912.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_cartago_por_100_mi",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 734.0788
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 714.1822
+   },
+   "variacion_interanual": {
+    "absoluta": 19.8965,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 651.6331
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 734.0788
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     651.6331
+    ],
+    [
+     "2023-06-30",
+     699.0457
+    ],
+    [
+     "2024-06-30",
+     714.1822
+    ],
+    [
+     "2025-06-30",
+     734.0788
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 2132.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 2011.0
+   },
+   "variacion_interanual": {
+    "absoluta": 121.0,
+    "porcentual": 6.0169
+   },
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1685.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 2132.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1709.0
+    ],
+    [
+     "2023-06-30",
+     1685.0
+    ],
+    [
+     "2024-06-30",
+     2011.0
+    ],
+    [
+     "2025-06-30",
+     2132.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público) (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 19617.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 18817.0
+   },
+   "variacion_interanual": {
+    "absoluta": 800.0,
+    "porcentual": 4.2515
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 17172.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 21193.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     17172.0
+    ],
+    [
+     "2023-06-30",
+     21193.0
+    ],
+    [
+     "2024-06-30",
+     18817.0
+    ],
+    [
+     "2025-06-30",
+     19617.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_heredia_por_10",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 3589.9768
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 3471.0683
+   },
+   "variacion_interanual": {
+    "absoluta": 118.9085,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 3471.0683
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 3942.2974
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     3584.0932
+    ],
+    [
+     "2023-06-30",
+     3942.2974
+    ],
+    [
+     "2024-06-30",
+     3471.0683
+    ],
+    [
+     "2025-06-30",
+     3589.9768
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 4198.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 4251.0
+   },
+   "variacion_interanual": {
+    "absoluta": -53.0,
+    "porcentual": -1.2468
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 3851.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 4261.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     3851.0
+    ],
+    [
+     "2023-06-30",
+     4261.0
+    ],
+    [
+     "2024-06-30",
+     4251.0
+    ],
+    [
+     "2025-06-30",
+     4198.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_heredia_por_100_mi",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 768.2481
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 784.1586
+   },
+   "variacion_interanual": {
+    "absoluta": -15.9105,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 768.2481
+   },
+   "maximo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 803.7703
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     803.7703
+    ],
+    [
+     "2023-06-30",
+     792.6263
+    ],
+    [
+     "2024-06-30",
+     784.1586
+    ],
+    [
+     "2025-06-30",
+     768.2481
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 2112.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 2071.0
+   },
+   "variacion_interanual": {
+    "absoluta": 41.0,
+    "porcentual": 1.9797
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 1783.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 2112.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1783.0
+    ],
+    [
+     "2023-06-30",
+     1971.0
+    ],
+    [
+     "2024-06-30",
+     2071.0
+    ],
+    [
+     "2025-06-30",
+     2112.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público) (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 20789.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 21180.0
+   },
+   "variacion_interanual": {
+    "absoluta": -391.0,
+    "porcentual": -1.8461
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 19114.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 24541.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     19114.0
+    ],
+    [
+     "2023-06-30",
+     24541.0
+    ],
+    [
+     "2024-06-30",
+     21180.0
+    ],
+    [
+     "2025-06-30",
+     20789.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_guanacaste_por",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 5024.3234
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 5161.6873
+   },
+   "variacion_interanual": {
+    "absoluta": -137.3639,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 4630.2397
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 6033.4958
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     4630.2397
+    ],
+    [
+     "2023-06-30",
+     6033.4958
+    ],
+    [
+     "2024-06-30",
+     5161.6873
+    ],
+    [
+     "2025-06-30",
+     5024.3234
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 5914.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 5889.0
+   },
+   "variacion_interanual": {
+    "absoluta": 25.0,
+    "porcentual": 0.4245
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 5772.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 5914.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     5772.0
+    ],
+    [
+     "2023-06-30",
+     5868.0
+    ],
+    [
+     "2024-06-30",
+     5889.0
+    ],
+    [
+     "2025-06-30",
+     5914.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_guanacaste_por_100",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 1429.3063
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 1435.183
+   },
+   "variacion_interanual": {
+    "absoluta": -5.8767,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 1398.2287
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1442.6696
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1398.2287
+    ],
+    [
+     "2023-06-30",
+     1442.6696
+    ],
+    [
+     "2024-06-30",
+     1435.183
+    ],
+    [
+     "2025-06-30",
+     1429.3063
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 2949.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 2735.0
+   },
+   "variacion_interanual": {
+    "absoluta": 214.0,
+    "porcentual": 7.8245
+   },
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 2587.0
+   },
+   "maximo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 2997.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     2997.0
+    ],
+    [
+     "2023-06-30",
+     2587.0
+    ],
+    [
+     "2024-06-30",
+     2735.0
+    ],
+    [
+     "2025-06-30",
+     2949.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público) (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 24864.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 23346.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1518.0,
+    "porcentual": 6.5022
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 22704.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 26308.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     22704.0
+    ],
+    [
+     "2023-06-30",
+     26308.0
+    ],
+    [
+     "2024-06-30",
+     23346.0
+    ],
+    [
+     "2025-06-30",
+     24864.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_puntarenas_por",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 4917.3611
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 4648.237
+   },
+   "variacion_interanual": {
+    "absoluta": 269.1241,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 4539.293
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 5275.3915
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     4539.293
+    ],
+    [
+     "2023-06-30",
+     5275.3915
+    ],
+    [
+     "2024-06-30",
+     4648.237
+    ],
+    [
+     "2025-06-30",
+     4917.3611
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 6052.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 6088.0
+   },
+   "variacion_interanual": {
+    "absoluta": -36.0,
+    "porcentual": -0.5913
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 5392.0
+   },
+   "maximo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 6088.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     5392.0
+    ],
+    [
+     "2023-06-30",
+     5673.0
+    ],
+    [
+     "2024-06-30",
+     6088.0
+    ],
+    [
+     "2025-06-30",
+     6052.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_puntarenas_por_100",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 1196.906
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 1212.1334
+   },
+   "variacion_interanual": {
+    "absoluta": -15.2275,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 1078.0421
+   },
+   "maximo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 1212.1334
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1078.0421
+    ],
+    [
+     "2023-06-30",
+     1137.574
+    ],
+    [
+     "2024-06-30",
+     1212.1334
+    ],
+    [
+     "2025-06-30",
+     1196.906
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 3148.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 2866.0
+   },
+   "variacion_interanual": {
+    "absoluta": 282.0,
+    "porcentual": 9.8395
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 2784.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 3726.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     2784.0
+    ],
+    [
+     "2023-06-30",
+     3726.0
+    ],
+    [
+     "2024-06-30",
+     2866.0
+    ],
+    [
+     "2025-06-30",
+     3148.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_penales_ministerio_publico_limon",
+   "hoja": "31_Delitos",
+   "columna": "Casos penales (Ministerio Público) (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Penal",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 21916.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 19818.0
+   },
+   "variacion_interanual": {
+    "absoluta": 2098.0,
+    "porcentual": 10.5863
+   },
+   "minimo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 19818.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 24026.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     20398.0
+    ],
+    [
+     "2023-06-30",
+     24026.0
+    ],
+    [
+     "2024-06-30",
+     19818.0
+    ],
+    [
+     "2025-06-30",
+     21916.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_penales_ministerio_publico_limon_por_100",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos penales (Ministerio Público) (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 4808.2326
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 4369.0435
+   },
+   "variacion_interanual": {
+    "absoluta": 439.1891,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 4336.4662
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 5324.6563
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     4336.4662
+    ],
+    [
+     "2023-06-30",
+     5324.6563
+    ],
+    [
+     "2024-06-30",
+     4369.0435
+    ],
+    [
+     "2025-06-30",
+     4808.2326
+    ]
+   ]
+  },
+  {
+   "id": "delitos_casos_de_violencia_domestica_limon",
+   "hoja": "31_Delitos",
+   "columna": "Casos de violencia doméstica (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 12.4",
+   "nombre_fuente": "Casos entrados en primera instancia por materia: Violencia doméstica",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 4861.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 4701.0
+   },
+   "variacion_interanual": {
+    "absoluta": 160.0,
+    "porcentual": 3.4035
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 4402.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 4861.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     4402.0
+    ],
+    [
+     "2023-06-30",
+     4674.0
+    ],
+    [
+     "2024-06-30",
+     4701.0
+    ],
+    [
+     "2025-06-30",
+     4861.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_casos_de_violencia_domestica_limon_por_100_mil",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Casos de violencia doméstica (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 1066.4728
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 1036.3747
+   },
+   "variacion_interanual": {
+    "absoluta": 30.0982,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 935.8331
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 1066.4728
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     935.8331
+    ],
+    [
+     "2023-06-30",
+     1035.8546
+    ],
+    [
+     "2024-06-30",
+     1036.3747
+    ],
+    [
+     "2025-06-30",
+     1066.4728
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_ley_de_penalizacion_vcm_limon",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias Ley de Penalización VcM (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "Anuario INEC, cuadro 8.7",
+   "nombre_fuente": "Denuncias presentadas con relación a la Ley de penalización de la violencia contra las mujeres",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 2312.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 2025.0
+   },
+   "variacion_interanual": {
+    "absoluta": 287.0,
+    "porcentual": 14.1728
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 1941.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 2312.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1941.0
+    ],
+    [
+     "2023-06-30",
+     2035.0
+    ],
+    [
+     "2024-06-30",
+     2025.0
+    ],
+    [
+     "2025-06-30",
+     2312.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_poblacion_atendida_todos_los_programas_persona",
+   "hoja": "32_Penitenciario",
+   "columna": "Población atendida, todos los programas (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.8",
+   "nombre_fuente": "Población penitenciaria según tipo de programa: Total",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 34938.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 34330.0
+   },
+   "variacion_interanual": {
+    "absoluta": 608.0,
+    "porcentual": 1.771
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 34062.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 34938.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     34062.0
+    ],
+    [
+     "2023-06-30",
+     34235.0
+    ],
+    [
+     "2024-06-30",
+     34330.0
+    ],
+    [
+     "2025-06-30",
+     34938.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_programa_institucional_centros_penales_persona",
+   "hoja": "32_Penitenciario",
+   "columna": "Programa institucional, centros penales (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.8",
+   "nombre_fuente": "Institucional",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 19221.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 17055.0
+   },
+   "variacion_interanual": {
+    "absoluta": 2166.0,
+    "porcentual": 12.7001
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 14907.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 19221.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     14907.0
+    ],
+    [
+     "2023-06-30",
+     15769.0
+    ],
+    [
+     "2024-06-30",
+     17055.0
+    ],
+    [
+     "2025-06-30",
+     19221.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_programa_semi_institucional_personas",
+   "hoja": "32_Penitenciario",
+   "columna": "Programa semi institucional (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.8",
+   "nombre_fuente": "Semi institucional",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 1298.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 1792.0
+   },
+   "variacion_interanual": {
+    "absoluta": -494.0,
+    "porcentual": -27.567
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 1298.0
+   },
+   "maximo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 2745.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     2745.0
+    ],
+    [
+     "2023-06-30",
+     2127.0
+    ],
+    [
+     "2024-06-30",
+     1792.0
+    ],
+    [
+     "2025-06-30",
+     1298.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_programa_en_comunidad_personas",
+   "hoja": "32_Penitenciario",
+   "columna": "Programa en comunidad (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.8",
+   "nombre_fuente": "Comunidad",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 12490.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 13220.0
+   },
+   "variacion_interanual": {
+    "absoluta": -730.0,
+    "porcentual": -5.5219
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 12490.0
+   },
+   "maximo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 13926.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     13926.0
+    ],
+    [
+     "2023-06-30",
+     13826.0
+    ],
+    [
+     "2024-06-30",
+     13220.0
+    ],
+    [
+     "2025-06-30",
+     12490.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_programa_penal_juvenil_personas",
+   "hoja": "32_Penitenciario",
+   "columna": "Programa penal juvenil (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.8",
+   "nombre_fuente": "Penal Juvenil",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 582.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 559.0
+   },
+   "variacion_interanual": {
+    "absoluta": 23.0,
+    "porcentual": 4.1145
+   },
+   "minimo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 559.0
+   },
+   "maximo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 616.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     616.0
+    ],
+    [
+     "2023-06-30",
+     581.0
+    ],
+    [
+     "2024-06-30",
+     559.0
+    ],
+    [
+     "2025-06-30",
+     582.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_unidad_de_vigilancia_electronica_personas",
+   "hoja": "32_Penitenciario",
+   "columna": "Unidad de vigilancia electrónica (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.8",
+   "nombre_fuente": "Unidad de Vigilancia Electrónica",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 1347.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 1704.0
+   },
+   "variacion_interanual": {
+    "absoluta": -357.0,
+    "porcentual": -20.9507
+   },
+   "minimo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 1347.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1932.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     1868.0
+    ],
+    [
+     "2023-06-30",
+     1932.0
+    ],
+    [
+     "2024-06-30",
+     1704.0
+    ],
+    [
+     "2025-06-30",
+     1347.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_poblacion_penitenciaria_segun_el_cuadro_12_9_p",
+   "hoja": "32_Penitenciario",
+   "columna": "Población penitenciaria según el cuadro 12.9 (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.9",
+   "nombre_fuente": "Población penitenciaria",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 23769.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 22603.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1166.0,
+    "porcentual": 5.1586
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 21383.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 23769.0
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     21383.0
+    ],
+    [
+     "2023-06-30",
+     21780.0
+    ],
+    [
+     "2024-06-30",
+     22603.0
+    ],
+    [
+     "2025-06-30",
+     23769.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_tasa_penitenciaria_publicada_por_100_mil_habit",
+   "hoja": "32_Penitenciario",
+   "columna": "Tasa penitenciaria publicada (por 100 mil habitantes)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "Anuario INEC, cuadro 12.9",
+   "nombre_fuente": "Tasa penitenciaria por 100 mil habitantes",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 457.8161
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 437.6304
+   },
+   "variacion_interanual": {
+    "absoluta": 20.1856,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 418.8715
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 457.8161
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     418.8715
+    ],
+    [
+     "2023-06-30",
+     424.0727
+    ],
+    [
+     "2024-06-30",
+     437.6304
+    ],
+    [
+     "2025-06-30",
+     457.8161
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_tasa_penitenciaria_por_100_mil_habitantes_calc",
+   "hoja": "32_Penitenciario",
+   "columna": "Tasa penitenciaria (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 457.8161
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 437.6305
+   },
+   "variacion_interanual": {
+    "absoluta": 20.1856,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 418.8715
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 457.8161
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     418.8715
+    ],
+    [
+     "2023-06-30",
+     424.0727
+    ],
+    [
+     "2024-06-30",
+     437.6305
+    ],
+    [
+     "2025-06-30",
+     457.8161
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_tasa_de_poblacion_atendida_por_100_mil_habitan",
+   "hoja": "32_Penitenciario",
+   "columna": "Tasa de población atendida (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 672.9428
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 664.684
+   },
+   "variacion_interanual": {
+    "absoluta": 8.2588,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2024-06-30",
+    "valor": 664.684
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 672.9428
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     667.2404
+    ],
+    [
+     "2023-06-30",
+     666.5808
+    ],
+    [
+     "2024-06-30",
+     664.684
+    ],
+    [
+     "2025-06-30",
+     672.9428
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_poblacion_al_30_de_junio_bccr",
+   "hoja": "32_Penitenciario",
+   "columna": "Población al 30 de junio (BCCR)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "SDDE 92929",
+   "nombre_fuente": "Población al 30 de junio (BCCR)",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "hace_un_anio": {
+    "fecha": "2024-06-30",
+    "valor": 5164859.9393
+   },
+   "variacion_interanual": {
+    "absoluta": 26963.1406,
+    "porcentual": 0.522
+   },
+   "minimo_ventana": {
+    "fecha": "2022-06-30",
+    "valor": 5104906.8366
+   },
+   "maximo_ventana": {
+    "fecha": "2025-06-30",
+    "valor": 5191823.08
+   },
+   "serie": [
+    [
+     "2022-06-30",
+     5104906.8366
+    ],
+    [
+     "2023-06-30",
+     5135911.6221
+    ],
+    [
+     "2024-06-30",
+     5164859.9393
+    ],
+    [
+     "2025-06-30",
+     5191823.08
     ]
    ]
   }
