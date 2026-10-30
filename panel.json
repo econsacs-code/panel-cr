@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generado": "2026-10-30T13:55:01-06:00",
+ "generado": "2026-10-30T14:34:57-06:00",
  "excel": "datos_cr_2026-10-30.xlsx",
  "ventana": {
   "desde": "2016-10-30",
@@ -1188,9 +1188,29 @@
    "titulo": "Delitos, denuncias y violencia contra las mujeres",
    "pilar": "seguridad",
    "fuente": "Poder Judicial, OIJ y MSP",
-   "periodicidad": "Anual",
+   "periodicidad": "Anual y Mensual",
    "nota": "Los delitos registrados por el OIJ y las causas del Poder Judicial son denuncias o casos entrados, no hechos: miden lo que llega a las autoridades y dependen de la propensión a denunciar (la cifra oculta), así que una subida puede ser más denuncia y no más delito. La única medida que no depende de denunciar es la victimización de la ENAHO (hoja 34). Anual, fechado al 30 de junio; cada cifra es del año calendario completo. Unidades: casos entrados (Poder Judicial: materia penal = entrada en las oficinas del Ministerio Público más los delitos de acción privada; violencia doméstica = casos entrados en primera instancia de la Ley 7586, donde se tramitan las medidas de protección), denuncias (Ley de Penalización de la Violencia contra las Mujeres, entrada al Ministerio Público; OIJ), víctimas (femicidios, según la Fiscalía Adjunta de Género y la Subcomisión de Prevención del Femicidio) y aprehensiones (MSP). Tasas nacionales con la población del BCCR (92929); provinciales con la población por provincia del anuario del INEC.",
    "graficos": [
+    {
+     "titulo": "Denuncias registradas por el OIJ por tipo de delito (anual; sin barra = año incompleto o no comparable)",
+     "columnas": [
+      "delitos_denuncias_oij_asaltos",
+      "delitos_denuncias_oij_robos",
+      "delitos_denuncias_oij_hurtos",
+      "delitos_denuncias_oij_robo_de_vehiculos",
+      "delitos_denuncias_oij_tachas_de_vehiculos"
+     ],
+     "eje_y": "Denuncias",
+     "tipo": "barras",
+     "etiquetas": {
+      "delitos_denuncias_oij_asaltos": "Asaltos",
+      "delitos_denuncias_oij_robos": "Robos",
+      "delitos_denuncias_oij_hurtos": "Hurtos",
+      "delitos_denuncias_oij_robo_de_vehiculos": "Robo de vehículos",
+      "delitos_denuncias_oij_tachas_de_vehiculos": "Tachas de vehículos"
+     },
+     "base": "anual"
+    },
     {
      "titulo": "Casos entrados al Ministerio Público por provincia (por 100 mil habitantes)",
      "columnas": [
@@ -1269,6 +1289,25 @@
       "delitos_tasa_homicidios_dolosos_oij_por_100_mil_habitantes_c": "Homicidios dolosos",
       "delitos_tasa_delitos_sexuales_fiscalias_de_adultos_por_100_m": "Delitos sexuales"
      }
+    },
+    {
+     "titulo": "Denuncias registradas por el OIJ por tipo de delito (mensual)",
+     "columnas": [
+      "delitos_denuncias_oij_asaltos_mensual",
+      "delitos_denuncias_oij_robos_mensual",
+      "delitos_denuncias_oij_hurtos_mensual",
+      "delitos_denuncias_oij_robo_de_vehiculos_mensual",
+      "delitos_denuncias_oij_tachas_de_vehiculos_mensual"
+     ],
+     "eje_y": "Denuncias",
+     "tipo": "linea",
+     "etiquetas": {
+      "delitos_denuncias_oij_asaltos_mensual": "Asaltos",
+      "delitos_denuncias_oij_robos_mensual": "Robos",
+      "delitos_denuncias_oij_hurtos_mensual": "Hurtos",
+      "delitos_denuncias_oij_robo_de_vehiculos_mensual": "Robo de vehículos",
+      "delitos_denuncias_oij_tachas_de_vehiculos_mensual": "Tachas de vehículos"
+     }
     }
    ]
   },
@@ -1278,32 +1317,45 @@
    "pilar": "seguridad",
    "fuente": "MJP",
    "periodicidad": "Anual",
-   "nota": "Anual, fechado al 30 de junio; las filas del archivo manual van en su fecha. Población atendida = todas las personas en los programas del sistema penitenciario (institucional, semi institucional, comunidad, penal juvenil y vigilancia electrónica); población penitenciaria = la columna así rotulada en el cuadro 12.9, cuya definición el cuadro no publica (no coincide con ninguna suma de programas del 12.8). Tasas calculadas con la población del BCCR (92929). Hacinamiento = población privada de libertad / capacidad instalada x 100 - 100 (sólo con fuentes/penitenciario.csv). Indiciados = prisión preventiva.",
+   "nota": "Anual, al 31 de diciembre (el corte del cuadro 1 del Informe Estadístico Anual del MJP, con el que coinciden los cuadros 12.8 y 12.9 del anuario del INEC). Población atendida = todas las personas en los programas del sistema penitenciario (institucional, semi institucional, comunidad, penal juvenil y vigilancia electrónica); población penitenciaria = la columna así rotulada en el cuadro 12.9, cuya definición el cuadro no publica. Nivel institucional, indiciados (prisión preventiva) y sentenciados: cuadro 1 del Informe Estadístico Anual del MJP vía fuentes/penitenciario.csv; indiciados + sentenciados + apremio por pensión alimentaria = nivel institucional. Sobrepoblación publicada: fila Total de diciembre del cuadro de sobrepoblación relativa del mismo informe (nivel institucional sin pensiones alimentarias y penal juvenil cerrado; (población - capacidad real) / capacidad real x 100, con la capacidad del oficio de la Dirección de Arquitectura vigente). El MJP no publica la capacidad en cifras: el hacinamiento calculado sólo aparece si fuentes/penitenciario.csv trae capacidad. Tasas con la población del BCCR (92929).",
    "graficos": [
     {
-     "titulo": "Población penitenciaria y capacidad instalada",
+     "titulo": "Población en centros penales y capacidad instalada",
      "columnas": [
       "penitenciario_poblacion_penitenciaria_segun_el_cuadro_12_9_p",
-      "penitenciario_programa_institucional_centros_penales_persona"
+      "penitenciario_nivel_institucional_privados_de_libertad_mjp_p"
      ],
      "eje_y": "Personas",
      "tipo": "linea",
      "etiquetas": {
       "penitenciario_poblacion_penitenciaria_segun_el_cuadro_12_9_p": "Población penitenciaria (12.9)",
-      "penitenciario_programa_institucional_centros_penales_persona": "Programa institucional"
+      "penitenciario_nivel_institucional_privados_de_libertad_mjp_p": "Nivel institucional (MJP)"
+     }
+    },
+    {
+     "titulo": "Hacinamiento en los centros penales (% de sobrepoblación, diciembre)",
+     "columnas": [
+      "penitenciario_sobrepoblacion_institucional_y_juvenil_cerrado"
+     ],
+     "eje_y": "Porcentaje",
+     "tipo": "linea",
+     "etiquetas": {
+      "penitenciario_sobrepoblacion_institucional_y_juvenil_cerrado": "Publicada por el MJP"
      }
     },
     {
      "titulo": "Tasa penitenciaria (por 100 mil habitantes)",
      "columnas": [
       "penitenciario_tasa_penitenciaria_por_100_mil_habitantes_calc",
-      "penitenciario_tasa_penitenciaria_publicada_por_100_mil_habit"
+      "penitenciario_tasa_penitenciaria_publicada_por_100_mil_habit",
+      "penitenciario_tasa_de_encarcelamiento_por_100_mil_habitantes"
      ],
      "eje_y": "Por 100 mil habitantes",
      "tipo": "linea",
      "etiquetas": {
       "penitenciario_tasa_penitenciaria_por_100_mil_habitantes_calc": "Calculada (BCCR)",
-      "penitenciario_tasa_penitenciaria_publicada_por_100_mil_habit": "Publicada (MJP / INEC)"
+      "penitenciario_tasa_penitenciaria_publicada_por_100_mil_habit": "Publicada (MJP / INEC)",
+      "penitenciario_tasa_de_encarcelamiento_por_100_mil_habitantes": "Encarcelamiento (manual)"
      }
     },
     {
@@ -1324,6 +1376,15 @@
       "penitenciario_programa_penal_juvenil_personas": "Penal juvenil",
       "penitenciario_unidad_de_vigilancia_electronica_personas": "Vigilancia electrónica"
      }
+    },
+    {
+     "titulo": "Indiciados y sentenciados",
+     "columnas": [
+      "penitenciario_indiciados_prision_preventiva_personas",
+      "penitenciario_sentenciados_personas"
+     ],
+     "eje_y": "Personas",
+     "tipo": "linea"
     }
    ]
   }
@@ -41918,9 +41979,9 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_extranjero_residente_dimex_millone",
+   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
    "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Extranjero residente (DIMEX) (millones de colones)",
+   "columna": "Dólares, Física nacional (millones de colones)",
    "pilar": "credito",
    "fuente": "SUGEF",
    "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
@@ -41930,264 +41991,264 @@
    "tipo_valor": "nivel",
    "ultimo": {
     "fecha": "2026-09-30",
-    "valor": 254284.8755
+    "valor": 2660941.9457
    },
    "hace_un_anio": {
     "fecha": "2025-09-30",
-    "valor": 292390.5102
+    "valor": 2943597.4434
    },
    "variacion_interanual": {
-    "absoluta": -38105.6347,
-    "porcentual": -13.0324
+    "absoluta": -282655.4977,
+    "porcentual": -9.6024
    },
    "minimo_ventana": {
     "fecha": "2026-08-31",
-    "valor": 249947.9259
+    "valor": 2621713.6198
    },
    "maximo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 374264.424
+    "fecha": "2022-05-31",
+    "valor": 3469783.8495
    },
    "serie": [
     [
      "2021-10-31",
-     354940.6289
+     3343458.3483
     ],
     [
      "2021-11-30",
-     347237.5113
+     3297134.6748
     ],
     [
      "2021-12-31",
-     349784.4601
+     3342142.0542
     ],
     [
      "2022-01-31",
-     348759.7836
+     3327305.4854
     ],
     [
      "2022-02-28",
-     349241.9593
+     3312058.8348
     ],
     [
      "2022-03-31",
-     359178.795
+     3392193.2785
     ],
     [
      "2022-04-30",
-     360520.1626
+     3394365.2523
     ],
     [
      "2022-05-31",
-     371296.9584
+     3469783.8495
     ],
     [
      "2022-06-30",
-     374264.424
+     3454882.6075
     ],
     [
      "2022-07-31",
-     362201.604
+     3355865.9723
     ],
     [
      "2022-08-31",
-     349583.1323
+     3231337.583
     ],
     [
      "2022-09-30",
-     339301.7017
+     3138312.8499
     ],
     [
      "2022-10-31",
-     334130.5217
+     3099002.1905
     ],
     [
      "2022-11-30",
-     323751.4287
+     3016961.753
     ],
     [
      "2022-12-31",
-     322269.7977
+     2995261.8142
     ],
     [
      "2023-01-31",
-     297751.4403
+     2773364.8972
     ],
     [
      "2023-02-28",
-     300526.5263
+     2802101.7845
     ],
     [
      "2023-03-31",
-     289689.7263
+     2714608.8741
     ],
     [
      "2023-04-30",
-     292908.0398
+     2751752.7104
     ],
     [
      "2023-05-31",
-     292771.9123
+     2742525.9657
     ],
     [
      "2023-06-30",
-     295722.7721
+     2769481.644
     ],
     [
      "2023-07-31",
-     297212.6375
+     2794797.6337
     ],
     [
      "2023-08-31",
-     294037.9572
+     2768399.245
     ],
     [
      "2023-09-30",
-     295659.0576
+     2817399.5353
     ],
     [
      "2023-10-31",
-     294186.0237
+     2817184.9083
     ],
     [
      "2023-11-30",
-     296900.1481
+     2842104.8722
     ],
     [
      "2023-12-31",
-     292887.1119
+     2807895.1525
     ],
     [
      "2024-01-31",
-     286987.1813
+     2789203.1759
     ],
     [
      "2024-02-29",
-     286018.4096
+     2773834.4551
     ],
     [
      "2024-03-31",
-     281052.2908
+     2737690.8903
     ],
     [
      "2024-04-30",
-     282219.2438
+     2754867.492
     ],
     [
      "2024-05-31",
-     293789.7158
+     2889512.4988
     ],
     [
      "2024-06-30",
-     294204.5748
+     2897829.7374
     ],
     [
      "2024-07-31",
-     295239.4775
+     2904173.8665
     ],
     [
      "2024-08-31",
-     292560.3524
+     2893364.8892
     ],
     [
      "2024-09-30",
-     297412.5547
+     2920240.8669
     ],
     [
      "2024-10-31",
-     294459.3923
+     2886802.4811
     ],
     [
      "2024-11-30",
-     293379.3559
+     2896197.0166
     ],
     [
      "2024-12-31",
-     293631.3034
+     2902824.0534
     ],
     [
      "2025-01-31",
-     292823.7776
+     2899812.7402
     ],
     [
      "2025-02-28",
-     293143.5678
+     2886558.38
     ],
     [
      "2025-03-31",
-     289604.3907
+     2867011.3506
     ],
     [
      "2025-04-30",
-     292849.4251
+     2908721.5533
     ],
     [
      "2025-05-31",
-     294688.0956
+     2925309.7668
     ],
     [
      "2025-06-30",
-     294994.5615
+     2923156.2356
     ],
     [
      "2025-07-31",
-     294592.5589
+     2937954.4076
     ],
     [
      "2025-08-31",
-     294175.8164
+     2944888.2451
     ],
     [
      "2025-09-30",
-     292390.5102
+     2943597.4434
     ],
     [
      "2025-10-31",
-     290420.8536
+     2941870.6981
     ],
     [
      "2025-11-30",
-     286223.7995
+     2919965.2259
     ],
     [
      "2025-12-31",
-     288613.4828
+     2935568.755
     ],
     [
      "2026-01-31",
-     286202.0091
+     2923614.7156
     ],
     [
      "2026-02-28",
-     269953.5743
+     2763628.4454
     ],
     [
      "2026-03-31",
-     263781.7174
+     2717647.7613
     ],
     [
      "2026-04-30",
-     257868.4812
+     2647475.1678
     ],
     [
      "2026-05-31",
-     257402.6985
+     2666376.4995
     ],
     [
      "2026-06-30",
-     254018.4636
+     2648964.397
     ],
     [
      "2026-07-31",
-     252343.5776
+     2634378.0065
     ],
     [
      "2026-08-31",
-     249947.9259
+     2621713.6198
     ],
     [
      "2026-09-30",
-     254284.8755
+     2660941.9457
     ]
    ]
   },
@@ -42466,9 +42527,9 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
+   "id": "sugef_usd_persona_dolares_extranjero_residente_dimex_millone",
    "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Física nacional (millones de colones)",
+   "columna": "Dólares, Extranjero residente (DIMEX) (millones de colones)",
    "pilar": "credito",
    "fuente": "SUGEF",
    "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
@@ -42478,264 +42539,264 @@
    "tipo_valor": "nivel",
    "ultimo": {
     "fecha": "2026-09-30",
-    "valor": 2660941.9457
+    "valor": 254284.8755
    },
    "hace_un_anio": {
     "fecha": "2025-09-30",
-    "valor": 2943597.4434
+    "valor": 292390.5102
    },
    "variacion_interanual": {
-    "absoluta": -282655.4977,
-    "porcentual": -9.6024
+    "absoluta": -38105.6347,
+    "porcentual": -13.0324
    },
    "minimo_ventana": {
     "fecha": "2026-08-31",
-    "valor": 2621713.6198
+    "valor": 249947.9259
    },
    "maximo_ventana": {
-    "fecha": "2022-05-31",
-    "valor": 3469783.8495
+    "fecha": "2022-06-30",
+    "valor": 374264.424
    },
    "serie": [
     [
      "2021-10-31",
-     3343458.3483
+     354940.6289
     ],
     [
      "2021-11-30",
-     3297134.6748
+     347237.5113
     ],
     [
      "2021-12-31",
-     3342142.0542
+     349784.4601
     ],
     [
      "2022-01-31",
-     3327305.4854
+     348759.7836
     ],
     [
      "2022-02-28",
-     3312058.8348
+     349241.9593
     ],
     [
      "2022-03-31",
-     3392193.2785
+     359178.795
     ],
     [
      "2022-04-30",
-     3394365.2523
+     360520.1626
     ],
     [
      "2022-05-31",
-     3469783.8495
+     371296.9584
     ],
     [
      "2022-06-30",
-     3454882.6075
+     374264.424
     ],
     [
      "2022-07-31",
-     3355865.9723
+     362201.604
     ],
     [
      "2022-08-31",
-     3231337.583
+     349583.1323
     ],
     [
      "2022-09-30",
-     3138312.8499
+     339301.7017
     ],
     [
      "2022-10-31",
-     3099002.1905
+     334130.5217
     ],
     [
      "2022-11-30",
-     3016961.753
+     323751.4287
     ],
     [
      "2022-12-31",
-     2995261.8142
+     322269.7977
     ],
     [
      "2023-01-31",
-     2773364.8972
+     297751.4403
     ],
     [
      "2023-02-28",
-     2802101.7845
+     300526.5263
     ],
     [
      "2023-03-31",
-     2714608.8741
+     289689.7263
     ],
     [
      "2023-04-30",
-     2751752.7104
+     292908.0398
     ],
     [
      "2023-05-31",
-     2742525.9657
+     292771.9123
     ],
     [
      "2023-06-30",
-     2769481.644
+     295722.7721
     ],
     [
      "2023-07-31",
-     2794797.6337
+     297212.6375
     ],
     [
      "2023-08-31",
-     2768399.245
+     294037.9572
     ],
     [
      "2023-09-30",
-     2817399.5353
+     295659.0576
     ],
     [
      "2023-10-31",
-     2817184.9083
+     294186.0237
     ],
     [
      "2023-11-30",
-     2842104.8722
+     296900.1481
     ],
     [
      "2023-12-31",
-     2807895.1525
+     292887.1119
     ],
     [
      "2024-01-31",
-     2789203.1759
+     286987.1813
     ],
     [
      "2024-02-29",
-     2773834.4551
+     286018.4096
     ],
     [
      "2024-03-31",
-     2737690.8903
+     281052.2908
     ],
     [
      "2024-04-30",
-     2754867.492
+     282219.2438
     ],
     [
      "2024-05-31",
-     2889512.4988
+     293789.7158
     ],
     [
      "2024-06-30",
-     2897829.7374
+     294204.5748
     ],
     [
      "2024-07-31",
-     2904173.8665
+     295239.4775
     ],
     [
      "2024-08-31",
-     2893364.8892
+     292560.3524
     ],
     [
      "2024-09-30",
-     2920240.8669
+     297412.5547
     ],
     [
      "2024-10-31",
-     2886802.4811
+     294459.3923
     ],
     [
      "2024-11-30",
-     2896197.0166
+     293379.3559
     ],
     [
      "2024-12-31",
-     2902824.0534
+     293631.3034
     ],
     [
      "2025-01-31",
-     2899812.7402
+     292823.7776
     ],
     [
      "2025-02-28",
-     2886558.38
+     293143.5678
     ],
     [
      "2025-03-31",
-     2867011.3506
+     289604.3907
     ],
     [
      "2025-04-30",
-     2908721.5533
+     292849.4251
     ],
     [
      "2025-05-31",
-     2925309.7668
+     294688.0956
     ],
     [
      "2025-06-30",
-     2923156.2356
+     294994.5615
     ],
     [
      "2025-07-31",
-     2937954.4076
+     294592.5589
     ],
     [
      "2025-08-31",
-     2944888.2451
+     294175.8164
     ],
     [
      "2025-09-30",
-     2943597.4434
+     292390.5102
     ],
     [
      "2025-10-31",
-     2941870.6981
+     290420.8536
     ],
     [
      "2025-11-30",
-     2919965.2259
+     286223.7995
     ],
     [
      "2025-12-31",
-     2935568.755
+     288613.4828
     ],
     [
      "2026-01-31",
-     2923614.7156
+     286202.0091
     ],
     [
      "2026-02-28",
-     2763628.4454
+     269953.5743
     ],
     [
      "2026-03-31",
-     2717647.7613
+     263781.7174
     ],
     [
      "2026-04-30",
-     2647475.1678
+     257868.4812
     ],
     [
      "2026-05-31",
-     2666376.4995
+     257402.6985
     ],
     [
      "2026-06-30",
-     2648964.397
+     254018.4636
     ],
     [
      "2026-07-31",
-     2634378.0065
+     252343.5776
     ],
     [
      "2026-08-31",
-     2621713.6198
+     249947.9259
     ],
     [
      "2026-09-30",
-     2660941.9457
+     254284.8755
     ]
    ]
   },
@@ -43010,280 +43071,6 @@
     [
      "2026-09-30",
      5163538.9408
-    ]
-   ]
-  },
-  {
-   "id": "sugef_usd_persona_dolares_empresa_extranjera_no_financiera_m",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Empresa extranjera no financiera (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 92891.9134
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 97010.513
-   },
-   "variacion_interanual": {
-    "absoluta": -4118.5996,
-    "porcentual": -4.2455
-   },
-   "minimo_ventana": {
-    "fecha": "2026-08-31",
-    "valor": 74923.8284
-   },
-   "maximo_ventana": {
-    "fecha": "2024-08-31",
-    "valor": 121612.4527
-   },
-   "serie": [
-    [
-     "2021-10-31",
-     82009.8387
-    ],
-    [
-     "2021-11-30",
-     79583.1343
-    ],
-    [
-     "2021-12-31",
-     90094.3592
-    ],
-    [
-     "2022-01-31",
-     88513.1406
-    ],
-    [
-     "2022-02-28",
-     87104.2753
-    ],
-    [
-     "2022-03-31",
-     97216.862
-    ],
-    [
-     "2022-04-30",
-     89698.732
-    ],
-    [
-     "2022-05-31",
-     92972.1871
-    ],
-    [
-     "2022-06-30",
-     96820.2488
-    ],
-    [
-     "2022-07-31",
-     90574.1066
-    ],
-    [
-     "2022-08-31",
-     92580.2722
-    ],
-    [
-     "2022-09-30",
-     93397.8725
-    ],
-    [
-     "2022-10-31",
-     97698.2307
-    ],
-    [
-     "2022-11-30",
-     99608.4154
-    ],
-    [
-     "2022-12-31",
-     112218.9452
-    ],
-    [
-     "2023-01-31",
-     97034.6911
-    ],
-    [
-     "2023-02-28",
-     99003.8534
-    ],
-    [
-     "2023-03-31",
-     92360.2165
-    ],
-    [
-     "2023-04-30",
-     95484.0216
-    ],
-    [
-     "2023-05-31",
-     106747.2076
-    ],
-    [
-     "2023-06-30",
-     105069.924
-    ],
-    [
-     "2023-07-31",
-     104031.8363
-    ],
-    [
-     "2023-08-31",
-     106657.962
-    ],
-    [
-     "2023-09-30",
-     109290.319
-    ],
-    [
-     "2023-10-31",
-     107312.8851
-    ],
-    [
-     "2023-11-30",
-     111760.3479
-    ],
-    [
-     "2023-12-31",
-     104898.2903
-    ],
-    [
-     "2024-01-31",
-     111982.1762
-    ],
-    [
-     "2024-02-29",
-     110837.2174
-    ],
-    [
-     "2024-03-31",
-     107968.0773
-    ],
-    [
-     "2024-04-30",
-     105031.4466
-    ],
-    [
-     "2024-05-31",
-     117779.6454
-    ],
-    [
-     "2024-06-30",
-     120921.4158
-    ],
-    [
-     "2024-07-31",
-     121021.0984
-    ],
-    [
-     "2024-08-31",
-     121612.4527
-    ],
-    [
-     "2024-09-30",
-     119720.8893
-    ],
-    [
-     "2024-10-31",
-     108493.2318
-    ],
-    [
-     "2024-11-30",
-     104921.8086
-    ],
-    [
-     "2024-12-31",
-     112325.5206
-    ],
-    [
-     "2025-01-31",
-     112406.7864
-    ],
-    [
-     "2025-02-28",
-     105955.243
-    ],
-    [
-     "2025-03-31",
-     100586.6193
-    ],
-    [
-     "2025-04-30",
-     93741.0336
-    ],
-    [
-     "2025-05-31",
-     91085.288
-    ],
-    [
-     "2025-06-30",
-     90516.0741
-    ],
-    [
-     "2025-07-31",
-     85895.6451
-    ],
-    [
-     "2025-08-31",
-     86105.501
-    ],
-    [
-     "2025-09-30",
-     97010.513
-    ],
-    [
-     "2025-10-31",
-     99545.9872
-    ],
-    [
-     "2025-11-30",
-     83269.6951
-    ],
-    [
-     "2025-12-31",
-     105586.7861
-    ],
-    [
-     "2026-01-31",
-     86927.8185
-    ],
-    [
-     "2026-02-28",
-     86967.853
-    ],
-    [
-     "2026-03-31",
-     83390.0654
-    ],
-    [
-     "2026-04-30",
-     79186.3052
-    ],
-    [
-     "2026-05-31",
-     76761.1744
-    ],
-    [
-     "2026-06-30",
-     75587.8118
-    ],
-    [
-     "2026-07-31",
-     82202.1137
-    ],
-    [
-     "2026-08-31",
-     74923.8284
-    ],
-    [
-     "2026-09-30",
-     92891.9134
     ]
    ]
   },
@@ -43832,6 +43619,280 @@
     [
      "2026-09-30",
      0.0
+    ]
+   ]
+  },
+  {
+   "id": "sugef_usd_persona_dolares_empresa_extranjera_no_financiera_m",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Empresa extranjera no financiera (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 92891.9134
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 97010.513
+   },
+   "variacion_interanual": {
+    "absoluta": -4118.5996,
+    "porcentual": -4.2455
+   },
+   "minimo_ventana": {
+    "fecha": "2026-08-31",
+    "valor": 74923.8284
+   },
+   "maximo_ventana": {
+    "fecha": "2024-08-31",
+    "valor": 121612.4527
+   },
+   "serie": [
+    [
+     "2021-10-31",
+     82009.8387
+    ],
+    [
+     "2021-11-30",
+     79583.1343
+    ],
+    [
+     "2021-12-31",
+     90094.3592
+    ],
+    [
+     "2022-01-31",
+     88513.1406
+    ],
+    [
+     "2022-02-28",
+     87104.2753
+    ],
+    [
+     "2022-03-31",
+     97216.862
+    ],
+    [
+     "2022-04-30",
+     89698.732
+    ],
+    [
+     "2022-05-31",
+     92972.1871
+    ],
+    [
+     "2022-06-30",
+     96820.2488
+    ],
+    [
+     "2022-07-31",
+     90574.1066
+    ],
+    [
+     "2022-08-31",
+     92580.2722
+    ],
+    [
+     "2022-09-30",
+     93397.8725
+    ],
+    [
+     "2022-10-31",
+     97698.2307
+    ],
+    [
+     "2022-11-30",
+     99608.4154
+    ],
+    [
+     "2022-12-31",
+     112218.9452
+    ],
+    [
+     "2023-01-31",
+     97034.6911
+    ],
+    [
+     "2023-02-28",
+     99003.8534
+    ],
+    [
+     "2023-03-31",
+     92360.2165
+    ],
+    [
+     "2023-04-30",
+     95484.0216
+    ],
+    [
+     "2023-05-31",
+     106747.2076
+    ],
+    [
+     "2023-06-30",
+     105069.924
+    ],
+    [
+     "2023-07-31",
+     104031.8363
+    ],
+    [
+     "2023-08-31",
+     106657.962
+    ],
+    [
+     "2023-09-30",
+     109290.319
+    ],
+    [
+     "2023-10-31",
+     107312.8851
+    ],
+    [
+     "2023-11-30",
+     111760.3479
+    ],
+    [
+     "2023-12-31",
+     104898.2903
+    ],
+    [
+     "2024-01-31",
+     111982.1762
+    ],
+    [
+     "2024-02-29",
+     110837.2174
+    ],
+    [
+     "2024-03-31",
+     107968.0773
+    ],
+    [
+     "2024-04-30",
+     105031.4466
+    ],
+    [
+     "2024-05-31",
+     117779.6454
+    ],
+    [
+     "2024-06-30",
+     120921.4158
+    ],
+    [
+     "2024-07-31",
+     121021.0984
+    ],
+    [
+     "2024-08-31",
+     121612.4527
+    ],
+    [
+     "2024-09-30",
+     119720.8893
+    ],
+    [
+     "2024-10-31",
+     108493.2318
+    ],
+    [
+     "2024-11-30",
+     104921.8086
+    ],
+    [
+     "2024-12-31",
+     112325.5206
+    ],
+    [
+     "2025-01-31",
+     112406.7864
+    ],
+    [
+     "2025-02-28",
+     105955.243
+    ],
+    [
+     "2025-03-31",
+     100586.6193
+    ],
+    [
+     "2025-04-30",
+     93741.0336
+    ],
+    [
+     "2025-05-31",
+     91085.288
+    ],
+    [
+     "2025-06-30",
+     90516.0741
+    ],
+    [
+     "2025-07-31",
+     85895.6451
+    ],
+    [
+     "2025-08-31",
+     86105.501
+    ],
+    [
+     "2025-09-30",
+     97010.513
+    ],
+    [
+     "2025-10-31",
+     99545.9872
+    ],
+    [
+     "2025-11-30",
+     83269.6951
+    ],
+    [
+     "2025-12-31",
+     105586.7861
+    ],
+    [
+     "2026-01-31",
+     86927.8185
+    ],
+    [
+     "2026-02-28",
+     86967.853
+    ],
+    [
+     "2026-03-31",
+     83390.0654
+    ],
+    [
+     "2026-04-30",
+     79186.3052
+    ],
+    [
+     "2026-05-31",
+     76761.1744
+    ],
+    [
+     "2026-06-30",
+     75587.8118
+    ],
+    [
+     "2026-07-31",
+     82202.1137
+    ],
+    [
+     "2026-08-31",
+     74923.8284
+    ],
+    [
+     "2026-09-30",
+     92891.9134
     ]
    ]
   },
@@ -79439,14 +79500,38 @@
     "porcentual": 0.522
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
-    "valor": 5104906.8366
+    "fecha": "2016-06-30",
+    "valor": 4882722.9688
    },
    "maximo_ventana": {
     "fecha": "2025-06-30",
     "valor": 5191823.08
    },
    "serie": [
+    [
+     "2016-06-30",
+     4882722.9688
+    ],
+    [
+     "2017-06-30",
+     4933518.8706
+    ],
+    [
+     "2018-06-30",
+     4981349.0094
+    ],
+    [
+     "2019-06-30",
+     5020970.0892
+    ],
+    [
+     "2020-06-30",
+     5051379.2311
+    ],
+    [
+     "2021-06-30",
+     5077666.8598
+    ],
     [
      "2022-06-30",
      5104906.8366
@@ -81216,6 +81301,6310 @@
    ]
   },
   {
+   "id": "delitos_denuncias_oij_asaltos",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 12693.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 12693.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 19426.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     16983.0
+    ],
+    [
+     "2017-06-30",
+     17717.0
+    ],
+    [
+     "2018-06-30",
+     19426.0
+    ],
+    [
+     "2019-06-30",
+     18380.0
+    ],
+    [
+     "2023-06-30",
+     12693.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_por_100_mil_habitantes_ca",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 247.1421
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 247.1421
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 389.9747
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     347.8182
+    ],
+    [
+     "2017-06-30",
+     359.1149
+    ],
+    [
+     "2018-06-30",
+     389.9747
+    ],
+    [
+     "2019-06-30",
+     366.0647
+    ],
+    [
+     "2023-06-30",
+     247.1421
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 6006.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 6006.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 10497.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     8521.0
+    ],
+    [
+     "2017-06-30",
+     9494.0
+    ],
+    [
+     "2018-06-30",
+     10497.0
+    ],
+    [
+     "2019-06-30",
+     9505.0
+    ],
+    [
+     "2023-06-30",
+     6006.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_san_jose_por_100_mil_habi",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 363.6106
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 363.6106
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 363.6106
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     363.6106
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1470.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1470.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1918.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1890.0
+    ],
+    [
+     "2017-06-30",
+     1874.0
+    ],
+    [
+     "2018-06-30",
+     1918.0
+    ],
+    [
+     "2019-06-30",
+     1904.0
+    ],
+    [
+     "2023-06-30",
+     1470.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_alajuela_por_100_mil_habi",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 138.824
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 138.824
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 138.824
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     138.824
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1068.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1068.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1375.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1230.0
+    ],
+    [
+     "2017-06-30",
+     1216.0
+    ],
+    [
+     "2018-06-30",
+     1375.0
+    ],
+    [
+     "2019-06-30",
+     1321.0
+    ],
+    [
+     "2023-06-30",
+     1068.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_cartago_por_100_mil_habit",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 201.1263
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 201.1263
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 201.1263
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     201.1263
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1071.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1071.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1984.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1667.0
+    ],
+    [
+     "2017-06-30",
+     1776.0
+    ],
+    [
+     "2018-06-30",
+     1984.0
+    ],
+    [
+     "2019-06-30",
+     1699.0
+    ],
+    [
+     "2023-06-30",
+     1071.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_heredia_por_100_mil_habit",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 199.2262
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 199.2262
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 199.2262
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     199.2262
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 718.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 636.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 745.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     657.0
+    ],
+    [
+     "2017-06-30",
+     636.0
+    ],
+    [
+     "2018-06-30",
+     692.0
+    ],
+    [
+     "2019-06-30",
+     745.0
+    ],
+    [
+     "2023-06-30",
+     718.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_guanacaste_por_100_mil_ha",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 176.523
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 176.523
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 176.523
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     176.523
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 964.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 964.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 1207.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1207.0
+    ],
+    [
+     "2017-06-30",
+     1073.0
+    ],
+    [
+     "2018-06-30",
+     1059.0
+    ],
+    [
+     "2019-06-30",
+     1081.0
+    ],
+    [
+     "2023-06-30",
+     964.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_puntarenas_por_100_mil_ha",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 193.3054
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 193.3054
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 193.3054
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     193.3054
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_limon",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1395.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1395.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 2125.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1811.0
+    ],
+    [
+     "2017-06-30",
+     1648.0
+    ],
+    [
+     "2018-06-30",
+     1901.0
+    ],
+    [
+     "2019-06-30",
+     2125.0
+    ],
+    [
+     "2023-06-30",
+     1395.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_asaltos_limon_por_100_mil_habitan",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Asaltos (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 309.1607
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 309.1607
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 309.1607
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     309.1607
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 10952.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 10952.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 12955.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     11770.0
+    ],
+    [
+     "2017-06-30",
+     11905.0
+    ],
+    [
+     "2018-06-30",
+     12578.0
+    ],
+    [
+     "2019-06-30",
+     12955.0
+    ],
+    [
+     "2023-06-30",
+     10952.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_por_100_mil_habitantes_calc",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 213.2435
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 213.2435
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 258.0179
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     241.054
+    ],
+    [
+     "2017-06-30",
+     241.3085
+    ],
+    [
+     "2018-06-30",
+     252.5019
+    ],
+    [
+     "2019-06-30",
+     258.0179
+    ],
+    [
+     "2023-06-30",
+     213.2435
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 2614.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 2297.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 3002.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     2297.0
+    ],
+    [
+     "2017-06-30",
+     2487.0
+    ],
+    [
+     "2018-06-30",
+     2522.0
+    ],
+    [
+     "2019-06-30",
+     3002.0
+    ],
+    [
+     "2023-06-30",
+     2614.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_san_jose_por_100_mil_habita",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 158.2548
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 158.2548
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 158.2548
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     158.2548
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 2152.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 2152.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 2802.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     2530.0
+    ],
+    [
+     "2017-06-30",
+     2642.0
+    ],
+    [
+     "2018-06-30",
+     2802.0
+    ],
+    [
+     "2019-06-30",
+     2661.0
+    ],
+    [
+     "2023-06-30",
+     2152.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_alajuela_por_100_mil_habita",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 203.2308
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 203.2308
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 203.2308
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     203.2308
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1028.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 1027.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 1524.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1027.0
+    ],
+    [
+     "2017-06-30",
+     1054.0
+    ],
+    [
+     "2018-06-30",
+     1383.0
+    ],
+    [
+     "2019-06-30",
+     1524.0
+    ],
+    [
+     "2023-06-30",
+     1028.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_cartago_por_100_mil_habitan",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 193.5935
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 193.5935
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 193.5935
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     193.5935
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 976.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 870.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1092.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1068.0
+    ],
+    [
+     "2017-06-30",
+     940.0
+    ],
+    [
+     "2018-06-30",
+     1092.0
+    ],
+    [
+     "2019-06-30",
+     870.0
+    ],
+    [
+     "2023-06-30",
+     976.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_heredia_por_100_mil_habitan",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 181.5544
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 181.5544
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 181.5544
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     181.5544
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1256.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1256.0
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 1421.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1367.0
+    ],
+    [
+     "2017-06-30",
+     1421.0
+    ],
+    [
+     "2018-06-30",
+     1335.0
+    ],
+    [
+     "2019-06-30",
+     1388.0
+    ],
+    [
+     "2023-06-30",
+     1256.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_guanacaste_por_100_mil_habi",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 308.7923
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 308.7923
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 308.7923
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     308.7923
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1759.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1759.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 2141.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     2065.0
+    ],
+    [
+     "2017-06-30",
+     1999.0
+    ],
+    [
+     "2018-06-30",
+     2003.0
+    ],
+    [
+     "2019-06-30",
+     2141.0
+    ],
+    [
+     "2023-06-30",
+     1759.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_puntarenas_por_100_mil_habi",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 352.7221
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 352.7221
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 352.7221
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     352.7221
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_limon",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1165.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1165.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1441.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1416.0
+    ],
+    [
+     "2017-06-30",
+     1362.0
+    ],
+    [
+     "2018-06-30",
+     1441.0
+    ],
+    [
+     "2019-06-30",
+     1369.0
+    ],
+    [
+     "2023-06-30",
+     1165.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robos_limon_por_100_mil_habitante",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robos (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 258.188
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 258.188
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 258.188
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     258.188
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 16439.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 16439.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 19508.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     19508.0
+    ],
+    [
+     "2017-06-30",
+     18499.0
+    ],
+    [
+     "2018-06-30",
+     17710.0
+    ],
+    [
+     "2019-06-30",
+     18544.0
+    ],
+    [
+     "2023-06-30",
+     16439.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_por_100_mil_habitantes_cal",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 320.0795
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 320.0795
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 399.5312
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     399.5312
+    ],
+    [
+     "2017-06-30",
+     374.9656
+    ],
+    [
+     "2018-06-30",
+     355.5262
+    ],
+    [
+     "2019-06-30",
+     369.331
+    ],
+    [
+     "2023-06-30",
+     320.0795
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 6408.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 6408.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 7156.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     7076.0
+    ],
+    [
+     "2017-06-30",
+     6940.0
+    ],
+    [
+     "2018-06-30",
+     6480.0
+    ],
+    [
+     "2019-06-30",
+     7156.0
+    ],
+    [
+     "2023-06-30",
+     6408.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_san_jose_por_100_mil_habit",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 387.9482
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 387.9482
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 387.9482
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     387.9482
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 2315.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 2315.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 3197.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     3197.0
+    ],
+    [
+     "2017-06-30",
+     2673.0
+    ],
+    [
+     "2018-06-30",
+     2825.0
+    ],
+    [
+     "2019-06-30",
+     2636.0
+    ],
+    [
+     "2023-06-30",
+     2315.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_alajuela_por_100_mil_habit",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 218.6242
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 218.6242
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 218.6242
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     218.6242
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1078.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1065.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 1210.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1146.0
+    ],
+    [
+     "2017-06-30",
+     1090.0
+    ],
+    [
+     "2018-06-30",
+     1065.0
+    ],
+    [
+     "2019-06-30",
+     1210.0
+    ],
+    [
+     "2023-06-30",
+     1078.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_cartago_por_100_mil_habita",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 203.0095
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 203.0095
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 203.0095
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     203.0095
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1571.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1571.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 1685.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1685.0
+    ],
+    [
+     "2017-06-30",
+     1667.0
+    ],
+    [
+     "2018-06-30",
+     1657.0
+    ],
+    [
+     "2019-06-30",
+     1652.0
+    ],
+    [
+     "2023-06-30",
+     1571.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_heredia_por_100_mil_habita",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 292.2356
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 292.2356
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 292.2356
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     292.2356
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1642.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1642.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 1891.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1891.0
+    ],
+    [
+     "2017-06-30",
+     1862.0
+    ],
+    [
+     "2018-06-30",
+     1759.0
+    ],
+    [
+     "2019-06-30",
+     1837.0
+    ],
+    [
+     "2023-06-30",
+     1642.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_guanacaste_por_100_mil_hab",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 403.6918
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 403.6918
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 403.6918
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     403.6918
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 2120.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 2120.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 3034.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     3034.0
+    ],
+    [
+     "2017-06-30",
+     2864.0
+    ],
+    [
+     "2018-06-30",
+     2655.0
+    ],
+    [
+     "2019-06-30",
+     2676.0
+    ],
+    [
+     "2023-06-30",
+     2120.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_puntarenas_por_100_mil_hab",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 425.1114
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 425.1114
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 425.1114
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     425.1114
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_limon",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1305.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1269.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 1479.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1479.0
+    ],
+    [
+     "2017-06-30",
+     1403.0
+    ],
+    [
+     "2018-06-30",
+     1269.0
+    ],
+    [
+     "2019-06-30",
+     1375.0
+    ],
+    [
+     "2023-06-30",
+     1305.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_hurtos_limon_por_100_mil_habitant",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Hurtos (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 289.2149
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 289.2149
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 289.2149
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     289.2149
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 4759.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 4275.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 5088.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     4275.0
+    ],
+    [
+     "2017-06-30",
+     4944.0
+    ],
+    [
+     "2018-06-30",
+     5088.0
+    ],
+    [
+     "2019-06-30",
+     4508.0
+    ],
+    [
+     "2023-06-30",
+     4759.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_por_100_mil_hab",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 92.6613
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 87.5536
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 102.141
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     87.5536
+    ],
+    [
+     "2017-06-30",
+     100.2124
+    ],
+    [
+     "2018-06-30",
+     102.141
+    ],
+    [
+     "2019-06-30",
+     89.7834
+    ],
+    [
+     "2023-06-30",
+     92.6613
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1434.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1434.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 1785.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     1443.0
+    ],
+    [
+     "2017-06-30",
+     1746.0
+    ],
+    [
+     "2018-06-30",
+     1785.0
+    ],
+    [
+     "2019-06-30",
+     1464.0
+    ],
+    [
+     "2023-06-30",
+     1434.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_san_jose_por_10",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 86.8161
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 86.8161
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 86.8161
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     86.8161
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1225.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 960.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1225.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     960.0
+    ],
+    [
+     "2017-06-30",
+     1107.0
+    ],
+    [
+     "2018-06-30",
+     1192.0
+    ],
+    [
+     "2019-06-30",
+     1050.0
+    ],
+    [
+     "2023-06-30",
+     1225.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_alajuela_por_10",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 115.6867
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 115.6867
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 115.6867
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     115.6867
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 337.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 248.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 337.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     248.0
+    ],
+    [
+     "2017-06-30",
+     260.0
+    ],
+    [
+     "2018-06-30",
+     296.0
+    ],
+    [
+     "2019-06-30",
+     272.0
+    ],
+    [
+     "2023-06-30",
+     337.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_cartago_por_100",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 63.464
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 63.464
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 63.464
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     63.464
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 534.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 534.0
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 748.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     624.0
+    ],
+    [
+     "2017-06-30",
+     748.0
+    ],
+    [
+     "2018-06-30",
+     570.0
+    ],
+    [
+     "2019-06-30",
+     581.0
+    ],
+    [
+     "2023-06-30",
+     534.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_heredia_por_100",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 99.3341
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 99.3341
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 99.3341
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     99.3341
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 336.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 237.0
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 346.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     265.0
+    ],
+    [
+     "2017-06-30",
+     346.0
+    ],
+    [
+     "2018-06-30",
+     334.0
+    ],
+    [
+     "2019-06-30",
+     237.0
+    ],
+    [
+     "2023-06-30",
+     336.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_guanacaste_por",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 82.6068
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 82.6068
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 82.6068
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     82.6068
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 498.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 343.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 498.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     351.0
+    ],
+    [
+     "2017-06-30",
+     343.0
+    ],
+    [
+     "2018-06-30",
+     431.0
+    ],
+    [
+     "2019-06-30",
+     402.0
+    ],
+    [
+     "2023-06-30",
+     498.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_puntarenas_por",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 99.8611
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 99.8611
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 99.8611
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     99.8611
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_limon",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 395.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 384.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 502.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     384.0
+    ],
+    [
+     "2017-06-30",
+     394.0
+    ],
+    [
+     "2018-06-30",
+     480.0
+    ],
+    [
+     "2019-06-30",
+     502.0
+    ],
+    [
+     "2023-06-30",
+     395.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_robo_de_vehiculos_limon_por_100_m",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Robo de vehículos (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 87.5401
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 87.5401
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 87.5401
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     87.5401
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 3863.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 3863.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 5825.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     5383.0
+    ],
+    [
+     "2017-06-30",
+     5640.0
+    ],
+    [
+     "2018-06-30",
+     5825.0
+    ],
+    [
+     "2019-06-30",
+     4522.0
+    ],
+    [
+     "2023-06-30",
+     3863.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_por_100_mil_h",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 75.2155
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 75.2155
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 116.9362
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     110.2459
+    ],
+    [
+     "2017-06-30",
+     114.32
+    ],
+    [
+     "2018-06-30",
+     116.9362
+    ],
+    [
+     "2019-06-30",
+     90.0623
+    ],
+    [
+     "2023-06-30",
+     75.2155
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 1455.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 1455.0
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 2371.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     2145.0
+    ],
+    [
+     "2017-06-30",
+     2371.0
+    ],
+    [
+     "2018-06-30",
+     2356.0
+    ],
+    [
+     "2019-06-30",
+     1881.0
+    ],
+    [
+     "2023-06-30",
+     1455.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_san_jose_por",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 88.0875
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 88.0875
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 88.0875
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     88.0875
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 523.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 523.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 819.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     758.0
+    ],
+    [
+     "2017-06-30",
+     750.0
+    ],
+    [
+     "2018-06-30",
+     819.0
+    ],
+    [
+     "2019-06-30",
+     584.0
+    ],
+    [
+     "2023-06-30",
+     523.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_alajuela_por",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 49.3911
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 49.3911
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 49.3911
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     49.3911
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 310.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 221.0
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 411.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     382.0
+    ],
+    [
+     "2017-06-30",
+     411.0
+    ],
+    [
+     "2018-06-30",
+     384.0
+    ],
+    [
+     "2019-06-30",
+     221.0
+    ],
+    [
+     "2023-06-30",
+     310.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_cartago_por_1",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 58.3794
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 58.3794
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 58.3794
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     58.3794
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 260.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 260.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 614.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     614.0
+    ],
+    [
+     "2017-06-30",
+     512.0
+    ],
+    [
+     "2018-06-30",
+     445.0
+    ],
+    [
+     "2019-06-30",
+     344.0
+    ],
+    [
+     "2023-06-30",
+     260.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_heredia_por_1",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 48.3649
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 48.3649
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 48.3649
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     48.3649
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 278.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 278.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 563.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     382.0
+    ],
+    [
+     "2017-06-30",
+     509.0
+    ],
+    [
+     "2018-06-30",
+     563.0
+    ],
+    [
+     "2019-06-30",
+     437.0
+    ],
+    [
+     "2023-06-30",
+     278.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_guanacaste_po",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 68.3473
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 68.3473
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 68.3473
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     68.3473
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 818.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 811.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 976.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     927.0
+    ],
+    [
+     "2017-06-30",
+     879.0
+    ],
+    [
+     "2018-06-30",
+     976.0
+    ],
+    [
+     "2019-06-30",
+     811.0
+    ],
+    [
+     "2023-06-30",
+     818.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_puntarenas_po",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 164.0288
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 164.0288
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 164.0288
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     164.0288
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_limon",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 219.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 175.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 282.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     175.0
+    ],
+    [
+     "2017-06-30",
+     208.0
+    ],
+    [
+     "2018-06-30",
+     282.0
+    ],
+    [
+     "2019-06-30",
+     244.0
+    ],
+    [
+     "2023-06-30",
+     219.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_tachas_de_vehiculos_limon_por_100",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Tachas de vehículos (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 48.5349
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 48.5349
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 48.5349
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     48.5349
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 903.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 563.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 903.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     626.0
+    ],
+    [
+     "2017-06-30",
+     658.0
+    ],
+    [
+     "2018-06-30",
+     641.0
+    ],
+    [
+     "2019-06-30",
+     563.0
+    ],
+    [
+     "2023-06-30",
+     903.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_por_100_mil_habitantes",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 17.5821
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 11.213
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 17.5821
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     12.8207
+    ],
+    [
+     "2017-06-30",
+     13.3373
+    ],
+    [
+     "2018-06-30",
+     12.868
+    ],
+    [
+     "2019-06-30",
+     11.213
+    ],
+    [
+     "2023-06-30",
+     17.5821
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_san_jose",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (San José)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 216.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 180.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 262.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     262.0
+    ],
+    [
+     "2017-06-30",
+     249.0
+    ],
+    [
+     "2018-06-30",
+     211.0
+    ],
+    [
+     "2019-06-30",
+     180.0
+    ],
+    [
+     "2023-06-30",
+     216.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_san_jose_por_100_mil_h",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (San José) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 13.0769
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 13.0769
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 13.0769
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     13.0769
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_alajuela",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (Alajuela)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 103.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 54.0
+   },
+   "maximo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 107.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     54.0
+    ],
+    [
+     "2017-06-30",
+     107.0
+    ],
+    [
+     "2018-06-30",
+     97.0
+    ],
+    [
+     "2019-06-30",
+     68.0
+    ],
+    [
+     "2023-06-30",
+     103.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_alajuela_por_100_mil_h",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (Alajuela) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 9.7271
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 9.7271
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 9.7271
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     9.7271
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_cartago",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (Cartago)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 73.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 45.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 73.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     45.0
+    ],
+    [
+     "2017-06-30",
+     48.0
+    ],
+    [
+     "2018-06-30",
+     65.0
+    ],
+    [
+     "2019-06-30",
+     49.0
+    ],
+    [
+     "2023-06-30",
+     73.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_cartago_por_100_mil_ha",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (Cartago) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 13.7474
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 13.7474
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 13.7474
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     13.7474
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_heredia",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (Heredia)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 48.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2016-06-30",
+    "valor": 33.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 51.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     33.0
+    ],
+    [
+     "2017-06-30",
+     36.0
+    ],
+    [
+     "2018-06-30",
+     51.0
+    ],
+    [
+     "2019-06-30",
+     36.0
+    ],
+    [
+     "2023-06-30",
+     48.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_heredia_por_100_mil_ha",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (Heredia) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 8.9289
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 8.9289
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 8.9289
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     8.9289
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_guanacaste",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (Guanacaste)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 100.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 22.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 100.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     44.0
+    ],
+    [
+     "2017-06-30",
+     47.0
+    ],
+    [
+     "2018-06-30",
+     22.0
+    ],
+    [
+     "2019-06-30",
+     38.0
+    ],
+    [
+     "2023-06-30",
+     100.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_guanacaste_por_100_mil",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (Guanacaste) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 24.5854
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 24.5854
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 24.5854
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     24.5854
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_puntarenas",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (Puntarenas)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 150.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2017-06-30",
+    "valor": 44.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 150.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     56.0
+    ],
+    [
+     "2017-06-30",
+     44.0
+    ],
+    [
+     "2018-06-30",
+     59.0
+    ],
+    [
+     "2019-06-30",
+     76.0
+    ],
+    [
+     "2023-06-30",
+     150.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_puntarenas_por_100_mil",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (Puntarenas) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 30.0786
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 30.0786
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 30.0786
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     30.0786
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_limon",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (Limón)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Anual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 213.0
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2019-06-30",
+    "valor": 116.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 213.0
+   },
+   "serie": [
+    [
+     "2016-06-30",
+     132.0
+    ],
+    [
+     "2017-06-30",
+     127.0
+    ],
+    [
+     "2018-06-30",
+     136.0
+    ],
+    [
+     "2019-06-30",
+     116.0
+    ],
+    [
+     "2023-06-30",
+     213.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_tasa_denuncias_oij_homicidios_limon_por_100_mil_habi",
+   "hoja": "31_Delitos",
+   "columna": "Tasa: Denuncias OIJ: Homicidios (Limón) (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2023-06-30",
+    "valor": 47.2052
+   },
+   "hace_un_anio": null,
+   "variacion_interanual": null,
+   "minimo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 47.2052
+   },
+   "maximo_ventana": {
+    "fecha": "2023-06-30",
+    "valor": 47.2052
+   },
+   "serie": [
+    [
+     "2023-06-30",
+     47.2052
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_asaltos_mensual",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Asaltos (mensual)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Mensual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2024-11-30",
+    "valor": 848.0
+   },
+   "hace_un_anio": {
+    "fecha": "2023-11-30",
+    "valor": 1015.0
+   },
+   "variacion_interanual": {
+    "absoluta": -167.0,
+    "porcentual": -16.4532
+   },
+   "minimo_ventana": {
+    "fecha": "2020-04-30",
+    "valor": 684.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-09-30",
+    "valor": 1864.0
+   },
+   "serie": [
+    [
+     "2016-01-31",
+     1283.0
+    ],
+    [
+     "2016-02-29",
+     1271.0
+    ],
+    [
+     "2016-03-31",
+     1353.0
+    ],
+    [
+     "2016-04-30",
+     1281.0
+    ],
+    [
+     "2016-05-31",
+     1451.0
+    ],
+    [
+     "2016-06-30",
+     1308.0
+    ],
+    [
+     "2016-07-31",
+     1578.0
+    ],
+    [
+     "2016-08-31",
+     1517.0
+    ],
+    [
+     "2016-09-30",
+     1482.0
+    ],
+    [
+     "2016-10-31",
+     1679.0
+    ],
+    [
+     "2016-11-30",
+     1417.0
+    ],
+    [
+     "2016-12-31",
+     1363.0
+    ],
+    [
+     "2017-01-31",
+     1299.0
+    ],
+    [
+     "2017-02-28",
+     1178.0
+    ],
+    [
+     "2017-03-31",
+     1485.0
+    ],
+    [
+     "2017-04-30",
+     1385.0
+    ],
+    [
+     "2017-05-31",
+     1562.0
+    ],
+    [
+     "2017-06-30",
+     1588.0
+    ],
+    [
+     "2017-07-31",
+     1280.0
+    ],
+    [
+     "2017-08-31",
+     1531.0
+    ],
+    [
+     "2017-09-30",
+     1475.0
+    ],
+    [
+     "2017-10-31",
+     1624.0
+    ],
+    [
+     "2017-11-30",
+     1791.0
+    ],
+    [
+     "2017-12-31",
+     1519.0
+    ],
+    [
+     "2018-01-31",
+     1388.0
+    ],
+    [
+     "2018-02-28",
+     1541.0
+    ],
+    [
+     "2018-03-31",
+     1585.0
+    ],
+    [
+     "2018-04-30",
+     1510.0
+    ],
+    [
+     "2018-05-31",
+     1563.0
+    ],
+    [
+     "2018-06-30",
+     1463.0
+    ],
+    [
+     "2018-07-31",
+     1675.0
+    ],
+    [
+     "2018-08-31",
+     1768.0
+    ],
+    [
+     "2018-09-30",
+     1864.0
+    ],
+    [
+     "2018-10-31",
+     1864.0
+    ],
+    [
+     "2018-11-30",
+     1731.0
+    ],
+    [
+     "2018-12-31",
+     1474.0
+    ],
+    [
+     "2019-01-31",
+     1375.0
+    ],
+    [
+     "2019-02-28",
+     1432.0
+    ],
+    [
+     "2019-03-31",
+     1689.0
+    ],
+    [
+     "2019-04-30",
+     1483.0
+    ],
+    [
+     "2019-05-31",
+     1574.0
+    ],
+    [
+     "2019-06-30",
+     1490.0
+    ],
+    [
+     "2019-07-31",
+     1541.0
+    ],
+    [
+     "2019-08-31",
+     1640.0
+    ],
+    [
+     "2019-09-30",
+     1574.0
+    ],
+    [
+     "2019-10-31",
+     1657.0
+    ],
+    [
+     "2019-11-30",
+     1530.0
+    ],
+    [
+     "2019-12-31",
+     1395.0
+    ],
+    [
+     "2020-01-31",
+     1445.0
+    ],
+    [
+     "2020-02-29",
+     1387.0
+    ],
+    [
+     "2020-03-31",
+     1226.0
+    ],
+    [
+     "2020-04-30",
+     684.0
+    ],
+    [
+     "2020-05-31",
+     838.0
+    ],
+    [
+     "2020-06-30",
+     759.0
+    ],
+    [
+     "2020-07-31",
+     734.0
+    ],
+    [
+     "2020-08-31",
+     862.0
+    ],
+    [
+     "2020-09-30",
+     809.0
+    ],
+    [
+     "2020-10-31",
+     884.0
+    ],
+    [
+     "2021-01-31",
+     896.0
+    ],
+    [
+     "2021-02-28",
+     897.0
+    ],
+    [
+     "2021-03-31",
+     971.0
+    ],
+    [
+     "2021-04-30",
+     850.0
+    ],
+    [
+     "2021-05-31",
+     860.0
+    ],
+    [
+     "2021-06-30",
+     862.0
+    ],
+    [
+     "2021-07-31",
+     909.0
+    ],
+    [
+     "2021-08-31",
+     858.0
+    ],
+    [
+     "2021-09-30",
+     869.0
+    ],
+    [
+     "2021-10-31",
+     1012.0
+    ],
+    [
+     "2021-11-30",
+     913.0
+    ],
+    [
+     "2023-01-31",
+     1069.0
+    ],
+    [
+     "2023-02-28",
+     970.0
+    ],
+    [
+     "2023-03-31",
+     1166.0
+    ],
+    [
+     "2023-04-30",
+     1083.0
+    ],
+    [
+     "2023-05-31",
+     1106.0
+    ],
+    [
+     "2023-06-30",
+     1116.0
+    ],
+    [
+     "2023-07-31",
+     1115.0
+    ],
+    [
+     "2023-08-31",
+     1006.0
+    ],
+    [
+     "2023-09-30",
+     1064.0
+    ],
+    [
+     "2023-10-31",
+     1014.0
+    ],
+    [
+     "2023-11-30",
+     1015.0
+    ],
+    [
+     "2023-12-31",
+     969.0
+    ],
+    [
+     "2024-01-31",
+     947.0
+    ],
+    [
+     "2024-02-29",
+     906.0
+    ],
+    [
+     "2024-03-31",
+     960.0
+    ],
+    [
+     "2024-04-30",
+     922.0
+    ],
+    [
+     "2024-05-31",
+     964.0
+    ],
+    [
+     "2024-06-30",
+     877.0
+    ],
+    [
+     "2024-07-31",
+     1020.0
+    ],
+    [
+     "2024-08-31",
+     1019.0
+    ],
+    [
+     "2024-09-30",
+     1023.0
+    ],
+    [
+     "2024-10-31",
+     931.0
+    ],
+    [
+     "2024-11-30",
+     848.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_homicidios_mensual",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Homicidios (mensual)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Mensual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2024-11-30",
+    "valor": 74.0
+   },
+   "hace_un_anio": {
+    "fecha": "2023-11-30",
+    "valor": 83.0
+   },
+   "variacion_interanual": {
+    "absoluta": -9.0,
+    "porcentual": -10.8434
+   },
+   "minimo_ventana": {
+    "fecha": "2020-04-30",
+    "valor": 36.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-08-31",
+    "valor": 88.0
+   },
+   "serie": [
+    [
+     "2016-01-31",
+     49.0
+    ],
+    [
+     "2016-02-29",
+     48.0
+    ],
+    [
+     "2016-03-31",
+     46.0
+    ],
+    [
+     "2016-04-30",
+     37.0
+    ],
+    [
+     "2016-05-31",
+     49.0
+    ],
+    [
+     "2016-06-30",
+     57.0
+    ],
+    [
+     "2016-08-31",
+     50.0
+    ],
+    [
+     "2016-09-30",
+     43.0
+    ],
+    [
+     "2016-10-31",
+     74.0
+    ],
+    [
+     "2016-11-30",
+     62.0
+    ],
+    [
+     "2016-12-31",
+     50.0
+    ],
+    [
+     "2017-01-31",
+     55.0
+    ],
+    [
+     "2017-03-31",
+     63.0
+    ],
+    [
+     "2017-05-31",
+     45.0
+    ],
+    [
+     "2017-06-30",
+     60.0
+    ],
+    [
+     "2017-07-31",
+     70.0
+    ],
+    [
+     "2017-08-31",
+     62.0
+    ],
+    [
+     "2017-09-30",
+     54.0
+    ],
+    [
+     "2017-10-31",
+     56.0
+    ],
+    [
+     "2017-11-30",
+     48.0
+    ],
+    [
+     "2017-12-31",
+     54.0
+    ],
+    [
+     "2018-01-31",
+     67.0
+    ],
+    [
+     "2018-02-28",
+     50.0
+    ],
+    [
+     "2018-03-31",
+     53.0
+    ],
+    [
+     "2018-05-31",
+     64.0
+    ],
+    [
+     "2018-06-30",
+     49.0
+    ],
+    [
+     "2018-08-31",
+     50.0
+    ],
+    [
+     "2018-11-30",
+     53.0
+    ],
+    [
+     "2018-12-31",
+     47.0
+    ],
+    [
+     "2019-02-28",
+     47.0
+    ],
+    [
+     "2019-03-31",
+     45.0
+    ],
+    [
+     "2019-04-30",
+     42.0
+    ],
+    [
+     "2019-05-31",
+     44.0
+    ],
+    [
+     "2019-06-30",
+     41.0
+    ],
+    [
+     "2019-07-31",
+     40.0
+    ],
+    [
+     "2019-08-31",
+     60.0
+    ],
+    [
+     "2019-09-30",
+     49.0
+    ],
+    [
+     "2019-10-31",
+     54.0
+    ],
+    [
+     "2019-11-30",
+     60.0
+    ],
+    [
+     "2019-12-31",
+     39.0
+    ],
+    [
+     "2020-01-31",
+     49.0
+    ],
+    [
+     "2020-03-31",
+     48.0
+    ],
+    [
+     "2020-04-30",
+     36.0
+    ],
+    [
+     "2020-05-31",
+     48.0
+    ],
+    [
+     "2020-06-30",
+     42.0
+    ],
+    [
+     "2020-07-31",
+     48.0
+    ],
+    [
+     "2020-08-31",
+     41.0
+    ],
+    [
+     "2020-09-30",
+     52.0
+    ],
+    [
+     "2020-10-31",
+     58.0
+    ],
+    [
+     "2021-02-28",
+     47.0
+    ],
+    [
+     "2021-03-31",
+     55.0
+    ],
+    [
+     "2021-04-30",
+     48.0
+    ],
+    [
+     "2021-05-31",
+     48.0
+    ],
+    [
+     "2021-06-30",
+     45.0
+    ],
+    [
+     "2021-07-31",
+     38.0
+    ],
+    [
+     "2021-08-31",
+     55.0
+    ],
+    [
+     "2021-09-30",
+     37.0
+    ],
+    [
+     "2021-10-31",
+     58.0
+    ],
+    [
+     "2021-11-30",
+     57.0
+    ],
+    [
+     "2023-01-31",
+     77.0
+    ],
+    [
+     "2023-02-28",
+     70.0
+    ],
+    [
+     "2023-03-31",
+     66.0
+    ],
+    [
+     "2023-04-30",
+     84.0
+    ],
+    [
+     "2023-05-31",
+     77.0
+    ],
+    [
+     "2023-06-30",
+     72.0
+    ],
+    [
+     "2023-07-31",
+     70.0
+    ],
+    [
+     "2023-08-31",
+     88.0
+    ],
+    [
+     "2023-09-30",
+     77.0
+    ],
+    [
+     "2023-10-31",
+     73.0
+    ],
+    [
+     "2023-11-30",
+     83.0
+    ],
+    [
+     "2023-12-31",
+     66.0
+    ],
+    [
+     "2024-02-29",
+     88.0
+    ],
+    [
+     "2024-03-31",
+     75.0
+    ],
+    [
+     "2024-04-30",
+     61.0
+    ],
+    [
+     "2024-05-31",
+     66.0
+    ],
+    [
+     "2024-06-30",
+     75.0
+    ],
+    [
+     "2024-07-31",
+     79.0
+    ],
+    [
+     "2024-08-31",
+     74.0
+    ],
+    [
+     "2024-09-30",
+     70.0
+    ],
+    [
+     "2024-10-31",
+     70.0
+    ],
+    [
+     "2024-11-30",
+     74.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_hurtos_mensual",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Hurtos (mensual)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Mensual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2024-11-30",
+    "valor": 1060.0
+   },
+   "hace_un_anio": {
+    "fecha": "2023-11-30",
+    "valor": 1219.0
+   },
+   "variacion_interanual": {
+    "absoluta": -159.0,
+    "porcentual": -13.0435
+   },
+   "minimo_ventana": {
+    "fecha": "2020-04-30",
+    "valor": 566.0
+   },
+   "maximo_ventana": {
+    "fecha": "2016-12-31",
+    "valor": 1867.0
+   },
+   "serie": [
+    [
+     "2016-01-31",
+     1540.0
+    ],
+    [
+     "2016-02-29",
+     1586.0
+    ],
+    [
+     "2016-03-31",
+     1604.0
+    ],
+    [
+     "2016-04-30",
+     1611.0
+    ],
+    [
+     "2016-05-31",
+     1665.0
+    ],
+    [
+     "2016-06-30",
+     1597.0
+    ],
+    [
+     "2016-07-31",
+     1685.0
+    ],
+    [
+     "2016-08-31",
+     1590.0
+    ],
+    [
+     "2016-09-30",
+     1675.0
+    ],
+    [
+     "2016-10-31",
+     1551.0
+    ],
+    [
+     "2016-11-30",
+     1537.0
+    ],
+    [
+     "2016-12-31",
+     1867.0
+    ],
+    [
+     "2017-01-31",
+     1516.0
+    ],
+    [
+     "2017-02-28",
+     1510.0
+    ],
+    [
+     "2017-03-31",
+     1737.0
+    ],
+    [
+     "2017-04-30",
+     1470.0
+    ],
+    [
+     "2017-05-31",
+     1601.0
+    ],
+    [
+     "2017-06-30",
+     1584.0
+    ],
+    [
+     "2017-07-31",
+     1292.0
+    ],
+    [
+     "2017-08-31",
+     1542.0
+    ],
+    [
+     "2017-09-30",
+     1461.0
+    ],
+    [
+     "2017-10-31",
+     1518.0
+    ],
+    [
+     "2017-11-30",
+     1541.0
+    ],
+    [
+     "2017-12-31",
+     1727.0
+    ],
+    [
+     "2018-01-31",
+     1475.0
+    ],
+    [
+     "2018-02-28",
+     1360.0
+    ],
+    [
+     "2018-03-31",
+     1600.0
+    ],
+    [
+     "2018-04-30",
+     1512.0
+    ],
+    [
+     "2018-05-31",
+     1476.0
+    ],
+    [
+     "2018-06-30",
+     1570.0
+    ],
+    [
+     "2018-07-31",
+     1548.0
+    ],
+    [
+     "2018-08-31",
+     1560.0
+    ],
+    [
+     "2018-09-30",
+     1379.0
+    ],
+    [
+     "2018-10-31",
+     1335.0
+    ],
+    [
+     "2018-11-30",
+     1404.0
+    ],
+    [
+     "2018-12-31",
+     1491.0
+    ],
+    [
+     "2019-01-31",
+     1493.0
+    ],
+    [
+     "2019-02-28",
+     1334.0
+    ],
+    [
+     "2019-03-31",
+     1659.0
+    ],
+    [
+     "2019-04-30",
+     1535.0
+    ],
+    [
+     "2019-05-31",
+     1518.0
+    ],
+    [
+     "2019-06-30",
+     1571.0
+    ],
+    [
+     "2019-07-31",
+     1557.0
+    ],
+    [
+     "2019-08-31",
+     1655.0
+    ],
+    [
+     "2019-09-30",
+     1499.0
+    ],
+    [
+     "2019-10-31",
+     1561.0
+    ],
+    [
+     "2019-11-30",
+     1490.0
+    ],
+    [
+     "2019-12-31",
+     1672.0
+    ],
+    [
+     "2020-01-31",
+     1434.0
+    ],
+    [
+     "2020-02-29",
+     1465.0
+    ],
+    [
+     "2020-03-31",
+     990.0
+    ],
+    [
+     "2020-04-30",
+     566.0
+    ],
+    [
+     "2020-05-31",
+     884.0
+    ],
+    [
+     "2020-06-30",
+     815.0
+    ],
+    [
+     "2020-07-31",
+     747.0
+    ],
+    [
+     "2020-08-31",
+     939.0
+    ],
+    [
+     "2020-09-30",
+     864.0
+    ],
+    [
+     "2020-10-31",
+     885.0
+    ],
+    [
+     "2021-01-31",
+     1060.0
+    ],
+    [
+     "2021-02-28",
+     1091.0
+    ],
+    [
+     "2021-03-31",
+     1217.0
+    ],
+    [
+     "2021-04-30",
+     1110.0
+    ],
+    [
+     "2021-05-31",
+     966.0
+    ],
+    [
+     "2021-06-30",
+     1108.0
+    ],
+    [
+     "2021-07-31",
+     1161.0
+    ],
+    [
+     "2021-08-31",
+     1140.0
+    ],
+    [
+     "2021-09-30",
+     1037.0
+    ],
+    [
+     "2021-10-31",
+     1175.0
+    ],
+    [
+     "2021-11-30",
+     1097.0
+    ],
+    [
+     "2023-01-31",
+     1382.0
+    ],
+    [
+     "2023-02-28",
+     1386.0
+    ],
+    [
+     "2023-03-31",
+     1502.0
+    ],
+    [
+     "2023-04-30",
+     1261.0
+    ],
+    [
+     "2023-05-31",
+     1469.0
+    ],
+    [
+     "2023-06-30",
+     1363.0
+    ],
+    [
+     "2023-07-31",
+     1474.0
+    ],
+    [
+     "2023-08-31",
+     1358.0
+    ],
+    [
+     "2023-09-30",
+     1384.0
+    ],
+    [
+     "2023-10-31",
+     1357.0
+    ],
+    [
+     "2023-11-30",
+     1219.0
+    ],
+    [
+     "2023-12-31",
+     1284.0
+    ],
+    [
+     "2024-01-31",
+     1243.0
+    ],
+    [
+     "2024-02-29",
+     1309.0
+    ],
+    [
+     "2024-03-31",
+     1367.0
+    ],
+    [
+     "2024-04-30",
+     1263.0
+    ],
+    [
+     "2024-05-31",
+     1343.0
+    ],
+    [
+     "2024-06-30",
+     1231.0
+    ],
+    [
+     "2024-07-31",
+     1125.0
+    ],
+    [
+     "2024-08-31",
+     1244.0
+    ],
+    [
+     "2024-09-30",
+     1256.0
+    ],
+    [
+     "2024-10-31",
+     1219.0
+    ],
+    [
+     "2024-11-30",
+     1060.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robo_de_vehiculos_mensual",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robo de vehículos (mensual)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Mensual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2024-11-30",
+    "valor": 421.0
+   },
+   "hace_un_anio": {
+    "fecha": "2023-11-30",
+    "valor": 413.0
+   },
+   "variacion_interanual": {
+    "absoluta": 8.0,
+    "porcentual": 1.937
+   },
+   "minimo_ventana": {
+    "fecha": "2020-07-31",
+    "valor": 176.0
+   },
+   "maximo_ventana": {
+    "fecha": "2023-08-31",
+    "valor": 491.0
+   },
+   "serie": [
+    [
+     "2016-01-31",
+     352.0
+    ],
+    [
+     "2016-02-29",
+     350.0
+    ],
+    [
+     "2016-03-31",
+     347.0
+    ],
+    [
+     "2016-04-30",
+     363.0
+    ],
+    [
+     "2016-05-31",
+     410.0
+    ],
+    [
+     "2016-06-30",
+     339.0
+    ],
+    [
+     "2016-07-31",
+     336.0
+    ],
+    [
+     "2016-08-31",
+     332.0
+    ],
+    [
+     "2016-09-30",
+     349.0
+    ],
+    [
+     "2016-10-31",
+     355.0
+    ],
+    [
+     "2016-11-30",
+     360.0
+    ],
+    [
+     "2016-12-31",
+     382.0
+    ],
+    [
+     "2017-01-31",
+     408.0
+    ],
+    [
+     "2017-02-28",
+     344.0
+    ],
+    [
+     "2017-03-31",
+     410.0
+    ],
+    [
+     "2017-04-30",
+     336.0
+    ],
+    [
+     "2017-05-31",
+     369.0
+    ],
+    [
+     "2017-06-30",
+     445.0
+    ],
+    [
+     "2017-07-31",
+     409.0
+    ],
+    [
+     "2017-08-31",
+     442.0
+    ],
+    [
+     "2017-09-30",
+     395.0
+    ],
+    [
+     "2017-10-31",
+     462.0
+    ],
+    [
+     "2017-11-30",
+     461.0
+    ],
+    [
+     "2017-12-31",
+     463.0
+    ],
+    [
+     "2018-01-31",
+     455.0
+    ],
+    [
+     "2018-02-28",
+     454.0
+    ],
+    [
+     "2018-03-31",
+     416.0
+    ],
+    [
+     "2018-04-30",
+     450.0
+    ],
+    [
+     "2018-05-31",
+     477.0
+    ],
+    [
+     "2018-06-30",
+     399.0
+    ],
+    [
+     "2018-07-31",
+     424.0
+    ],
+    [
+     "2018-08-31",
+     409.0
+    ],
+    [
+     "2018-09-30",
+     431.0
+    ],
+    [
+     "2018-10-31",
+     418.0
+    ],
+    [
+     "2018-11-30",
+     410.0
+    ],
+    [
+     "2018-12-31",
+     345.0
+    ],
+    [
+     "2019-01-31",
+     371.0
+    ],
+    [
+     "2019-02-28",
+     338.0
+    ],
+    [
+     "2019-03-31",
+     407.0
+    ],
+    [
+     "2019-04-30",
+     356.0
+    ],
+    [
+     "2019-05-31",
+     382.0
+    ],
+    [
+     "2019-06-30",
+     375.0
+    ],
+    [
+     "2019-07-31",
+     398.0
+    ],
+    [
+     "2019-08-31",
+     422.0
+    ],
+    [
+     "2019-09-30",
+     386.0
+    ],
+    [
+     "2019-10-31",
+     359.0
+    ],
+    [
+     "2019-11-30",
+     383.0
+    ],
+    [
+     "2019-12-31",
+     331.0
+    ],
+    [
+     "2020-01-31",
+     369.0
+    ],
+    [
+     "2020-02-29",
+     387.0
+    ],
+    [
+     "2020-03-31",
+     304.0
+    ],
+    [
+     "2020-04-30",
+     182.0
+    ],
+    [
+     "2020-05-31",
+     198.0
+    ],
+    [
+     "2020-06-30",
+     179.0
+    ],
+    [
+     "2020-07-31",
+     176.0
+    ],
+    [
+     "2020-08-31",
+     247.0
+    ],
+    [
+     "2020-09-30",
+     275.0
+    ],
+    [
+     "2020-10-31",
+     272.0
+    ],
+    [
+     "2021-01-31",
+     264.0
+    ],
+    [
+     "2021-02-28",
+     225.0
+    ],
+    [
+     "2021-03-31",
+     269.0
+    ],
+    [
+     "2021-04-30",
+     254.0
+    ],
+    [
+     "2021-05-31",
+     265.0
+    ],
+    [
+     "2021-06-30",
+     277.0
+    ],
+    [
+     "2021-07-31",
+     294.0
+    ],
+    [
+     "2021-08-31",
+     287.0
+    ],
+    [
+     "2021-09-30",
+     310.0
+    ],
+    [
+     "2021-10-31",
+     350.0
+    ],
+    [
+     "2021-11-30",
+     304.0
+    ],
+    [
+     "2023-01-31",
+     343.0
+    ],
+    [
+     "2023-02-28",
+     324.0
+    ],
+    [
+     "2023-03-31",
+     393.0
+    ],
+    [
+     "2023-04-30",
+     361.0
+    ],
+    [
+     "2023-05-31",
+     358.0
+    ],
+    [
+     "2023-06-30",
+     395.0
+    ],
+    [
+     "2023-07-31",
+     421.0
+    ],
+    [
+     "2023-08-31",
+     491.0
+    ],
+    [
+     "2023-09-30",
+     452.0
+    ],
+    [
+     "2023-10-31",
+     441.0
+    ],
+    [
+     "2023-11-30",
+     413.0
+    ],
+    [
+     "2023-12-31",
+     367.0
+    ],
+    [
+     "2024-01-31",
+     390.0
+    ],
+    [
+     "2024-02-29",
+     430.0
+    ],
+    [
+     "2024-03-31",
+     421.0
+    ],
+    [
+     "2024-04-30",
+     410.0
+    ],
+    [
+     "2024-05-31",
+     415.0
+    ],
+    [
+     "2024-06-30",
+     418.0
+    ],
+    [
+     "2024-07-31",
+     448.0
+    ],
+    [
+     "2024-08-31",
+     431.0
+    ],
+    [
+     "2024-09-30",
+     402.0
+    ],
+    [
+     "2024-10-31",
+     458.0
+    ],
+    [
+     "2024-11-30",
+     421.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_robos_mensual",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Robos (mensual)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Mensual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2024-11-30",
+    "valor": 655.0
+   },
+   "hace_un_anio": {
+    "fecha": "2023-11-30",
+    "valor": 831.0
+   },
+   "variacion_interanual": {
+    "absoluta": -176.0,
+    "porcentual": -21.1793
+   },
+   "minimo_ventana": {
+    "fecha": "2024-11-30",
+    "valor": 655.0
+   },
+   "maximo_ventana": {
+    "fecha": "2019-05-31",
+    "valor": 1228.0
+   },
+   "serie": [
+    [
+     "2016-01-31",
+     894.0
+    ],
+    [
+     "2016-02-29",
+     941.0
+    ],
+    [
+     "2016-03-31",
+     931.0
+    ],
+    [
+     "2016-04-30",
+     966.0
+    ],
+    [
+     "2016-05-31",
+     1069.0
+    ],
+    [
+     "2016-06-30",
+     955.0
+    ],
+    [
+     "2016-07-31",
+     1082.0
+    ],
+    [
+     "2016-08-31",
+     1086.0
+    ],
+    [
+     "2016-09-30",
+     914.0
+    ],
+    [
+     "2016-10-31",
+     1013.0
+    ],
+    [
+     "2016-11-30",
+     931.0
+    ],
+    [
+     "2016-12-31",
+     988.0
+    ],
+    [
+     "2017-01-31",
+     960.0
+    ],
+    [
+     "2017-02-28",
+     931.0
+    ],
+    [
+     "2017-03-31",
+     1048.0
+    ],
+    [
+     "2017-04-30",
+     994.0
+    ],
+    [
+     "2017-05-31",
+     1008.0
+    ],
+    [
+     "2017-06-30",
+     987.0
+    ],
+    [
+     "2017-07-31",
+     919.0
+    ],
+    [
+     "2017-08-31",
+     1064.0
+    ],
+    [
+     "2017-09-30",
+     1027.0
+    ],
+    [
+     "2017-10-31",
+     1004.0
+    ],
+    [
+     "2017-11-30",
+     975.0
+    ],
+    [
+     "2017-12-31",
+     988.0
+    ],
+    [
+     "2018-01-31",
+     1061.0
+    ],
+    [
+     "2018-02-28",
+     1042.0
+    ],
+    [
+     "2018-03-31",
+     1038.0
+    ],
+    [
+     "2018-04-30",
+     1015.0
+    ],
+    [
+     "2018-05-31",
+     1044.0
+    ],
+    [
+     "2018-06-30",
+     1071.0
+    ],
+    [
+     "2018-07-31",
+     1134.0
+    ],
+    [
+     "2018-08-31",
+     1084.0
+    ],
+    [
+     "2018-09-30",
+     1016.0
+    ],
+    [
+     "2018-10-31",
+     1036.0
+    ],
+    [
+     "2018-11-30",
+     1047.0
+    ],
+    [
+     "2018-12-31",
+     990.0
+    ],
+    [
+     "2019-01-31",
+     1068.0
+    ],
+    [
+     "2019-02-28",
+     969.0
+    ],
+    [
+     "2019-03-31",
+     1095.0
+    ],
+    [
+     "2019-04-30",
+     1039.0
+    ],
+    [
+     "2019-05-31",
+     1228.0
+    ],
+    [
+     "2019-06-30",
+     1111.0
+    ],
+    [
+     "2019-07-31",
+     1153.0
+    ],
+    [
+     "2019-08-31",
+     1168.0
+    ],
+    [
+     "2019-09-30",
+     1038.0
+    ],
+    [
+     "2019-10-31",
+     1082.0
+    ],
+    [
+     "2019-11-30",
+     984.0
+    ],
+    [
+     "2019-12-31",
+     1020.0
+    ],
+    [
+     "2020-01-31",
+     1047.0
+    ],
+    [
+     "2020-02-29",
+     974.0
+    ],
+    [
+     "2020-03-31",
+     923.0
+    ],
+    [
+     "2020-04-30",
+     695.0
+    ],
+    [
+     "2020-05-31",
+     750.0
+    ],
+    [
+     "2020-06-30",
+     736.0
+    ],
+    [
+     "2020-07-31",
+     730.0
+    ],
+    [
+     "2020-08-31",
+     837.0
+    ],
+    [
+     "2020-09-30",
+     819.0
+    ],
+    [
+     "2020-10-31",
+     840.0
+    ],
+    [
+     "2021-01-31",
+     868.0
+    ],
+    [
+     "2021-02-28",
+     833.0
+    ],
+    [
+     "2021-03-31",
+     920.0
+    ],
+    [
+     "2021-04-30",
+     862.0
+    ],
+    [
+     "2021-05-31",
+     871.0
+    ],
+    [
+     "2021-06-30",
+     836.0
+    ],
+    [
+     "2021-07-31",
+     938.0
+    ],
+    [
+     "2021-08-31",
+     941.0
+    ],
+    [
+     "2021-09-30",
+     953.0
+    ],
+    [
+     "2021-10-31",
+     906.0
+    ],
+    [
+     "2021-11-30",
+     884.0
+    ],
+    [
+     "2023-01-31",
+     971.0
+    ],
+    [
+     "2023-02-28",
+     889.0
+    ],
+    [
+     "2023-03-31",
+     979.0
+    ],
+    [
+     "2023-04-30",
+     889.0
+    ],
+    [
+     "2023-05-31",
+     932.0
+    ],
+    [
+     "2023-06-30",
+     902.0
+    ],
+    [
+     "2023-07-31",
+     946.0
+    ],
+    [
+     "2023-08-31",
+     971.0
+    ],
+    [
+     "2023-09-30",
+     947.0
+    ],
+    [
+     "2023-10-31",
+     941.0
+    ],
+    [
+     "2023-11-30",
+     831.0
+    ],
+    [
+     "2023-12-31",
+     754.0
+    ],
+    [
+     "2024-01-31",
+     805.0
+    ],
+    [
+     "2024-02-29",
+     714.0
+    ],
+    [
+     "2024-03-31",
+     664.0
+    ],
+    [
+     "2024-04-30",
+     743.0
+    ],
+    [
+     "2024-05-31",
+     735.0
+    ],
+    [
+     "2024-06-30",
+     707.0
+    ],
+    [
+     "2024-07-31",
+     728.0
+    ],
+    [
+     "2024-08-31",
+     755.0
+    ],
+    [
+     "2024-09-30",
+     845.0
+    ],
+    [
+     "2024-10-31",
+     755.0
+    ],
+    [
+     "2024-11-30",
+     655.0
+    ]
+   ]
+  },
+  {
+   "id": "delitos_denuncias_oij_tachas_de_vehiculos_mensual",
+   "hoja": "31_Delitos",
+   "columna": "Denuncias OIJ: Tachas de vehículos (mensual)",
+   "pilar": "seguridad",
+   "fuente": "Poder Judicial, OIJ y MSP",
+   "codigo": "sitiooij.poder-judicial.go.cr, Datos Abiertos; fuentes/oij_delitos.csv",
+   "nombre_fuente": "OIJ, Estadísticas Policiales (una fila por hecho denunciado; se cuentan filas)",
+   "periodicidad": "Mensual",
+   "unidad": "Denuncias",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2024-11-30",
+    "valor": 369.0
+   },
+   "hace_un_anio": {
+    "fecha": "2023-11-30",
+    "valor": 334.0
+   },
+   "variacion_interanual": {
+    "absoluta": 35.0,
+    "porcentual": 10.479
+   },
+   "minimo_ventana": {
+    "fecha": "2020-04-30",
+    "valor": 178.0
+   },
+   "maximo_ventana": {
+    "fecha": "2018-06-30",
+    "valor": 546.0
+   },
+   "serie": [
+    [
+     "2016-01-31",
+     414.0
+    ],
+    [
+     "2016-02-29",
+     446.0
+    ],
+    [
+     "2016-03-31",
+     421.0
+    ],
+    [
+     "2016-04-30",
+     384.0
+    ],
+    [
+     "2016-05-31",
+     440.0
+    ],
+    [
+     "2016-06-30",
+     474.0
+    ],
+    [
+     "2016-07-31",
+     458.0
+    ],
+    [
+     "2016-08-31",
+     420.0
+    ],
+    [
+     "2016-09-30",
+     425.0
+    ],
+    [
+     "2016-10-31",
+     460.0
+    ],
+    [
+     "2016-11-30",
+     513.0
+    ],
+    [
+     "2016-12-31",
+     528.0
+    ],
+    [
+     "2017-01-31",
+     506.0
+    ],
+    [
+     "2017-02-28",
+     523.0
+    ],
+    [
+     "2017-03-31",
+     527.0
+    ],
+    [
+     "2017-04-30",
+     478.0
+    ],
+    [
+     "2017-05-31",
+     428.0
+    ],
+    [
+     "2017-06-30",
+     473.0
+    ],
+    [
+     "2017-07-31",
+     433.0
+    ],
+    [
+     "2017-08-31",
+     467.0
+    ],
+    [
+     "2017-09-30",
+     437.0
+    ],
+    [
+     "2017-10-31",
+     441.0
+    ],
+    [
+     "2017-11-30",
+     453.0
+    ],
+    [
+     "2017-12-31",
+     474.0
+    ],
+    [
+     "2018-01-31",
+     539.0
+    ],
+    [
+     "2018-02-28",
+     457.0
+    ],
+    [
+     "2018-03-31",
+     510.0
+    ],
+    [
+     "2018-04-30",
+     545.0
+    ],
+    [
+     "2018-05-31",
+     470.0
+    ],
+    [
+     "2018-06-30",
+     546.0
+    ],
+    [
+     "2018-07-31",
+     488.0
+    ],
+    [
+     "2018-08-31",
+     508.0
+    ],
+    [
+     "2018-09-30",
+     445.0
+    ],
+    [
+     "2018-10-31",
+     405.0
+    ],
+    [
+     "2018-11-30",
+     453.0
+    ],
+    [
+     "2018-12-31",
+     459.0
+    ],
+    [
+     "2019-01-31",
+     442.0
+    ],
+    [
+     "2019-02-28",
+     389.0
+    ],
+    [
+     "2019-03-31",
+     398.0
+    ],
+    [
+     "2019-04-30",
+     388.0
+    ],
+    [
+     "2019-05-31",
+     383.0
+    ],
+    [
+     "2019-06-30",
+     361.0
+    ],
+    [
+     "2019-07-31",
+     336.0
+    ],
+    [
+     "2019-08-31",
+     439.0
+    ],
+    [
+     "2019-09-30",
+     355.0
+    ],
+    [
+     "2019-10-31",
+     304.0
+    ],
+    [
+     "2019-11-30",
+     395.0
+    ],
+    [
+     "2019-12-31",
+     332.0
+    ],
+    [
+     "2020-01-31",
+     388.0
+    ],
+    [
+     "2020-02-29",
+     397.0
+    ],
+    [
+     "2020-03-31",
+     299.0
+    ],
+    [
+     "2020-04-30",
+     178.0
+    ],
+    [
+     "2020-05-31",
+     236.0
+    ],
+    [
+     "2020-06-30",
+     212.0
+    ],
+    [
+     "2020-07-31",
+     200.0
+    ],
+    [
+     "2020-08-31",
+     257.0
+    ],
+    [
+     "2020-09-30",
+     230.0
+    ],
+    [
+     "2020-10-31",
+     275.0
+    ],
+    [
+     "2021-01-31",
+     246.0
+    ],
+    [
+     "2021-02-28",
+     257.0
+    ],
+    [
+     "2021-03-31",
+     328.0
+    ],
+    [
+     "2021-04-30",
+     251.0
+    ],
+    [
+     "2021-05-31",
+     241.0
+    ],
+    [
+     "2021-06-30",
+     249.0
+    ],
+    [
+     "2021-07-31",
+     242.0
+    ],
+    [
+     "2021-08-31",
+     269.0
+    ],
+    [
+     "2021-09-30",
+     213.0
+    ],
+    [
+     "2021-10-31",
+     254.0
+    ],
+    [
+     "2021-11-30",
+     292.0
+    ],
+    [
+     "2023-01-31",
+     315.0
+    ],
+    [
+     "2023-02-28",
+     331.0
+    ],
+    [
+     "2023-03-31",
+     352.0
+    ],
+    [
+     "2023-04-30",
+     345.0
+    ],
+    [
+     "2023-05-31",
+     349.0
+    ],
+    [
+     "2023-06-30",
+     276.0
+    ],
+    [
+     "2023-07-31",
+     292.0
+    ],
+    [
+     "2023-08-31",
+     331.0
+    ],
+    [
+     "2023-09-30",
+     286.0
+    ],
+    [
+     "2023-10-31",
+     323.0
+    ],
+    [
+     "2023-11-30",
+     334.0
+    ],
+    [
+     "2023-12-31",
+     329.0
+    ],
+    [
+     "2024-01-31",
+     286.0
+    ],
+    [
+     "2024-02-29",
+     262.0
+    ],
+    [
+     "2024-03-31",
+     295.0
+    ],
+    [
+     "2024-04-30",
+     278.0
+    ],
+    [
+     "2024-05-31",
+     269.0
+    ],
+    [
+     "2024-06-30",
+     283.0
+    ],
+    [
+     "2024-07-31",
+     279.0
+    ],
+    [
+     "2024-08-31",
+     334.0
+    ],
+    [
+     "2024-09-30",
+     343.0
+    ],
+    [
+     "2024-10-31",
+     318.0
+    ],
+    [
+     "2024-11-30",
+     369.0
+    ]
+   ]
+  },
+  {
    "id": "penitenciario_poblacion_atendida_todos_los_programas_persona",
    "hoja": "32_Penitenciario",
    "columna": "Población atendida, todos los programas (personas)",
@@ -81227,11 +87616,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 34938.0
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 34330.0
    },
    "variacion_interanual": {
@@ -81239,28 +87628,36 @@
     "porcentual": 1.771
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 34062.0
    },
    "maximo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 34938.0
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      34062.0
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      34235.0
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      34330.0
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      34938.0
     ]
    ]
@@ -81277,11 +87674,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 19221.0
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 17055.0
    },
    "variacion_interanual": {
@@ -81289,28 +87686,36 @@
     "porcentual": 12.7001
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 14907.0
    },
    "maximo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 19221.0
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      14907.0
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      15769.0
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      17055.0
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      19221.0
     ]
    ]
@@ -81327,11 +87732,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 1298.0
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 1792.0
    },
    "variacion_interanual": {
@@ -81339,28 +87744,36 @@
     "porcentual": -27.567
    },
    "minimo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 1298.0
    },
    "maximo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 2745.0
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      2745.0
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      2127.0
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      1792.0
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      1298.0
     ]
    ]
@@ -81377,11 +87790,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 12490.0
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 13220.0
    },
    "variacion_interanual": {
@@ -81389,28 +87802,36 @@
     "porcentual": -5.5219
    },
    "minimo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 12490.0
    },
    "maximo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 13926.0
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      13926.0
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      13826.0
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      13220.0
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      12490.0
     ]
    ]
@@ -81427,11 +87848,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 582.0
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 559.0
    },
    "variacion_interanual": {
@@ -81439,28 +87860,36 @@
     "porcentual": 4.1145
    },
    "minimo_ventana": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 559.0
    },
    "maximo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 616.0
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      616.0
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      581.0
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      559.0
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      582.0
     ]
    ]
@@ -81477,11 +87906,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 1347.0
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 1704.0
    },
    "variacion_interanual": {
@@ -81489,28 +87918,36 @@
     "porcentual": -20.9507
    },
    "minimo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 1347.0
    },
    "maximo_ventana": {
-    "fecha": "2023-06-30",
+    "fecha": "2023-12-31",
     "valor": 1932.0
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      1868.0
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      1932.0
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      1704.0
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      1347.0
     ]
    ]
@@ -81527,11 +87964,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 23769.0
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 22603.0
    },
    "variacion_interanual": {
@@ -81539,28 +87976,36 @@
     "porcentual": 5.1586
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 21383.0
    },
    "maximo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 23769.0
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      21383.0
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      21780.0
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      22603.0
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      23769.0
     ]
    ]
@@ -81577,11 +88022,11 @@
    "unidad": "Por 100 mil habitantes",
    "tipo_valor": "tasa",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 457.8161
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 437.6304
    },
    "variacion_interanual": {
@@ -81589,28 +88034,36 @@
     "porcentual": null
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 418.8715
    },
    "maximo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 457.8161
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      418.8715
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      424.0727
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      437.6304
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      457.8161
     ]
    ]
@@ -81627,11 +88080,11 @@
    "unidad": "Por 100 mil habitantes",
    "tipo_valor": "tasa",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 457.8161
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 437.6305
    },
    "variacion_interanual": {
@@ -81639,28 +88092,36 @@
     "porcentual": null
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 418.8715
    },
    "maximo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 457.8161
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      418.8715
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      424.0727
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      437.6305
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      457.8161
     ]
    ]
@@ -81677,11 +88138,11 @@
    "unidad": "Por 100 mil habitantes",
    "tipo_valor": "tasa",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 672.9428
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 664.684
    },
    "variacion_interanual": {
@@ -81689,28 +88150,36 @@
     "porcentual": null
    },
    "minimo_ventana": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 664.684
    },
    "maximo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 672.9428
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      667.2404
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      666.5808
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      664.684
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      672.9428
     ]
    ]
@@ -81727,11 +88196,11 @@
    "unidad": "Personas",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 5191823.08
    },
    "hace_un_anio": {
-    "fecha": "2024-06-30",
+    "fecha": "2024-12-31",
     "valor": 5164859.9393
    },
    "variacion_interanual": {
@@ -81739,29 +88208,385 @@
     "porcentual": 0.522
    },
    "minimo_ventana": {
-    "fecha": "2022-06-30",
+    "fecha": "2022-12-31",
     "valor": 5104906.8366
    },
    "maximo_ventana": {
-    "fecha": "2025-06-30",
+    "fecha": "2025-12-31",
     "valor": 5191823.08
    },
    "serie": [
     [
-     "2022-06-30",
+     "2020-12-31",
+     null
+    ],
+    [
+     "2021-12-31",
+     null
+    ],
+    [
+     "2022-12-31",
      5104906.8366
     ],
     [
-     "2023-06-30",
+     "2023-12-31",
      5135911.6221
     ],
     [
-     "2024-06-30",
+     "2024-12-31",
      5164859.9393
     ],
     [
-     "2025-06-30",
+     "2025-12-31",
      5191823.08
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_nivel_institucional_privados_de_libertad_mjp_p",
+   "hoja": "32_Penitenciario",
+   "columna": "Nivel institucional, privados de libertad (MJP, personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "fuentes/penitenciario.csv",
+   "nombre_fuente": "Nivel institucional, privados de libertad (MJP, personas)",
+   "periodicidad": "Anual",
+   "unidad": "Casos",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-12-31",
+    "valor": 19221.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-12-31",
+    "valor": 17055.0
+   },
+   "variacion_interanual": {
+    "absoluta": 2166.0,
+    "porcentual": 12.7001
+   },
+   "minimo_ventana": {
+    "fecha": "2022-12-31",
+    "valor": 14907.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 19221.0
+   },
+   "serie": [
+    [
+     "2020-12-31",
+     15495.0
+    ],
+    [
+     "2021-12-31",
+     14921.0
+    ],
+    [
+     "2022-12-31",
+     14907.0
+    ],
+    [
+     "2023-12-31",
+     15769.0
+    ],
+    [
+     "2024-12-31",
+     17055.0
+    ],
+    [
+     "2025-12-31",
+     19221.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_indiciados_prision_preventiva_personas",
+   "hoja": "32_Penitenciario",
+   "columna": "Indiciados, prisión preventiva (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "fuentes/penitenciario.csv",
+   "nombre_fuente": "Indiciados, prisión preventiva (personas)",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-12-31",
+    "valor": 4839.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-12-31",
+    "valor": 3828.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1011.0,
+    "porcentual": 26.4107
+   },
+   "minimo_ventana": {
+    "fecha": "2022-12-31",
+    "valor": 2811.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 4839.0
+   },
+   "serie": [
+    [
+     "2020-12-31",
+     3137.0
+    ],
+    [
+     "2021-12-31",
+     3000.0
+    ],
+    [
+     "2022-12-31",
+     2811.0
+    ],
+    [
+     "2023-12-31",
+     3058.0
+    ],
+    [
+     "2024-12-31",
+     3828.0
+    ],
+    [
+     "2025-12-31",
+     4839.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_sentenciados_personas",
+   "hoja": "32_Penitenciario",
+   "columna": "Sentenciados (personas)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "fuentes/penitenciario.csv",
+   "nombre_fuente": "Sentenciados (personas)",
+   "periodicidad": "Anual",
+   "unidad": "Personas",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2025-12-31",
+    "valor": 14145.0
+   },
+   "hace_un_anio": {
+    "fecha": "2024-12-31",
+    "valor": 13028.0
+   },
+   "variacion_interanual": {
+    "absoluta": 1117.0,
+    "porcentual": 8.5738
+   },
+   "minimo_ventana": {
+    "fecha": "2021-12-31",
+    "valor": 11677.0
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 14145.0
+   },
+   "serie": [
+    [
+     "2020-12-31",
+     12150.0
+    ],
+    [
+     "2021-12-31",
+     11677.0
+    ],
+    [
+     "2022-12-31",
+     11804.0
+    ],
+    [
+     "2023-12-31",
+     12373.0
+    ],
+    [
+     "2024-12-31",
+     13028.0
+    ],
+    [
+     "2025-12-31",
+     14145.0
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_indiciados_pct_de_la_poblacion_privada_de_libe",
+   "hoja": "32_Penitenciario",
+   "columna": "Indiciados, % de la población privada de libertad (calculada)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Porcentaje",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-12-31",
+    "valor": 25.1756
+   },
+   "hace_un_anio": {
+    "fecha": "2024-12-31",
+    "valor": 22.445
+   },
+   "variacion_interanual": {
+    "absoluta": 2.7306,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-12-31",
+    "valor": 18.8569
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 25.1756
+   },
+   "serie": [
+    [
+     "2020-12-31",
+     20.2452
+    ],
+    [
+     "2021-12-31",
+     20.1059
+    ],
+    [
+     "2022-12-31",
+     18.8569
+    ],
+    [
+     "2023-12-31",
+     19.3925
+    ],
+    [
+     "2024-12-31",
+     22.445
+    ],
+    [
+     "2025-12-31",
+     25.1756
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_tasa_de_encarcelamiento_por_100_mil_habitantes",
+   "hoja": "32_Penitenciario",
+   "columna": "Tasa de encarcelamiento (por 100 mil habitantes, calculada)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": null,
+   "nombre_fuente": "(calculada a partir de las otras columnas)",
+   "periodicidad": "Anual",
+   "unidad": "Por 100 mil habitantes",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-12-31",
+    "valor": 370.2168
+   },
+   "hace_un_anio": {
+    "fecha": "2024-12-31",
+    "valor": 330.2122
+   },
+   "variacion_interanual": {
+    "absoluta": 40.0045,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-12-31",
+    "valor": 292.0132
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 370.2168
+   },
+   "serie": [
+    [
+     "2020-12-31",
+     306.7479
+    ],
+    [
+     "2021-12-31",
+     293.8554
+    ],
+    [
+     "2022-12-31",
+     292.0132
+    ],
+    [
+     "2023-12-31",
+     307.0341
+    ],
+    [
+     "2024-12-31",
+     330.2122
+    ],
+    [
+     "2025-12-31",
+     370.2168
+    ]
+   ]
+  },
+  {
+   "id": "penitenciario_sobrepoblacion_institucional_y_juvenil_cerrado",
+   "hoja": "32_Penitenciario",
+   "columna": "Sobrepoblación institucional y juvenil cerrado, % (MJP)",
+   "pilar": "seguridad",
+   "fuente": "MJP",
+   "codigo": "fuentes/penitenciario.csv",
+   "nombre_fuente": "Sobrepoblación institucional y juvenil cerrado, % (MJP)",
+   "periodicidad": "Anual",
+   "unidad": "Porcentaje",
+   "tipo_valor": "tasa",
+   "ultimo": {
+    "fecha": "2025-12-31",
+    "valor": 44.77
+   },
+   "hace_un_anio": {
+    "fecha": "2024-12-31",
+    "valor": 24.3
+   },
+   "variacion_interanual": {
+    "absoluta": 20.47,
+    "porcentual": null
+   },
+   "minimo_ventana": {
+    "fecha": "2022-12-31",
+    "valor": 6.4
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 44.77
+   },
+   "serie": [
+    [
+     "2020-12-31",
+     21.8
+    ],
+    [
+     "2021-12-31",
+     8.16
+    ],
+    [
+     "2022-12-31",
+     6.4
+    ],
+    [
+     "2023-12-31",
+     13.7
+    ],
+    [
+     "2024-12-31",
+     24.3
+    ],
+    [
+     "2025-12-31",
+     44.77
     ]
    ]
   }
