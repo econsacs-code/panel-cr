@@ -1,10 +1,10 @@
 {
  "version": 1,
- "generado": "2026-10-30T17:53:16-06:00",
- "excel": "datos_cr_2026-10-30.xlsx",
+ "generado": "2026-11-02T08:21:29-06:00",
+ "excel": "datos_cr_2026-11-02.xlsx",
  "ventana": {
-  "desde": "2016-10-30",
-  "hasta": "2026-10-30"
+  "desde": "2016-11-02",
+  "hasta": "2026-11-02"
  },
  "pilares": [
   {
@@ -1593,7 +1593,7 @@
    "pilar": "sociedad",
    "fuente": "INEC, ECE; BCCR; CCSS",
    "periodicidad": "Trimestral y Anual",
-   "nota": "ECE: encuesta trimestral por muestreo (trimestres calendario), con margen de error; los cuadros marcan con * los valores con coeficiente de variación mayor a 20 %. Serie histórica comparable desde el III trimestre de 2010. Ocupados e ingreso por sector institucional: ECE, serie histórica, cuadros 2 y 4 (ingreso bruto corriente en el empleo principal). Remuneraciones: SDDE 6304, cuadro 226 'Gobierno Central: ingresos, gastos y financiamiento, base devengado' (STAP), suma de los 12 meses del año; % del PIB con el PIB nominal anual del BCCR. Asegurados directos del seguro de invalidez, vejez y muerte por sector institucional: CCSS, anuario estadístico, vía el anuario del INEC (cuadro 12.14; registro administrativo). El IVM no cubre a quienes cotizan a otros regímenes (por ejemplo el Magisterio), así que no es el total de empleados públicos. La brecha compara promedios simples de dos poblaciones con distinta composición (educación, edad, ocupación): los cuadros publicados de la ECE no traen el ingreso por sector y nivel educativo, así que la comparación por nivel educativo no se puede hacer sin los microdatos. Remuneraciones % del gasto total: SDDE 6304 / SDDE 6295 (gasto total del cuadro 226, el de la hoja 22).",
+   "nota": "ECE: encuesta trimestral por muestreo (trimestres calendario), con margen de error; los cuadros marcan con * los valores con coeficiente de variación mayor a 20 %. Serie histórica comparable desde el III trimestre de 2010. Ocupados e ingreso por sector institucional: ECE, serie histórica, cuadros 2 y 4 (ingreso bruto corriente en el empleo principal). Remuneraciones: SDDE 6304, cuadro 226 'Gobierno Central: ingresos, gastos y financiamiento, base devengado' (STAP), suma de los 12 meses del año; % del PIB con el PIB nominal anual del BCCR. Cotizantes al IVM de la CCSS (asegurados directos del seguro de invalidez, vejez y muerte) por sector institucional: CCSS, anuario estadístico, vía el anuario del INEC (cuadro 12.14; registro administrativo). No incluye a quienes cotizan al Magisterio Nacional ni al fondo de pensiones del Poder Judicial, por eso no es el total de empleados públicos: el total de empleo público es el de la ECE (ocupados en el sector público). Estas tres columnas quedan en el Excel pero no van a panel.json. La brecha compara promedios simples de dos poblaciones con distinta composición (educación, edad, ocupación): los cuadros publicados de la ECE no traen el ingreso por sector y nivel educativo, así que la comparación por nivel educativo no se puede hacer sin los microdatos. Remuneraciones % del gasto total: SDDE 6304 / SDDE 6295 (gasto total del cuadro 226, el de la hoja 22).",
    "graficos": [
     {
      "titulo": "Ocupados en el sector público, % de los ocupados (ECE)",
@@ -1637,21 +1637,6 @@
       "empleo_publico_remuneraciones_del_gobierno_central_pct_del_g": "% del gasto total"
      },
      "base": "anual"
-    },
-    {
-     "titulo": "Asegurados directos del IVM por sector institucional (CCSS)",
-     "columnas": [
-      "empleo_publico_asegurados_directos_ivm_gobierno_central_ccss",
-      "empleo_publico_asegurados_directos_ivm_instituciones_autonom",
-      "empleo_publico_asegurados_directos_ivm_empresa_privada_ccss"
-     ],
-     "eje_y": "Personas",
-     "tipo": "linea",
-     "etiquetas": {
-      "empleo_publico_asegurados_directos_ivm_gobierno_central_ccss": "Gobierno Central",
-      "empleo_publico_asegurados_directos_ivm_instituciones_autonom": "instituciones autónomas",
-      "empleo_publico_asegurados_directos_ivm_empresa_privada_ccss": "empresa privada"
-     }
     }
    ]
   },
@@ -1770,12 +1755,12 @@
    "pilar": "sociedad",
    "fuente": "INEC (ENAHO y anuario), BCCR y documentos oficiales",
    "periodicidad": "Anual",
-   "nota": "ENAHO: encuesta por muestreo (julio de cada año), con margen de error; el INEC publica la variabilidad de los ingresos y la pobreza en los 'Cuadros de variabilidades', no la de la tipología de hogares. La ENAHO 2025 todavía usa el marco muestral de viviendas 2011 (MMV-2011) y ajusta los factores de expansión a las proyecciones distritales 2000-2025 basadas en el Censo 2011 (Resultados generales ENAHO 2025, p. 81); no hubo cambio de marco ni de factores por el Censo 2022, así que la serie es comparable entre 2010 y 2025. Cuando el INEC pase a las proyecciones con el Censo 2022 habrá un quiebre que hay que anotar. Subsidios estatales y becas: ENAHO, cuadro 1 (hogares perceptores y monto mensual en millones de colones; incluye IMAS, Avancemos, pensión del régimen no contributivo, becas y otros, sin desglose por programa en los cuadros publicados). Funciones sociales: egresos ejecutados del Gobierno de la República en educación, salud, protección social, vivienda y servicios comunitarios y recreación, cultura y religión (clasificación funcional; Contraloría General de la República, Memoria anual, vía el anuario del INEC, cuadros 5.38 y 5.39). Desde 2025 rige otra clasificación funcional (Decreto Ejecutivo 43.611-H) y el INEC la publica como serie separada: no es comparable con 2024 y antes. Es sólo el Gobierno de la República, no el gasto social del sector público (ese va en fuentes/programas_sociales.csv). Transferencias corrientes: SDDE 19128 (cuadro 226, base devengado, STAP), suma de los 12 meses; % del gasto total con el gasto total del mismo cuadro (SDDE 6295, hoja 22). Registros administrativos salvo la ENAHO.",
+   "nota": "ENAHO: encuesta por muestreo (julio de cada año), con margen de error; el INEC publica la variabilidad de los ingresos y la pobreza en los 'Cuadros de variabilidades', no la de la tipología de hogares. La ENAHO 2025 todavía usa el marco muestral de viviendas 2011 (MMV-2011) y ajusta los factores de expansión a las proyecciones distritales 2000-2025 basadas en el Censo 2011 (Resultados generales ENAHO 2025, p. 81); no hubo cambio de marco ni de factores por el Censo 2022, así que la serie es comparable entre 2010 y 2025. Cuando el INEC pase a las proyecciones con el Censo 2022 habrá un quiebre que hay que anotar. Subsidios estatales y becas: ENAHO, cuadro 1, fila 'Con subsidios estatales y becas' (hogares perceptores) y 'Subsidios estatales y becas' (monto mensual en millones de colones). Es el ingreso en efectivo que declaran los hogares (IMAS, Avancemos, becas y otros, sin desglose por programa): no incluye las transferencias en especie (comedores escolares, CEN-CINAI, bono de vivienda) ni las pensiones, tampoco las del régimen no contributivo si la ENAHO las clasifica como pensiones (el cuadro 1 no trae fila de pensiones: van dentro de 'otras transferencias', que también incluye transferencias no monetarias). Está sujeto a subdeclaración. No es la población en programas sociales: esa cifra requiere el registro del SINIRUBE. Funciones sociales: egresos ejecutados del Gobierno de la República en educación, salud, protección social, vivienda y servicios comunitarios y recreación, cultura y religión (clasificación funcional; Contraloría General de la República, Memoria anual, vía el anuario del INEC, cuadros 5.38 y 5.39). Desde 2025 rige otra clasificación funcional (Decreto Ejecutivo 43.611-H) y el INEC la publica como serie separada: no es comparable con 2024 y antes. Es sólo el Gobierno de la República, no el gasto social del sector público (ese va en fuentes/programas_sociales.csv). Transferencias corrientes: SDDE 19128 (cuadro 226, base devengado, STAP), suma de los 12 meses; % del gasto total con el gasto total del mismo cuadro (SDDE 6295, hoja 22). Registros administrativos salvo la ENAHO.",
    "graficos": [
     {
-     "titulo": "Hogares que reciben subsidios estatales y becas, % de los hogares (ENAHO)",
+     "titulo": "Hogares que declaran ingreso en efectivo por subsidios estatales y becas, % de los hogares (ENAHO)",
      "columnas": [
-      "programas_sociales_hogares_con_subsidios_estatales_y_becas_p"
+      "programas_sociales_hogares_que_declaran_ingreso_en_efectiv_2"
      ],
      "eje_y": "Porcentaje",
      "tipo": "linea"
@@ -1885,16 +1870,16 @@
    "unidad": "Colón Costarricense",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2026-10-30",
-    "valor": 455.44
+    "fecha": "2026-11-02",
+    "valor": 456.04
    },
    "hace_un_anio": {
-    "fecha": "2025-10-30",
-    "valor": 505.03
+    "fecha": "2025-11-02",
+    "valor": 504.73
    },
    "variacion_interanual": {
-    "absoluta": -49.59,
-    "porcentual": -9.8192
+    "absoluta": -48.69,
+    "porcentual": -9.6467
    },
    "minimo_ventana": {
     "fecha": "2026-09-17",
@@ -1905,7 +1890,6 @@
     "valor": 698.44
    },
    "serie": [
-    ["2016-10-31", 560.18],
     ["2016-11-30", 558.4],
     ["2016-12-31", 561.1],
     ["2017-01-31", 561.42],
@@ -2025,7 +2009,8 @@
     ["2026-07-31", 454.44],
     ["2026-08-31", 452.93],
     ["2026-09-30", 458.43],
-    ["2026-10-30", 455.44]
+    ["2026-10-31", 456.04],
+    ["2026-11-02", 456.04]
    ]
   },
   {
@@ -2040,11 +2025,11 @@
    "unidad": "Porcentaje",
    "tipo_valor": "tasa",
    "ultimo": {
-    "fecha": "2026-10-30",
+    "fecha": "2026-11-02",
     "valor": 3.0
    },
    "hace_un_anio": {
-    "fecha": "2025-10-30",
+    "fecha": "2025-11-02",
     "valor": 3.5
    },
    "variacion_interanual": {
@@ -2060,7 +2045,6 @@
     "valor": 9.0
    },
    "serie": [
-    ["2016-10-31", 1.75],
     ["2016-11-30", 1.75],
     ["2016-12-31", 1.75],
     ["2017-01-31", 1.75],
@@ -2180,7 +2164,8 @@
     ["2026-07-31", 3.0],
     ["2026-08-31", 3.0],
     ["2026-09-30", 3.0],
-    ["2026-10-30", 3.0]
+    ["2026-10-31", 3.0],
+    ["2026-11-02", 3.0]
    ]
   },
   {
@@ -2195,11 +2180,11 @@
    "unidad": "Porcentaje",
    "tipo_valor": "tasa",
    "ultimo": {
-    "fecha": "2026-10-30",
+    "fecha": "2026-11-02",
     "valor": 3.56
    },
    "hace_un_anio": {
-    "fecha": "2025-10-30",
+    "fecha": "2025-11-02",
     "valor": 3.81
    },
    "variacion_interanual": {
@@ -2215,7 +2200,6 @@
     "valor": 6.73
    },
    "serie": [
-    ["2016-10-31", 4.65],
     ["2016-11-30", 4.6],
     ["2016-12-31", 4.45],
     ["2017-01-31", 4.55],
@@ -2335,7 +2319,8 @@
     ["2026-07-31", 3.64],
     ["2026-08-31", 3.62],
     ["2026-09-30", 3.58],
-    ["2026-10-30", 3.56]
+    ["2026-10-31", 3.56],
+    ["2026-11-02", 3.56]
    ]
   },
   {
@@ -2370,7 +2355,6 @@
     "valor": 12.1285
    },
    "serie": [
-    ["2016-10-31", 0.5518],
     ["2016-11-30", 0.5604],
     ["2016-12-31", 0.7652],
     ["2017-01-31", 0.6557],
@@ -2524,7 +2508,6 @@
     "valor": 6.9926
    },
    "serie": [
-    ["2016-10-31", 0.7198],
     ["2016-11-30", 0.7782],
     ["2016-12-31", 0.8711],
     ["2017-01-31", 0.7401],
@@ -2655,27 +2638,26 @@
    "unidad": "Colón Costarricense",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 25749735.2088
+    "fecha": "2026-10-31",
+    "valor": 25817901.3119
    },
    "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 25488555.4955
+    "fecha": "2025-10-31",
+    "valor": 25513284.2416
    },
    "variacion_interanual": {
-    "absoluta": 261179.7132,
-    "porcentual": 1.0247
+    "absoluta": 304617.0703,
+    "porcentual": 1.194
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 17984066.3117
+    "fecha": "2016-11-30",
+    "valor": 18208079.9315
    },
    "maximo_ventana": {
-    "fecha": "2026-09-30",
-    "valor": 25749735.2088
+    "fecha": "2026-10-31",
+    "valor": 25817901.3119
    },
    "serie": [
-    ["2016-10-31", 17984066.3117],
     ["2016-11-30", 18208079.9315],
     ["2016-12-31", 18403519.2061],
     ["2017-01-31", 18477382.0019],
@@ -2794,7 +2776,8 @@
     ["2026-06-30", 25332551.5934],
     ["2026-07-31", 25351914.3298],
     ["2026-08-31", 25543907.7669],
-    ["2026-09-30", 25749735.2088]
+    ["2026-09-30", 25749735.2088],
+    ["2026-10-31", 25817901.3119]
    ]
   },
   {
@@ -2809,27 +2792,26 @@
    "unidad": "Colón Costarricense",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 17803985.6606
+    "fecha": "2026-10-31",
+    "valor": 17797961.8788
    },
    "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 17123286.6718
+    "fecha": "2025-10-31",
+    "valor": 17176003.0939
    },
    "variacion_interanual": {
-    "absoluta": 680698.9888,
-    "porcentual": 3.9753
+    "absoluta": 621958.7849,
+    "porcentual": 3.6211
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 10517886.7415
+    "fecha": "2016-11-30",
+    "valor": 10701497.0151
    },
    "maximo_ventana": {
     "fecha": "2026-09-30",
     "valor": 17803985.6606
    },
    "serie": [
-    ["2016-10-31", 10517886.7415],
     ["2016-11-30", 10701497.0151],
     ["2016-12-31", 10837740.5087],
     ["2017-01-31", 10906807.6219],
@@ -2948,7 +2930,8 @@
     ["2026-06-30", 17485178.0975],
     ["2026-07-31", 17530417.944],
     ["2026-08-31", 17762167.0073],
-    ["2026-09-30", 17803985.6606]
+    ["2026-09-30", 17803985.6606],
+    ["2026-10-31", 17797961.8788]
    ]
   },
   {
@@ -2963,16 +2946,16 @@
    "unidad": "Colón Costarricense",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 7945749.5481
+    "fecha": "2026-10-31",
+    "valor": 8019939.4331
    },
    "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 8365268.8237
+    "fecha": "2025-10-31",
+    "valor": 8337281.1476
    },
    "variacion_interanual": {
-    "absoluta": -419519.2756,
-    "porcentual": -5.015
+    "absoluta": -317341.7146,
+    "porcentual": -3.8063
    },
    "minimo_ventana": {
     "fecha": "2023-03-31",
@@ -2983,7 +2966,6 @@
     "valor": 8572532.0698
    },
    "serie": [
-    ["2016-10-31", 7466179.5701],
     ["2016-11-30", 7506582.9165],
     ["2016-12-31", 7565778.6974],
     ["2017-01-31", 7570574.38],
@@ -3102,7 +3084,8 @@
     ["2026-06-30", 7847373.4959],
     ["2026-07-31", 7821496.3858],
     ["2026-08-31", 7781740.7596],
-    ["2026-09-30", 7945749.5481]
+    ["2026-09-30", 7945749.5481],
+    ["2026-10-31", 8019939.4331]
    ]
   },
   {
@@ -3117,16 +3100,16 @@
    "unidad": "Dólar EEUU",
    "tipo_valor": "nivel",
    "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 20277.0813
+    "fecha": "2026-10-31",
+    "valor": 20232.7665
    },
    "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 15783.5265
+    "fecha": "2025-10-31",
+    "valor": 16074.981
    },
    "variacion_interanual": {
-    "absoluta": 4493.5548,
-    "porcentual": 28.4699
+    "absoluta": 4157.7855,
+    "porcentual": 25.8649
    },
    "minimo_ventana": {
     "fecha": "2022-06-30",
@@ -3137,7 +3120,6 @@
     "valor": 20970.1408
    },
    "serie": [
-    ["2016-10-31", 7715.3161],
     ["2016-11-30", 7583.0049],
     ["2016-12-31", 7573.7913],
     ["2017-01-31", 7523.7667],
@@ -3256,7 +3238,8 @@
     ["2026-06-30", 20733.5465],
     ["2026-07-31", 20816.4147],
     ["2026-08-31", 20447.9129],
-    ["2026-09-30", 20277.0813]
+    ["2026-09-30", 20277.0813],
+    ["2026-10-31", 20232.7665]
    ]
   },
   {
@@ -3291,7 +3274,6 @@
     "valor": 9.9336
    },
    "serie": [
-    ["2016-10-31", 4.6525],
     ["2016-11-30", 4.6839],
     ["2016-12-31", 4.2565],
     ["2017-01-31", 3.4532],
@@ -3444,7 +3426,6 @@
     "valor": 11.4404
    },
    "serie": [
-    ["2016-10-31", 3.5008],
     ["2016-11-30", 3.6711],
     ["2016-12-31", 3.3102],
     ["2017-01-31", 2.526],
@@ -3597,7 +3578,6 @@
     "valor": 26.9489
    },
    "serie": [
-    ["2016-10-31", 15.2394],
     ["2016-11-30", 15.17],
     ["2016-12-31", 14.8551],
     ["2017-01-31", 14.3454],
@@ -3750,7 +3730,6 @@
     "valor": 67.6081
    },
    "serie": [
-    ["2016-10-31", 43.3947],
     ["2016-11-30", 43.0683],
     ["2016-12-31", 44.089],
     ["2017-01-31", 41.5675],
@@ -3903,7 +3882,6 @@
     "valor": 32487776.3773
    },
    "serie": [
-    ["2016-10-31", 13910737.4596],
     ["2016-11-30", 13806090.7227],
     ["2016-12-31", 14133299.451],
     ["2017-01-31", 14275802.275],
@@ -9841,7 +9819,6 @@
     "valor": 2.5032
    },
    "serie": [
-    ["2021-10-31", 2.4883],
     ["2021-11-30", 2.5032],
     ["2021-12-31", 2.2927],
     ["2022-01-31", 2.3151],
@@ -9935,7 +9912,6 @@
     "valor": 2.483
    },
    "serie": [
-    ["2021-10-31", 2.2441],
     ["2021-11-30", 2.2019],
     ["2021-12-31", 2.022],
     ["2022-01-31", 2.0115],
@@ -10029,7 +10005,6 @@
     "valor": 3.0493
    },
    "serie": [
-    ["2021-10-31", 2.9184],
     ["2021-11-30", 3.0493],
     ["2021-12-31", 2.7693],
     ["2022-01-31", 2.8499],
@@ -10123,7 +10098,6 @@
     "valor": 2.5394
    },
    "serie": [
-    ["2021-10-31", 2.519],
     ["2021-11-30", 2.5394],
     ["2021-12-31", 2.3254],
     ["2022-01-31", 2.3519],
@@ -10217,7 +10191,6 @@
     "valor": 2.4965
    },
    "serie": [
-    ["2021-10-31", 2.2516],
     ["2021-11-30", 2.211],
     ["2021-12-31", 2.0247],
     ["2022-01-31", 2.0148],
@@ -10311,7 +10284,6 @@
     "valor": 3.1291
    },
    "serie": [
-    ["2021-10-31", 2.9855],
     ["2021-11-30", 3.1291],
     ["2021-12-31", 2.8523],
     ["2022-01-31", 2.9441],
@@ -10397,15 +10369,14 @@
     "porcentual": 0.5946
    },
    "minimo_ventana": {
-    "fecha": "2021-10-31",
-    "valor": 23725770.6169
+    "fecha": "2021-11-30",
+    "valor": 23739999.5556
    },
    "maximo_ventana": {
     "fecha": "2025-12-31",
     "valor": 27532080.4647
    },
    "serie": [
-    ["2021-10-31", 23725770.6169],
     ["2021-11-30", 23739999.5556],
     ["2021-12-31", 24136896.9584],
     ["2022-01-31", 24164982.8498],
@@ -10491,15 +10462,14 @@
     "porcentual": 2.708
    },
    "minimo_ventana": {
-    "fecha": "2021-10-31",
-    "valor": 15310550.1988
+    "fecha": "2021-11-30",
+    "valor": 15436402.9857
    },
    "maximo_ventana": {
     "fecha": "2026-09-30",
     "valor": 19170208.2288
    },
    "serie": [
-    ["2021-10-31", 15310550.1988],
     ["2021-11-30", 15436402.9857],
     ["2021-12-31", 15524516.3491],
     ["2022-01-31", 15526133.7655],
@@ -10593,7 +10563,6 @@
     "valor": 9105164.7611
    },
    "serie": [
-    ["2021-10-31", 8412667.125],
     ["2021-11-30", 8301112.4658],
     ["2021-12-31", 8609903.3282],
     ["2022-01-31", 8636442.1488],
@@ -10679,15 +10648,14 @@
     "porcentual": 4.2106
    },
    "minimo_ventana": {
-    "fecha": "2021-10-31",
-    "valor": 860609.0406
+    "fecha": "2021-11-30",
+    "valor": 877061.3163
    },
    "maximo_ventana": {
     "fecha": "2026-09-30",
     "valor": 1244189.5842
    },
    "serie": [
-    ["2021-10-31", 860609.0406],
     ["2021-11-30", 877061.3163],
     ["2021-12-31", 919626.8064],
     ["2022-01-31", 930838.169],
@@ -10781,7 +10749,6 @@
     "valor": 631919.0677
    },
    "serie": [
-    ["2021-10-31", 590364.2052],
     ["2021-11-30", 594251.8147],
     ["2021-12-31", 553385.5728],
     ["2022-01-31", 559441.0308],
@@ -10875,7 +10842,6 @@
     "valor": 474791.6304
    },
    "serie": [
-    ["2021-10-31", 343584.7993],
     ["2021-11-30", 339897.6109],
     ["2021-12-31", 313909.1779],
     ["2022-01-31", 312309.1739],
@@ -10969,7 +10935,6 @@
     "valor": 260360.4765
    },
    "serie": [
-    ["2021-10-31", 245516.5825],
     ["2021-11-30", 253124.8517],
     ["2021-12-31", 238430.4477],
     ["2022-01-31", 246130.0322],
@@ -14279,7 +14244,6 @@
     "valor": 6551.0571
    },
    "serie": [
-    ["2021-10-31", 5816.2616],
     ["2021-11-30", 5819.0957],
     ["2021-12-31", 5775.2884],
     ["2022-01-31", 5741.1824],
@@ -14365,15 +14329,14 @@
     "porcentual": 9.8906
    },
    "minimo_ventana": {
-    "fecha": "2021-10-31",
-    "valor": 7290.8478
+    "fecha": "2021-11-30",
+    "valor": 7311.4207
    },
    "maximo_ventana": {
     "fecha": "2026-09-30",
     "valor": 11516.4567
    },
    "serie": [
-    ["2021-10-31", 7290.8478],
     ["2021-11-30", 7311.4207],
     ["2021-12-31", 7568.2271],
     ["2022-01-31", 7623.7853],
@@ -14459,15 +14422,14 @@
     "porcentual": 5.9629
    },
    "minimo_ventana": {
-    "fecha": "2021-10-31",
-    "valor": 13107.1094
+    "fecha": "2021-11-30",
+    "valor": 13130.5164
    },
    "maximo_ventana": {
     "fecha": "2026-09-30",
     "valor": 17977.1972
    },
    "serie": [
-    ["2021-10-31", 13107.1094],
     ["2021-11-30", 13130.5164],
     ["2021-12-31", 13343.5154],
     ["2022-01-31", 13364.9677],
@@ -14557,11 +14519,10 @@
     "valor": 35.9385
    },
    "maximo_ventana": {
-    "fecha": "2021-10-31",
-    "valor": 44.3749
+    "fecha": "2021-11-30",
+    "valor": 44.3173
    },
    "serie": [
-    ["2021-10-31", 44.3749],
     ["2021-11-30", 44.3173],
     ["2021-12-31", 43.2816],
     ["2022-01-31", 42.9569],
@@ -14647,15 +14608,14 @@
     "porcentual": null
    },
    "minimo_ventana": {
-    "fecha": "2021-10-31",
-    "valor": 55.6251
+    "fecha": "2021-11-30",
+    "valor": 55.6827
    },
    "maximo_ventana": {
     "fecha": "2026-09-30",
     "valor": 64.0615
    },
    "serie": [
-    ["2021-10-31", 55.6251],
     ["2021-11-30", 55.6827],
     ["2021-12-31", 56.7184],
     ["2022-01-31", 57.0431],
@@ -14749,7 +14709,6 @@
     "valor": 3877386.5867
    },
    "serie": [
-    ["2021-10-31", 3733109.3761],
     ["2021-11-30", 3678832.3124],
     ["2021-12-31", 3726504.8093],
     ["2022-01-31", 3709952.0912],
@@ -14843,7 +14802,6 @@
     "valor": 5393817.9251
    },
    "serie": [
-    ["2021-10-31", 4679557.749],
     ["2021-11-30", 4622280.1534],
     ["2021-12-31", 4883398.5189],
     ["2022-01-31", 4926490.0575],
@@ -14937,7 +14895,6 @@
     "valor": 9105164.7611
    },
    "serie": [
-    ["2021-10-31", 8412667.125],
     ["2021-11-30", 8301112.4658],
     ["2021-12-31", 8609903.3282],
     ["2022-01-31", 8636442.1488],
@@ -15000,100 +14957,6 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Física nacional (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 2660941.9457
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 2943597.4434
-   },
-   "variacion_interanual": {
-    "absoluta": -282655.4977,
-    "porcentual": -9.6024
-   },
-   "minimo_ventana": {
-    "fecha": "2026-08-31",
-    "valor": 2621713.6198
-   },
-   "maximo_ventana": {
-    "fecha": "2022-05-31",
-    "valor": 3469783.8495
-   },
-   "serie": [
-    ["2021-10-31", 3343458.3483],
-    ["2021-11-30", 3297134.6748],
-    ["2021-12-31", 3342142.0542],
-    ["2022-01-31", 3327305.4854],
-    ["2022-02-28", 3312058.8348],
-    ["2022-03-31", 3392193.2785],
-    ["2022-04-30", 3394365.2523],
-    ["2022-05-31", 3469783.8495],
-    ["2022-06-30", 3454882.6075],
-    ["2022-07-31", 3355865.9723],
-    ["2022-08-31", 3231337.583],
-    ["2022-09-30", 3138312.8499],
-    ["2022-10-31", 3099002.1905],
-    ["2022-11-30", 3016961.753],
-    ["2022-12-31", 2995261.8142],
-    ["2023-01-31", 2773364.8972],
-    ["2023-02-28", 2802101.7845],
-    ["2023-03-31", 2714608.8741],
-    ["2023-04-30", 2751752.7104],
-    ["2023-05-31", 2742525.9657],
-    ["2023-06-30", 2769481.644],
-    ["2023-07-31", 2794797.6337],
-    ["2023-08-31", 2768399.245],
-    ["2023-09-30", 2817399.5353],
-    ["2023-10-31", 2817184.9083],
-    ["2023-11-30", 2842104.8722],
-    ["2023-12-31", 2807895.1525],
-    ["2024-01-31", 2789203.1759],
-    ["2024-02-29", 2773834.4551],
-    ["2024-03-31", 2737690.8903],
-    ["2024-04-30", 2754867.492],
-    ["2024-05-31", 2889512.4988],
-    ["2024-06-30", 2897829.7374],
-    ["2024-07-31", 2904173.8665],
-    ["2024-08-31", 2893364.8892],
-    ["2024-09-30", 2920240.8669],
-    ["2024-10-31", 2886802.4811],
-    ["2024-11-30", 2896197.0166],
-    ["2024-12-31", 2902824.0534],
-    ["2025-01-31", 2899812.7402],
-    ["2025-02-28", 2886558.38],
-    ["2025-03-31", 2867011.3506],
-    ["2025-04-30", 2908721.5533],
-    ["2025-05-31", 2925309.7668],
-    ["2025-06-30", 2923156.2356],
-    ["2025-07-31", 2937954.4076],
-    ["2025-08-31", 2944888.2451],
-    ["2025-09-30", 2943597.4434],
-    ["2025-10-31", 2941870.6981],
-    ["2025-11-30", 2919965.2259],
-    ["2025-12-31", 2935568.755],
-    ["2026-01-31", 2923614.7156],
-    ["2026-02-28", 2763628.4454],
-    ["2026-03-31", 2717647.7613],
-    ["2026-04-30", 2647475.1678],
-    ["2026-05-31", 2666376.4995],
-    ["2026-06-30", 2648964.397],
-    ["2026-07-31", 2634378.0065],
-    ["2026-08-31", 2621713.6198],
-    ["2026-09-30", 2660941.9457]
-   ]
-  },
-  {
    "id": "sugef_usd_persona_dolares_otra_persona_extranjera_millones_d",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Dólares, Otra persona extranjera (millones de colones)",
@@ -15125,7 +14988,6 @@
     "valor": 46645.066
    },
    "serie": [
-    ["2021-10-31", 34710.3989],
     ["2021-11-30", 34460.1263],
     ["2021-12-31", 34578.2949],
     ["2022-01-31", 33886.8222],
@@ -15188,6 +15050,99 @@
    ]
   },
   {
+   "id": "sugef_usd_persona_dolares_fisica_nacional_millones_de_colone",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Física nacional (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 2660941.9457
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 2943597.4434
+   },
+   "variacion_interanual": {
+    "absoluta": -282655.4977,
+    "porcentual": -9.6024
+   },
+   "minimo_ventana": {
+    "fecha": "2026-08-31",
+    "valor": 2621713.6198
+   },
+   "maximo_ventana": {
+    "fecha": "2022-05-31",
+    "valor": 3469783.8495
+   },
+   "serie": [
+    ["2021-11-30", 3297134.6748],
+    ["2021-12-31", 3342142.0542],
+    ["2022-01-31", 3327305.4854],
+    ["2022-02-28", 3312058.8348],
+    ["2022-03-31", 3392193.2785],
+    ["2022-04-30", 3394365.2523],
+    ["2022-05-31", 3469783.8495],
+    ["2022-06-30", 3454882.6075],
+    ["2022-07-31", 3355865.9723],
+    ["2022-08-31", 3231337.583],
+    ["2022-09-30", 3138312.8499],
+    ["2022-10-31", 3099002.1905],
+    ["2022-11-30", 3016961.753],
+    ["2022-12-31", 2995261.8142],
+    ["2023-01-31", 2773364.8972],
+    ["2023-02-28", 2802101.7845],
+    ["2023-03-31", 2714608.8741],
+    ["2023-04-30", 2751752.7104],
+    ["2023-05-31", 2742525.9657],
+    ["2023-06-30", 2769481.644],
+    ["2023-07-31", 2794797.6337],
+    ["2023-08-31", 2768399.245],
+    ["2023-09-30", 2817399.5353],
+    ["2023-10-31", 2817184.9083],
+    ["2023-11-30", 2842104.8722],
+    ["2023-12-31", 2807895.1525],
+    ["2024-01-31", 2789203.1759],
+    ["2024-02-29", 2773834.4551],
+    ["2024-03-31", 2737690.8903],
+    ["2024-04-30", 2754867.492],
+    ["2024-05-31", 2889512.4988],
+    ["2024-06-30", 2897829.7374],
+    ["2024-07-31", 2904173.8665],
+    ["2024-08-31", 2893364.8892],
+    ["2024-09-30", 2920240.8669],
+    ["2024-10-31", 2886802.4811],
+    ["2024-11-30", 2896197.0166],
+    ["2024-12-31", 2902824.0534],
+    ["2025-01-31", 2899812.7402],
+    ["2025-02-28", 2886558.38],
+    ["2025-03-31", 2867011.3506],
+    ["2025-04-30", 2908721.5533],
+    ["2025-05-31", 2925309.7668],
+    ["2025-06-30", 2923156.2356],
+    ["2025-07-31", 2937954.4076],
+    ["2025-08-31", 2944888.2451],
+    ["2025-09-30", 2943597.4434],
+    ["2025-10-31", 2941870.6981],
+    ["2025-11-30", 2919965.2259],
+    ["2025-12-31", 2935568.755],
+    ["2026-01-31", 2923614.7156],
+    ["2026-02-28", 2763628.4454],
+    ["2026-03-31", 2717647.7613],
+    ["2026-04-30", 2647475.1678],
+    ["2026-05-31", 2666376.4995],
+    ["2026-06-30", 2648964.397],
+    ["2026-07-31", 2634378.0065],
+    ["2026-08-31", 2621713.6198],
+    ["2026-09-30", 2660941.9457]
+   ]
+  },
+  {
    "id": "sugef_usd_persona_dolares_extranjero_residente_dimex_millone",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Dólares, Extranjero residente (DIMEX) (millones de colones)",
@@ -15219,7 +15174,6 @@
     "valor": 374264.424
    },
    "serie": [
-    ["2021-10-31", 354940.6289],
     ["2021-11-30", 347237.5113],
     ["2021-12-31", 349784.4601],
     ["2022-01-31", 348759.7836],
@@ -15282,100 +15236,6 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_empresa_nacional_millones_de_colon",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Empresa nacional (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 5163538.9408
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 5205832.4044
-   },
-   "variacion_interanual": {
-    "absoluta": -42293.4636,
-    "porcentual": -0.8124
-   },
-   "minimo_ventana": {
-    "fecha": "2023-03-31",
-    "valor": 4389621.1192
-   },
-   "maximo_ventana": {
-    "fecha": "2025-12-31",
-    "valor": 5288200.4075
-   },
-   "serie": [
-    ["2021-10-31", 4596348.951],
-    ["2021-11-30", 4541516.0673],
-    ["2021-12-31", 4792125.7041],
-    ["2022-01-31", 4836796.0762],
-    ["2022-02-28", 4878624.3878],
-    ["2022-03-31", 4991002.5686],
-    ["2022-04-30", 5030821.2193],
-    ["2022-05-31", 5133604.3994],
-    ["2022-06-30", 5129851.7244],
-    ["2022-07-31", 5016987.4629],
-    ["2022-08-31", 4899416.7588],
-    ["2022-09-30", 4780328.1053],
-    ["2022-10-31", 4794087.7307],
-    ["2022-11-30", 4710467.5563],
-    ["2022-12-31", 4753714.5502],
-    ["2023-01-31", 4438255.7672],
-    ["2023-02-28", 4480727.3789],
-    ["2023-03-31", 4389621.1192],
-    ["2023-04-30", 4491735.6005],
-    ["2023-05-31", 4479890.9511],
-    ["2023-06-30", 4518442.8781],
-    ["2023-07-31", 4545649.738],
-    ["2023-08-31", 4478938.0832],
-    ["2023-09-30", 4577702.6383],
-    ["2023-10-31", 4557719.9998],
-    ["2023-11-30", 4578571.2329],
-    ["2023-12-31", 4586588.9306],
-    ["2024-01-31", 4640498.5192],
-    ["2024-02-29", 4610442.1845],
-    ["2024-03-31", 4552038.4047],
-    ["2024-04-30", 4658771.6491],
-    ["2024-05-31", 4891846.2482],
-    ["2024-06-30", 4899805.9399],
-    ["2024-07-31", 4954756.4607],
-    ["2024-08-31", 4948058.8507],
-    ["2024-09-30", 4957461.2905],
-    ["2024-10-31", 4865939.6894],
-    ["2024-11-30", 4857758.496],
-    ["2024-12-31", 4928202.3557],
-    ["2025-01-31", 4963228.1907],
-    ["2025-02-28", 5010679.6462],
-    ["2025-03-31", 4996513.1608],
-    ["2025-04-30", 5098384.3065],
-    ["2025-05-31", 5107424.1322],
-    ["2025-06-30", 5092506.1106],
-    ["2025-07-31", 5127347.7544],
-    ["2025-08-31", 5143449.5405],
-    ["2025-09-30", 5205832.4044],
-    ["2025-10-31", 5258360.0773],
-    ["2025-11-30", 5202988.525],
-    ["2025-12-31", 5288200.4075],
-    ["2026-01-31", 5284869.4376],
-    ["2026-02-28", 5032719.8895],
-    ["2026-03-31", 4985562.8677],
-    ["2026-04-30", 4933878.6932],
-    ["2026-05-31", 5031831.7651],
-    ["2026-06-30", 5083813.5381],
-    ["2026-07-31", 5069509.7811],
-    ["2026-08-31", 5093297.2154],
-    ["2026-09-30", 5163538.9408]
-   ]
-  },
-  {
    "id": "sugef_usd_persona_dolares_fideicomisos_millones_de_colones",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Dólares, Fideicomisos (millones de colones)",
@@ -15399,7 +15259,7 @@
     "porcentual": null
    },
    "minimo_ventana": {
-    "fecha": "2021-10-31",
+    "fecha": "2021-11-30",
     "valor": 0.0
    },
    "maximo_ventana": {
@@ -15407,7 +15267,6 @@
     "valor": 1684.8296
    },
    "serie": [
-    ["2021-10-31", 0.0],
     ["2021-11-30", 0.0],
     ["2021-12-31", 0.0],
     ["2022-01-31", 0.0],
@@ -15470,100 +15329,6 @@
    ]
   },
   {
-   "id": "sugef_usd_persona_dolares_empresa_extranjera_no_financiera_m",
-   "hoja": "16_SUGEF_USD_persona",
-   "columna": "Dólares, Empresa extranjera no financiera (millones de colones)",
-   "pilar": "credito",
-   "fuente": "SUGEF",
-   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
-   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
-   "periodicidad": "Mensual",
-   "unidad": "millones de colones",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2026-09-30",
-    "valor": 92891.9134
-   },
-   "hace_un_anio": {
-    "fecha": "2025-09-30",
-    "valor": 97010.513
-   },
-   "variacion_interanual": {
-    "absoluta": -4118.5996,
-    "porcentual": -4.2455
-   },
-   "minimo_ventana": {
-    "fecha": "2026-08-31",
-    "valor": 74923.8284
-   },
-   "maximo_ventana": {
-    "fecha": "2024-08-31",
-    "valor": 121612.4527
-   },
-   "serie": [
-    ["2021-10-31", 82009.8387],
-    ["2021-11-30", 79583.1343],
-    ["2021-12-31", 90094.3592],
-    ["2022-01-31", 88513.1406],
-    ["2022-02-28", 87104.2753],
-    ["2022-03-31", 97216.862],
-    ["2022-04-30", 89698.732],
-    ["2022-05-31", 92972.1871],
-    ["2022-06-30", 96820.2488],
-    ["2022-07-31", 90574.1066],
-    ["2022-08-31", 92580.2722],
-    ["2022-09-30", 93397.8725],
-    ["2022-10-31", 97698.2307],
-    ["2022-11-30", 99608.4154],
-    ["2022-12-31", 112218.9452],
-    ["2023-01-31", 97034.6911],
-    ["2023-02-28", 99003.8534],
-    ["2023-03-31", 92360.2165],
-    ["2023-04-30", 95484.0216],
-    ["2023-05-31", 106747.2076],
-    ["2023-06-30", 105069.924],
-    ["2023-07-31", 104031.8363],
-    ["2023-08-31", 106657.962],
-    ["2023-09-30", 109290.319],
-    ["2023-10-31", 107312.8851],
-    ["2023-11-30", 111760.3479],
-    ["2023-12-31", 104898.2903],
-    ["2024-01-31", 111982.1762],
-    ["2024-02-29", 110837.2174],
-    ["2024-03-31", 107968.0773],
-    ["2024-04-30", 105031.4466],
-    ["2024-05-31", 117779.6454],
-    ["2024-06-30", 120921.4158],
-    ["2024-07-31", 121021.0984],
-    ["2024-08-31", 121612.4527],
-    ["2024-09-30", 119720.8893],
-    ["2024-10-31", 108493.2318],
-    ["2024-11-30", 104921.8086],
-    ["2024-12-31", 112325.5206],
-    ["2025-01-31", 112406.7864],
-    ["2025-02-28", 105955.243],
-    ["2025-03-31", 100586.6193],
-    ["2025-04-30", 93741.0336],
-    ["2025-05-31", 91085.288],
-    ["2025-06-30", 90516.0741],
-    ["2025-07-31", 85895.6451],
-    ["2025-08-31", 86105.501],
-    ["2025-09-30", 97010.513],
-    ["2025-10-31", 99545.9872],
-    ["2025-11-30", 83269.6951],
-    ["2025-12-31", 105586.7861],
-    ["2026-01-31", 86927.8185],
-    ["2026-02-28", 86967.853],
-    ["2026-03-31", 83390.0654],
-    ["2026-04-30", 79186.3052],
-    ["2026-05-31", 76761.1744],
-    ["2026-06-30", 75587.8118],
-    ["2026-07-31", 82202.1137],
-    ["2026-08-31", 74923.8284],
-    ["2026-09-30", 92891.9134]
-   ]
-  },
-  {
    "id": "sugef_usd_persona_dolares_entidad_financiera_extranjera_mill",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Dólares, Entidad financiera extranjera (millones de colones)",
@@ -15595,7 +15360,6 @@
     "valor": 23058.3738
    },
    "serie": [
-    ["2021-10-31", 1198.9593],
     ["2021-11-30", 1180.9518],
     ["2021-12-31", 1178.4556],
     ["2022-01-31", 1180.8407],
@@ -15658,6 +15422,192 @@
    ]
   },
   {
+   "id": "sugef_usd_persona_dolares_empresa_nacional_millones_de_colon",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Empresa nacional (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 5163538.9408
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 5205832.4044
+   },
+   "variacion_interanual": {
+    "absoluta": -42293.4636,
+    "porcentual": -0.8124
+   },
+   "minimo_ventana": {
+    "fecha": "2023-03-31",
+    "valor": 4389621.1192
+   },
+   "maximo_ventana": {
+    "fecha": "2025-12-31",
+    "valor": 5288200.4075
+   },
+   "serie": [
+    ["2021-11-30", 4541516.0673],
+    ["2021-12-31", 4792125.7041],
+    ["2022-01-31", 4836796.0762],
+    ["2022-02-28", 4878624.3878],
+    ["2022-03-31", 4991002.5686],
+    ["2022-04-30", 5030821.2193],
+    ["2022-05-31", 5133604.3994],
+    ["2022-06-30", 5129851.7244],
+    ["2022-07-31", 5016987.4629],
+    ["2022-08-31", 4899416.7588],
+    ["2022-09-30", 4780328.1053],
+    ["2022-10-31", 4794087.7307],
+    ["2022-11-30", 4710467.5563],
+    ["2022-12-31", 4753714.5502],
+    ["2023-01-31", 4438255.7672],
+    ["2023-02-28", 4480727.3789],
+    ["2023-03-31", 4389621.1192],
+    ["2023-04-30", 4491735.6005],
+    ["2023-05-31", 4479890.9511],
+    ["2023-06-30", 4518442.8781],
+    ["2023-07-31", 4545649.738],
+    ["2023-08-31", 4478938.0832],
+    ["2023-09-30", 4577702.6383],
+    ["2023-10-31", 4557719.9998],
+    ["2023-11-30", 4578571.2329],
+    ["2023-12-31", 4586588.9306],
+    ["2024-01-31", 4640498.5192],
+    ["2024-02-29", 4610442.1845],
+    ["2024-03-31", 4552038.4047],
+    ["2024-04-30", 4658771.6491],
+    ["2024-05-31", 4891846.2482],
+    ["2024-06-30", 4899805.9399],
+    ["2024-07-31", 4954756.4607],
+    ["2024-08-31", 4948058.8507],
+    ["2024-09-30", 4957461.2905],
+    ["2024-10-31", 4865939.6894],
+    ["2024-11-30", 4857758.496],
+    ["2024-12-31", 4928202.3557],
+    ["2025-01-31", 4963228.1907],
+    ["2025-02-28", 5010679.6462],
+    ["2025-03-31", 4996513.1608],
+    ["2025-04-30", 5098384.3065],
+    ["2025-05-31", 5107424.1322],
+    ["2025-06-30", 5092506.1106],
+    ["2025-07-31", 5127347.7544],
+    ["2025-08-31", 5143449.5405],
+    ["2025-09-30", 5205832.4044],
+    ["2025-10-31", 5258360.0773],
+    ["2025-11-30", 5202988.525],
+    ["2025-12-31", 5288200.4075],
+    ["2026-01-31", 5284869.4376],
+    ["2026-02-28", 5032719.8895],
+    ["2026-03-31", 4985562.8677],
+    ["2026-04-30", 4933878.6932],
+    ["2026-05-31", 5031831.7651],
+    ["2026-06-30", 5083813.5381],
+    ["2026-07-31", 5069509.7811],
+    ["2026-08-31", 5093297.2154],
+    ["2026-09-30", 5163538.9408]
+   ]
+  },
+  {
+   "id": "sugef_usd_persona_dolares_empresa_extranjera_no_financiera_m",
+   "hoja": "16_SUGEF_USD_persona",
+   "columna": "Dólares, Empresa extranjera no financiera (millones de colones)",
+   "pilar": "credito",
+   "fuente": "SUGEF",
+   "codigo": "ReporteTipoMonedaCarteraPersona (+Hasta2023)",
+   "nombre_fuente": "Reporte tipo de moneda, cartera y persona",
+   "periodicidad": "Mensual",
+   "unidad": "millones de colones",
+   "tipo_valor": "nivel",
+   "ultimo": {
+    "fecha": "2026-09-30",
+    "valor": 92891.9134
+   },
+   "hace_un_anio": {
+    "fecha": "2025-09-30",
+    "valor": 97010.513
+   },
+   "variacion_interanual": {
+    "absoluta": -4118.5996,
+    "porcentual": -4.2455
+   },
+   "minimo_ventana": {
+    "fecha": "2026-08-31",
+    "valor": 74923.8284
+   },
+   "maximo_ventana": {
+    "fecha": "2024-08-31",
+    "valor": 121612.4527
+   },
+   "serie": [
+    ["2021-11-30", 79583.1343],
+    ["2021-12-31", 90094.3592],
+    ["2022-01-31", 88513.1406],
+    ["2022-02-28", 87104.2753],
+    ["2022-03-31", 97216.862],
+    ["2022-04-30", 89698.732],
+    ["2022-05-31", 92972.1871],
+    ["2022-06-30", 96820.2488],
+    ["2022-07-31", 90574.1066],
+    ["2022-08-31", 92580.2722],
+    ["2022-09-30", 93397.8725],
+    ["2022-10-31", 97698.2307],
+    ["2022-11-30", 99608.4154],
+    ["2022-12-31", 112218.9452],
+    ["2023-01-31", 97034.6911],
+    ["2023-02-28", 99003.8534],
+    ["2023-03-31", 92360.2165],
+    ["2023-04-30", 95484.0216],
+    ["2023-05-31", 106747.2076],
+    ["2023-06-30", 105069.924],
+    ["2023-07-31", 104031.8363],
+    ["2023-08-31", 106657.962],
+    ["2023-09-30", 109290.319],
+    ["2023-10-31", 107312.8851],
+    ["2023-11-30", 111760.3479],
+    ["2023-12-31", 104898.2903],
+    ["2024-01-31", 111982.1762],
+    ["2024-02-29", 110837.2174],
+    ["2024-03-31", 107968.0773],
+    ["2024-04-30", 105031.4466],
+    ["2024-05-31", 117779.6454],
+    ["2024-06-30", 120921.4158],
+    ["2024-07-31", 121021.0984],
+    ["2024-08-31", 121612.4527],
+    ["2024-09-30", 119720.8893],
+    ["2024-10-31", 108493.2318],
+    ["2024-11-30", 104921.8086],
+    ["2024-12-31", 112325.5206],
+    ["2025-01-31", 112406.7864],
+    ["2025-02-28", 105955.243],
+    ["2025-03-31", 100586.6193],
+    ["2025-04-30", 93741.0336],
+    ["2025-05-31", 91085.288],
+    ["2025-06-30", 90516.0741],
+    ["2025-07-31", 85895.6451],
+    ["2025-08-31", 86105.501],
+    ["2025-09-30", 97010.513],
+    ["2025-10-31", 99545.9872],
+    ["2025-11-30", 83269.6951],
+    ["2025-12-31", 105586.7861],
+    ["2026-01-31", 86927.8185],
+    ["2026-02-28", 86967.853],
+    ["2026-03-31", 83390.0654],
+    ["2026-04-30", 79186.3052],
+    ["2026-05-31", 76761.1744],
+    ["2026-06-30", 75587.8118],
+    ["2026-07-31", 82202.1137],
+    ["2026-08-31", 74923.8284],
+    ["2026-09-30", 92891.9134]
+   ]
+  },
+  {
    "id": "sugef_usd_persona_tipo_de_cambio_venta_318_fin_de_mes",
    "hoja": "16_SUGEF_USD_persona",
    "columna": "Tipo de cambio venta 318 (fin de mes)",
@@ -15689,7 +15639,6 @@
     "valor": 692.25
    },
    "serie": [
-    ["2021-10-31", 641.84],
     ["2021-11-30", 632.2],
     ["2021-12-31", 645.25],
     ["2022-01-31", 646.2],
@@ -18247,15 +18196,14 @@
     "porcentual": -2.0347
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 47369.3365
+    "fecha": "2016-11-30",
+    "valor": 47618.8851
    },
    "maximo_ventana": {
     "fecha": "2025-02-28",
     "valor": 66509.2843
    },
    "serie": [
-    ["2016-10-31", 47369.3365],
     ["2016-11-30", 47618.8851],
     ["2016-12-31", 48854.6942],
     ["2017-01-31", 49992.051],
@@ -18401,15 +18349,14 @@
     "porcentual": -1.4087
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 39432.9664
+    "fecha": "2016-11-30",
+    "valor": 39666.393
    },
    "maximo_ventana": {
     "fecha": "2025-01-31",
     "valor": 55342.6515
    },
    "serie": [
-    ["2016-10-31", 39432.9664],
     ["2016-11-30", 39666.393],
     ["2016-12-31", 40764.3114],
     ["2017-01-31", 41837.0847],
@@ -18555,15 +18502,14 @@
     "porcentual": -1.8206
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 44337.534
+    "fecha": "2016-11-30",
+    "valor": 44580.9238
    },
    "maximo_ventana": {
     "fecha": "2025-02-28",
     "valor": 62172.6903
    },
    "serie": [
-    ["2016-10-31", 44337.534],
     ["2016-11-30", 44580.9238],
     ["2016-12-31", 45764.0567],
     ["2017-01-31", 46876.7418],
@@ -18709,15 +18655,14 @@
     "porcentual": -0.4367
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 105436.444
+    "fecha": "2016-11-30",
+    "valor": 105626.8674
    },
    "maximo_ventana": {
     "fecha": "2022-08-31",
     "valor": 133136.0436
    },
    "serie": [
-    ["2016-10-31", 105436.444],
     ["2016-11-30", 105626.8674],
     ["2016-12-31", 106799.9508],
     ["2017-01-31", 108061.0028],
@@ -18863,15 +18808,14 @@
     "porcentual": -0.2347
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 81064.385
+    "fecha": "2016-11-30",
+    "valor": 81255.4216
    },
    "maximo_ventana": {
     "fecha": "2022-08-31",
     "valor": 103024.786
    },
    "serie": [
-    ["2016-10-31", 81064.385],
     ["2016-11-30", 81255.4216],
     ["2016-12-31", 82308.3686],
     ["2017-01-31", 83469.8256],
@@ -19017,7 +18961,7 @@
     "porcentual": 1.63
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
+    "fecha": "2016-11-30",
     "valor": 289828.62
    },
    "maximo_ventana": {
@@ -19025,7 +18969,6 @@
     "valor": 373092.3
    },
    "serie": [
-    ["2016-10-31", 289828.62],
     ["2016-11-30", 289828.62],
     ["2016-12-31", 289828.62],
     ["2017-01-31", 293132.67],
@@ -19179,7 +19122,6 @@
     "valor": 19.9677
    },
    "serie": [
-    ["2016-10-31", 16.3439],
     ["2016-11-30", 16.43],
     ["2016-12-31", 16.8564],
     ["2017-01-31", 17.0544],
@@ -19333,7 +19275,6 @@
     "valor": 16.5447
    },
    "serie": [
-    ["2016-10-31", 13.6056],
     ["2016-11-30", 13.6862],
     ["2016-12-31", 14.065],
     ["2017-01-31", 14.2724],
@@ -19763,7 +19704,6 @@
     "valor": 864150.9101
    },
    "serie": [
-    ["2016-10-31", 328087.5],
     ["2016-11-30", 347566.5],
     ["2016-12-31", 687966.3],
     ["2017-01-31", 376494.5],
@@ -19916,7 +19856,6 @@
     "valor": 792741.2418
    },
    "serie": [
-    ["2016-10-31", 311661.5],
     ["2016-11-30", 315676.5],
     ["2016-12-31", 597828.8],
     ["2017-01-31", 343836.1],
@@ -20069,7 +20008,6 @@
     "valor": 1145191.4524
    },
    "serie": [
-    ["2016-10-31", 490925.5],
     ["2016-11-30", 476642.3],
     ["2016-12-31", 970122.2],
     ["2017-01-31", 561555.5],
@@ -20222,7 +20160,6 @@
     "valor": 343729.115
    },
    "serie": [
-    ["2016-10-31", 63413.4],
     ["2016-11-30", 40086.6],
     ["2016-12-31", 130541.2],
     ["2017-01-31", 51967.5],
@@ -20375,7 +20312,6 @@
     "valor": 347415.7304
    },
    "serie": [
-    ["2016-10-31", -99424.5],
     ["2016-11-30", -88989.3],
     ["2016-12-31", -151614.7],
     ["2017-01-31", -133093.5],
@@ -20528,7 +20464,6 @@
     "valor": 105022.9052
    },
    "serie": [
-    ["2016-10-31", -162838.0],
     ["2016-11-30", -129075.8],
     ["2016-12-31", -282155.9],
     ["2017-01-31", -185061.0],
@@ -20673,7 +20608,7 @@
     "porcentual": 2.4562
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
+    "fecha": "2016-11-30",
     "valor": 32056288.2102
    },
    "maximo_ventana": {
@@ -20681,7 +20616,6 @@
     "valor": 53084916.7131
    },
    "serie": [
-    ["2016-10-31", 32056288.2102],
     ["2016-11-30", 32056288.2102],
     ["2016-12-31", 32056288.2102],
     ["2017-01-31", 34343647.4944],
@@ -20834,7 +20768,6 @@
     "valor": 16.0068
    },
    "serie": [
-    ["2016-10-31", 11.0102],
     ["2016-11-30", 12.0944],
     ["2016-12-31", 14.2406],
     ["2017-01-31", 1.0963],
@@ -20987,7 +20920,6 @@
     "valor": 13.7667
    },
    "serie": [
-    ["2016-10-31", 10.1505],
     ["2016-11-30", 11.1353],
     ["2016-12-31", 13.0002],
     ["2017-01-31", 1.0012],
@@ -21140,7 +21072,6 @@
     "valor": 21.0381
    },
    "serie": [
-    ["2016-10-31", 14.8255],
     ["2016-11-30", 16.3124],
     ["2016-12-31", 19.3387],
     ["2017-01-31", 1.6351],
@@ -21293,7 +21224,6 @@
     "valor": 4.766
    },
    "serie": [
-    ["2016-10-31", 2.196],
     ["2016-11-30", 2.3211],
     ["2016-12-31", 2.7283],
     ["2017-01-31", 0.1513],
@@ -21446,7 +21376,6 @@
     "valor": 2.2172
    },
    "serie": [
-    ["2016-10-31", -1.612],
     ["2016-11-30", -1.8896],
     ["2016-12-31", -2.3626],
     ["2017-01-31", -0.3875],
@@ -21599,7 +21528,6 @@
     "valor": -0.1637
    },
    "serie": [
-    ["2016-10-31", -3.8153],
     ["2016-11-30", -4.218],
     ["2016-12-31", -5.0982],
     ["2017-01-31", -0.5389],
@@ -21752,7 +21680,6 @@
     "valor": 16.0068
    },
    "serie": [
-    ["2016-10-31", 13.9412],
     ["2016-11-30", 14.0403],
     ["2016-12-31", 14.2406],
     ["2017-01-31", 13.4249],
@@ -21905,7 +21832,6 @@
     "valor": 13.7667
    },
    "serie": [
-    ["2016-10-31", 12.8707],
     ["2016-11-30", 12.9222],
     ["2016-12-31", 13.0002],
     ["2017-01-31", 12.2119],
@@ -22058,7 +21984,6 @@
     "valor": 22.0952
    },
    "serie": [
-    ["2016-10-31", 18.7495],
     ["2016-11-30", 18.944],
     ["2016-12-31", 19.3387],
     ["2017-01-31", 18.1561],
@@ -22211,7 +22136,6 @@
     "valor": 4.7789
    },
    "serie": [
-    ["2016-10-31", 2.6772],
     ["2016-11-30", 2.6773],
     ["2016-12-31", 2.7283],
     ["2017-01-31", 2.5436],
@@ -22364,7 +22288,6 @@
     "valor": 2.1967
    },
    "serie": [
-    ["2016-10-31", -2.1238],
     ["2016-11-30", -2.2191],
     ["2016-12-31", -2.3626],
     ["2017-01-31", -2.1808],
@@ -22517,7 +22440,6 @@
     "valor": -2.1258
    },
    "serie": [
-    ["2016-10-31", -4.8083],
     ["2016-11-30", -4.9037],
     ["2016-12-31", -5.0982],
     ["2017-01-31", -4.7312],
@@ -22670,7 +22592,6 @@
     "valor": 36.1485
    },
    "serie": [
-    ["2016-10-31", 19.2035],
     ["2016-11-30", 19.069],
     ["2016-12-31", 19.1586],
     ["2017-01-31", 18.9469],
@@ -22823,8 +22744,7 @@
     "valor": 146.2952
    },
    "serie": [
-    ["2016-10-31", null],
-    ["2016-11-30", 89.7538],
+    ["2016-11-30", null],
     ["2016-12-31", 68.5173],
     ["2017-01-31", 64.1012],
     ["2017-02-28", 60.3551],
@@ -22977,8 +22897,7 @@
     "valor": 146.2952
    },
    "serie": [
-    ["2016-10-31", null],
-    ["2016-11-30", 89.7538],
+    ["2016-11-30", null],
     ["2016-12-31", 68.5173],
     ["2017-01-31", 64.1012],
     ["2017-02-28", 60.3551],
@@ -23123,7 +23042,7 @@
     "porcentual": null
    },
    "minimo_ventana": {
-    "fecha": "2016-11-30",
+    "fecha": "2016-12-31",
     "valor": 0.0
    },
    "maximo_ventana": {
@@ -23131,8 +23050,7 @@
     "valor": 10.5882
    },
    "serie": [
-    ["2016-10-31", null],
-    ["2016-11-30", 0.0],
+    ["2016-11-30", null],
     ["2016-12-31", 0.0],
     ["2017-01-31", 0.0],
     ["2017-02-28", 0.0],
@@ -23285,8 +23203,7 @@
     "valor": 69.7988
    },
    "serie": [
-    ["2016-10-31", null],
-    ["2016-11-30", 39.458],
+    ["2016-11-30", null],
     ["2016-12-31", 26.5955],
     ["2017-01-31", 27.3924],
     ["2017-02-28", 24.6064],
@@ -23439,7 +23356,6 @@
     "valor": 1450.7015
    },
    "serie": [
-    ["2016-10-31", null],
     ["2016-11-30", null],
     ["2016-12-31", null],
     ["2017-01-31", null],
@@ -23451,7 +23367,7 @@
     ["2017-07-31", null],
     ["2017-08-31", null],
     ["2017-09-30", null],
-    ["2017-10-31", 839.6367],
+    ["2017-10-31", null],
     ["2017-11-30", 840.1457],
     ["2017-12-31", 833.2647],
     ["2018-01-31", 829.961],
@@ -23593,7 +23509,6 @@
     "valor": 1429.6083
    },
    "serie": [
-    ["2016-10-31", 765.1282],
     ["2016-11-30", 854.882],
     ["2016-12-31", 923.3993],
     ["2017-01-31", 64.1012],
@@ -26130,7 +26045,6 @@
     "valor": 2152.7253
    },
    "serie": [
-    ["2016-10-31", 818.8506],
     ["2016-11-30", 851.2878],
     ["2016-12-31", 819.4597],
     ["2017-01-31", 757.3148],
@@ -26282,7 +26196,6 @@
     "valor": 2452.9383
    },
    "serie": [
-    ["2016-10-31", 1267.2927],
     ["2016-11-30", 1435.4082],
     ["2016-12-31", 1326.0864],
     ["2017-01-31", 1277.2411],
@@ -26434,7 +26347,6 @@
     "valor": -13.6886
    },
    "serie": [
-    ["2016-10-31", -448.4422],
     ["2016-11-30", -584.1204],
     ["2016-12-31", -506.6266],
     ["2017-01-31", -519.9263],
@@ -26578,15 +26490,14 @@
     "porcentual": 6.8183
    },
    "minimo_ventana": {
-    "fecha": "2016-10-31",
-    "valor": 9756.6074
+    "fecha": "2016-11-30",
+    "valor": 9829.7816
    },
    "maximo_ventana": {
     "fecha": "2026-06-30",
     "valor": 23319.646
    },
    "serie": [
-    ["2016-10-31", 9756.6074],
     ["2016-11-30", 9829.7816],
     ["2016-12-31", 9924.1608],
     ["2017-01-31", 9972.7391],
@@ -26738,7 +26649,6 @@
     "valor": 26156.6016
    },
    "serie": [
-    ["2016-10-31", 15003.1869],
     ["2016-11-30", 15118.0851],
     ["2016-12-31", 15230.8936],
     ["2017-01-31", 15345.5275],
@@ -26890,7 +26800,6 @@
     "valor": -2084.9119
    },
    "serie": [
-    ["2016-10-31", -5246.5795],
     ["2016-11-30", -5288.3035],
     ["2016-12-31", -5306.7328],
     ["2017-01-31", -5372.7884],
@@ -36956,120 +36865,6 @@
    ]
   },
   {
-   "id": "empleo_publico_asegurados_directos_ivm_gobierno_central_ccss",
-   "hoja": "38_Empleo_publico",
-   "columna": "Asegurados directos IVM: Gobierno Central (CCSS)",
-   "pilar": "sociedad",
-   "fuente": "INEC, ECE; BCCR; CCSS",
-   "codigo": "Anuario INEC, cuadro 12.14 (CCSS)",
-   "nombre_fuente": "Asegurados directos del IVM por sector institucional",
-   "periodicidad": "Anual",
-   "unidad": "Personas",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2025-12-31",
-    "valor": 47464.0
-   },
-   "hace_un_anio": {
-    "fecha": "2024-12-31",
-    "valor": 47223.0
-   },
-   "variacion_interanual": {
-    "absoluta": 241.0,
-    "porcentual": 0.5103
-   },
-   "minimo_ventana": {
-    "fecha": "2023-12-31",
-    "valor": 47062.0
-   },
-   "maximo_ventana": {
-    "fecha": "2022-12-31",
-    "valor": 48480.0
-   },
-   "serie": [
-    ["2022-12-31", 48480.0],
-    ["2023-12-31", 47062.0],
-    ["2024-12-31", 47223.0],
-    ["2025-12-31", 47464.0]
-   ]
-  },
-  {
-   "id": "empleo_publico_asegurados_directos_ivm_instituciones_autonom",
-   "hoja": "38_Empleo_publico",
-   "columna": "Asegurados directos IVM: instituciones autónomas (CCSS)",
-   "pilar": "sociedad",
-   "fuente": "INEC, ECE; BCCR; CCSS",
-   "codigo": "Anuario INEC, cuadro 12.14 (CCSS)",
-   "nombre_fuente": "Asegurados directos del IVM por sector institucional",
-   "periodicidad": "Anual",
-   "unidad": "Personas",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2025-12-31",
-    "valor": 164161.0
-   },
-   "hace_un_anio": {
-    "fecha": "2024-12-31",
-    "valor": 158545.0
-   },
-   "variacion_interanual": {
-    "absoluta": 5616.0,
-    "porcentual": 3.5422
-   },
-   "minimo_ventana": {
-    "fecha": "2024-12-31",
-    "valor": 158545.0
-   },
-   "maximo_ventana": {
-    "fecha": "2025-12-31",
-    "valor": 164161.0
-   },
-   "serie": [
-    ["2022-12-31", 159695.0],
-    ["2023-12-31", 159082.0],
-    ["2024-12-31", 158545.0],
-    ["2025-12-31", 164161.0]
-   ]
-  },
-  {
-   "id": "empleo_publico_asegurados_directos_ivm_empresa_privada_ccss",
-   "hoja": "38_Empleo_publico",
-   "columna": "Asegurados directos IVM: empresa privada (CCSS)",
-   "pilar": "sociedad",
-   "fuente": "INEC, ECE; BCCR; CCSS",
-   "codigo": "Anuario INEC, cuadro 12.14 (CCSS)",
-   "nombre_fuente": "Asegurados directos del IVM por sector institucional",
-   "periodicidad": "Anual",
-   "unidad": "Personas",
-   "tipo_valor": "nivel",
-   "ultimo": {
-    "fecha": "2025-12-31",
-    "valor": 1167587.0
-   },
-   "hace_un_anio": {
-    "fecha": "2024-12-31",
-    "valor": 1126970.0
-   },
-   "variacion_interanual": {
-    "absoluta": 40617.0,
-    "porcentual": 3.6041
-   },
-   "minimo_ventana": {
-    "fecha": "2022-12-31",
-    "valor": 1036237.0
-   },
-   "maximo_ventana": {
-    "fecha": "2025-12-31",
-    "valor": 1167587.0
-   },
-   "serie": [
-    ["2022-12-31", 1036237.0],
-    ["2023-12-31", 1084090.0],
-    ["2024-12-31", 1126970.0],
-    ["2025-12-31", 1167587.0]
-   ]
-  },
-  {
    "id": "salarios_ingreso_promedio_mensual_todos_los_ocupados_colones",
    "hoja": "39_Salarios",
    "columna": "Ingreso promedio mensual, todos los ocupados (colones corrientes)",
@@ -39959,13 +39754,13 @@
    ]
   },
   {
-   "id": "programas_sociales_hogares_con_subsidios_estatales_y_becas_e",
+   "id": "programas_sociales_hogares_que_declaran_ingreso_en_efectivo",
    "hoja": "40_Programas_sociales",
-   "columna": "Hogares con subsidios estatales y becas (ENAHO)",
+   "columna": "Hogares que declaran ingreso en efectivo por subsidios estatales y becas (ENAHO, cuadro 1)",
    "pilar": "sociedad",
    "fuente": "INEC (ENAHO y anuario), BCCR y documentos oficiales",
    "codigo": "ENAHO, cuadros por temas, cuadro 1",
-   "nombre_fuente": "Hogares con subsidios estatales y becas / Subsidios estatales y becas (millones de colones), Total",
+   "nombre_fuente": "Con subsidios estatales y becas / Subsidios estatales y becas (millones de colones), Total",
    "periodicidad": "Anual",
    "unidad": "Hogares",
    "tipo_valor": "nivel",
@@ -40013,9 +39808,9 @@
    ]
   },
   {
-   "id": "programas_sociales_hogares_con_subsidios_estatales_y_becas_p",
+   "id": "programas_sociales_hogares_que_declaran_ingreso_en_efectiv_2",
    "hoja": "40_Programas_sociales",
-   "columna": "Hogares con subsidios estatales y becas, % de los hogares (calculada)",
+   "columna": "Hogares que declaran ingreso en efectivo por subsidios estatales y becas, % de los hogares (calculada)",
    "pilar": "sociedad",
    "fuente": "INEC (ENAHO y anuario), BCCR y documentos oficiales",
    "codigo": null,
@@ -40073,7 +39868,7 @@
    "pilar": "sociedad",
    "fuente": "INEC (ENAHO y anuario), BCCR y documentos oficiales",
    "codigo": "ENAHO, cuadros por temas, cuadro 1",
-   "nombre_fuente": "Hogares con subsidios estatales y becas / Subsidios estatales y becas (millones de colones), Total",
+   "nombre_fuente": "Con subsidios estatales y becas / Subsidios estatales y becas (millones de colones), Total",
    "periodicidad": "Anual",
    "unidad": "Millones de colones",
    "tipo_valor": "nivel",
