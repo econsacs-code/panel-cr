@@ -10,4 +10,6 @@ Dirección directa del archivo:
 https://raw.githubusercontent.com/econsacs-code/panel-cr/main/panel.json
 ```
 
+La carpeta `dashboard/` trae los mismos datos en el formato que usa el dashboard del proyecto: `series.csv` (indicador, fecha, valor), `indicadores.csv` (catálogo con fuente, código y último dato), `cantones.csv` (homicidios por cantón) y `panel_meta.json` (fecha del panel). Se generan cada lunes a partir de `panel.json`.
+
 Los datos son de las instituciones citadas. Cualquier error de procesamiento es nuestro y se agradece el aviso.

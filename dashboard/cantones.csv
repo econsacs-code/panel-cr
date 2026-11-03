@@ -1,0 +1,421 @@
+canton,provincia,anio,homicidios,tasa
+San José,San José,2016,85.0,
+San José,San José,2017,105.0,
+San José,San José,2018,88.0,
+San José,San José,2019,72.0,
+San José,San José,2023,82.0,23.34
+Escazú,San José,2016,11.0,
+Escazú,San José,2017,6.0,
+Escazú,San José,2018,7.0,
+Escazú,San José,2019,5.0,
+Escazú,San José,2023,8.0,11.34
+Desamparados,San José,2016,26.0,
+Desamparados,San José,2017,32.0,
+Desamparados,San José,2018,22.0,
+Desamparados,San José,2019,18.0,
+Desamparados,San José,2023,26.0,10.69
+Puriscal,San José,2016,1.0,
+Puriscal,San José,2017,0.0,
+Puriscal,San José,2018,1.0,
+Puriscal,San José,2019,1.0,
+Puriscal,San José,2023,1.0,2.57
+Tarrazú,San José,2016,0.0,
+Tarrazú,San José,2017,1.0,
+Tarrazú,San José,2018,1.0,
+Tarrazú,San José,2019,0.0,
+Tarrazú,San José,2023,1.0,5.57
+Aserrí,San José,2016,14.0,
+Aserrí,San José,2017,10.0,
+Aserrí,San José,2018,10.0,
+Aserrí,San José,2019,6.0,
+Aserrí,San José,2023,7.0,11.2
+Mora,San José,2016,3.0,
+Mora,San José,2017,1.0,
+Mora,San José,2018,1.0,
+Mora,San José,2019,0.0,
+Mora,San José,2023,2.0,6.98
+Goicoechea,San José,2016,27.0,
+Goicoechea,San José,2017,16.0,
+Goicoechea,San José,2018,22.0,
+Goicoechea,San José,2019,16.0,
+Goicoechea,San José,2023,20.0,14.37
+Santa Ana,San José,2016,7.0,
+Santa Ana,San José,2017,4.0,
+Santa Ana,San José,2018,1.0,
+Santa Ana,San José,2019,4.0,
+Santa Ana,San José,2023,1.0,1.63
+Alajuelita,San José,2016,21.0,
+Alajuelita,San José,2017,27.0,
+Alajuelita,San José,2018,10.0,
+Alajuelita,San José,2019,15.0,
+Alajuelita,San José,2023,23.0,23.98
+Vázquez de Coronado,San José,2016,3.0,
+Vázquez de Coronado,San José,2017,14.0,
+Vázquez de Coronado,San José,2018,4.0,
+Vázquez de Coronado,San José,2019,6.0,
+Vázquez de Coronado,San José,2023,7.0,9.82
+Acosta,San José,2016,0.0,
+Acosta,San José,2017,0.0,
+Acosta,San José,2018,0.0,
+Acosta,San José,2019,2.0,
+Acosta,San José,2023,0.0,0.0
+Tibás,San José,2016,34.0,
+Tibás,San José,2017,12.0,
+Tibás,San José,2018,22.0,
+Tibás,San José,2019,16.0,
+Tibás,San José,2023,7.0,8.25
+Moravia,San José,2016,12.0,
+Moravia,San José,2017,8.0,
+Moravia,San José,2018,1.0,
+Moravia,San José,2019,1.0,
+Moravia,San José,2023,3.0,4.88
+Montes de Oca,San José,2016,6.0,
+Montes de Oca,San José,2017,6.0,
+Montes de Oca,San José,2018,2.0,
+Montes de Oca,San José,2019,4.0,
+Montes de Oca,San José,2023,6.0,9.8
+Turrubares,San José,2016,1.0,
+Turrubares,San José,2017,0.0,
+Turrubares,San José,2018,1.0,
+Turrubares,San José,2019,1.0,
+Turrubares,San José,2023,0.0,0.0
+Dota,San José,2016,0.0,
+Dota,San José,2017,0.0,
+Dota,San José,2018,0.0,
+Dota,San José,2019,0.0,
+Dota,San José,2023,0.0,0.0
+Curridabat,San José,2016,7.0,
+Curridabat,San José,2017,2.0,
+Curridabat,San José,2018,9.0,
+Curridabat,San José,2019,7.0,
+Curridabat,San José,2023,6.0,7.59
+Pérez Zeledón,San José,2016,3.0,
+Pérez Zeledón,San José,2017,5.0,
+Pérez Zeledón,San José,2018,6.0,
+Pérez Zeledón,San José,2019,6.0,
+Pérez Zeledón,San José,2023,13.0,9.68
+León Cortés,San José,2016,1.0,
+León Cortés,San José,2017,0.0,
+León Cortés,San José,2018,3.0,
+León Cortés,San José,2019,0.0,
+León Cortés,San José,2023,3.0,22.42
+Alajuela,Alajuela,2016,24.0,
+Alajuela,Alajuela,2017,35.0,
+Alajuela,Alajuela,2018,48.0,
+Alajuela,Alajuela,2019,37.0,
+Alajuela,Alajuela,2023,44.0,13.62
+San Ramón,Alajuela,2016,3.0,
+San Ramón,Alajuela,2017,6.0,
+San Ramón,Alajuela,2018,13.0,
+San Ramón,Alajuela,2019,3.0,
+San Ramón,Alajuela,2023,13.0,14.23
+Grecia,Alajuela,2016,1.0,
+Grecia,Alajuela,2017,2.0,
+Grecia,Alajuela,2018,3.0,
+Grecia,Alajuela,2019,0.0,
+Grecia,Alajuela,2023,4.0,5.01
+San Mateo,Alajuela,2016,0.0,
+San Mateo,Alajuela,2017,5.0,
+San Mateo,Alajuela,2018,0.0,
+San Mateo,Alajuela,2019,0.0,
+San Mateo,Alajuela,2023,0.0,0.0
+Atenas,Alajuela,2016,1.0,
+Atenas,Alajuela,2017,0.0,
+Atenas,Alajuela,2018,3.0,
+Atenas,Alajuela,2019,0.0,
+Atenas,Alajuela,2023,3.0,9.93
+Naranjo,Alajuela,2016,1.0,
+Naranjo,Alajuela,2017,3.0,
+Naranjo,Alajuela,2018,5.0,
+Naranjo,Alajuela,2019,3.0,
+Naranjo,Alajuela,2023,3.0,6.02
+Palmares,Alajuela,2016,1.0,
+Palmares,Alajuela,2017,9.0,
+Palmares,Alajuela,2018,2.0,
+Palmares,Alajuela,2019,0.0,
+Palmares,Alajuela,2023,0.0,0.0
+Poás,Alajuela,2016,0.0,
+Poás,Alajuela,2017,5.0,
+Poás,Alajuela,2018,0.0,
+Poás,Alajuela,2019,0.0,
+Poás,Alajuela,2023,2.0,5.71
+Orotina,Alajuela,2016,1.0,
+Orotina,Alajuela,2017,11.0,
+Orotina,Alajuela,2018,6.0,
+Orotina,Alajuela,2019,1.0,
+Orotina,Alajuela,2023,3.0,12.11
+San Carlos,Alajuela,2016,12.0,
+San Carlos,Alajuela,2017,14.0,
+San Carlos,Alajuela,2018,8.0,
+San Carlos,Alajuela,2019,18.0,
+San Carlos,Alajuela,2023,19.0,9.13
+Zarcero,Alajuela,2016,0.0,
+Zarcero,Alajuela,2017,6.0,
+Zarcero,Alajuela,2018,1.0,
+Zarcero,Alajuela,2019,0.0,
+Zarcero,Alajuela,2023,0.0,0.0
+Sarchí,Alajuela,2016,0.0,
+Sarchí,Alajuela,2017,0.0,
+Sarchí,Alajuela,2018,1.0,
+Sarchí,Alajuela,2019,0.0,
+Sarchí,Alajuela,2023,0.0,0.0
+Upala,Alajuela,2016,2.0,
+Upala,Alajuela,2017,5.0,
+Upala,Alajuela,2018,5.0,
+Upala,Alajuela,2019,5.0,
+Upala,Alajuela,2023,2.0,3.56
+Los Chiles,Alajuela,2016,4.0,
+Los Chiles,Alajuela,2017,2.0,
+Los Chiles,Alajuela,2018,1.0,
+Los Chiles,Alajuela,2019,0.0,
+Los Chiles,Alajuela,2023,6.0,16.54
+Guatuso,Alajuela,2016,4.0,
+Guatuso,Alajuela,2017,2.0,
+Guatuso,Alajuela,2018,1.0,
+Guatuso,Alajuela,2019,0.0,
+Guatuso,Alajuela,2023,3.0,15.2
+Río Cuarto,Alajuela,2016,0.0,
+Río Cuarto,Alajuela,2017,2.0,
+Río Cuarto,Alajuela,2018,0.0,
+Río Cuarto,Alajuela,2019,1.0,
+Río Cuarto,Alajuela,2023,1.0,5.7
+Cartago,Cartago,2016,19.0,
+Cartago,Cartago,2017,15.0,
+Cartago,Cartago,2018,23.0,
+Cartago,Cartago,2019,11.0,
+Cartago,Cartago,2023,21.0,12.92
+Paraíso,Cartago,2016,2.0,
+Paraíso,Cartago,2017,2.0,
+Paraíso,Cartago,2018,5.0,
+Paraíso,Cartago,2019,9.0,
+Paraíso,Cartago,2023,17.0,27.76
+La Unión,Cartago,2016,15.0,
+La Unión,Cartago,2017,22.0,
+La Unión,Cartago,2018,20.0,
+La Unión,Cartago,2019,16.0,
+La Unión,Cartago,2023,15.0,13.23
+Jiménez,Cartago,2016,2.0,
+Jiménez,Cartago,2017,0.0,
+Jiménez,Cartago,2018,1.0,
+Jiménez,Cartago,2019,1.0,
+Jiménez,Cartago,2023,1.0,6.31
+Turrialba,Cartago,2016,1.0,
+Turrialba,Cartago,2017,1.0,
+Turrialba,Cartago,2018,3.0,
+Turrialba,Cartago,2019,3.0,
+Turrialba,Cartago,2023,10.0,14.45
+Alvarado,Cartago,2016,0.0,
+Alvarado,Cartago,2017,0.0,
+Alvarado,Cartago,2018,0.0,
+Alvarado,Cartago,2019,1.0,
+Alvarado,Cartago,2023,2.0,13.2
+Oreamuno,Cartago,2016,2.0,
+Oreamuno,Cartago,2017,2.0,
+Oreamuno,Cartago,2018,7.0,
+Oreamuno,Cartago,2019,3.0,
+Oreamuno,Cartago,2023,3.0,6.17
+El Guarco,Cartago,2016,4.0,
+El Guarco,Cartago,2017,6.0,
+El Guarco,Cartago,2018,6.0,
+El Guarco,Cartago,2019,5.0,
+El Guarco,Cartago,2023,4.0,8.88
+Heredia,Heredia,2016,8.0,
+Heredia,Heredia,2017,10.0,
+Heredia,Heredia,2018,15.0,
+Heredia,Heredia,2019,9.0,
+Heredia,Heredia,2023,17.0,11.74
+Barva,Heredia,2016,4.0,
+Barva,Heredia,2017,1.0,
+Barva,Heredia,2018,2.0,
+Barva,Heredia,2019,3.0,
+Barva,Heredia,2023,1.0,2.08
+Santo Domingo,Heredia,2016,2.0,
+Santo Domingo,Heredia,2017,0.0,
+Santo Domingo,Heredia,2018,7.0,
+Santo Domingo,Heredia,2019,0.0,
+Santo Domingo,Heredia,2023,3.0,6.05
+Santa Bárbara,Heredia,2016,2.0,
+Santa Bárbara,Heredia,2017,3.0,
+Santa Bárbara,Heredia,2018,2.0,
+Santa Bárbara,Heredia,2019,4.0,
+Santa Bárbara,Heredia,2023,2.0,4.5
+San Rafael,Heredia,2016,4.0,
+San Rafael,Heredia,2017,3.0,
+San Rafael,Heredia,2018,2.0,
+San Rafael,Heredia,2019,5.0,
+San Rafael,Heredia,2023,4.0,7.15
+San Isidro,Heredia,2016,0.0,
+San Isidro,Heredia,2017,3.0,
+San Isidro,Heredia,2018,3.0,
+San Isidro,Heredia,2019,1.0,
+San Isidro,Heredia,2023,0.0,0.0
+Belén,Heredia,2016,1.0,
+Belén,Heredia,2017,2.0,
+Belén,Heredia,2018,2.0,
+Belén,Heredia,2019,1.0,
+Belén,Heredia,2023,0.0,0.0
+Flores,Heredia,2016,3.0,
+Flores,Heredia,2017,1.0,
+Flores,Heredia,2018,0.0,
+Flores,Heredia,2019,0.0,
+Flores,Heredia,2023,1.0,4.58
+San Pablo,Heredia,2016,2.0,
+San Pablo,Heredia,2017,0.0,
+San Pablo,Heredia,2018,0.0,
+San Pablo,Heredia,2019,1.0,
+San Pablo,Heredia,2023,1.0,3.29
+Sarapiquí,Heredia,2016,7.0,
+Sarapiquí,Heredia,2017,13.0,
+Sarapiquí,Heredia,2018,18.0,
+Sarapiquí,Heredia,2019,12.0,
+Sarapiquí,Heredia,2023,19.0,20.43
+Liberia,Guanacaste,2016,11.0,
+Liberia,Guanacaste,2017,15.0,
+Liberia,Guanacaste,2018,5.0,
+Liberia,Guanacaste,2019,7.0,
+Liberia,Guanacaste,2023,16.0,20.03
+Nicoya,Guanacaste,2016,5.0,
+Nicoya,Guanacaste,2017,5.0,
+Nicoya,Guanacaste,2018,7.0,
+Nicoya,Guanacaste,2019,2.0,
+Nicoya,Guanacaste,2023,28.0,48.0
+Santa Cruz,Guanacaste,2016,10.0,
+Santa Cruz,Guanacaste,2017,4.0,
+Santa Cruz,Guanacaste,2018,2.0,
+Santa Cruz,Guanacaste,2019,3.0,
+Santa Cruz,Guanacaste,2023,24.0,33.52
+Bagaces,Guanacaste,2016,1.0,
+Bagaces,Guanacaste,2017,2.0,
+Bagaces,Guanacaste,2018,0.0,
+Bagaces,Guanacaste,2019,1.0,
+Bagaces,Guanacaste,2023,3.0,11.93
+Carrillo,Guanacaste,2016,4.0,
+Carrillo,Guanacaste,2017,6.0,
+Carrillo,Guanacaste,2018,1.0,
+Carrillo,Guanacaste,2019,2.0,
+Carrillo,Guanacaste,2023,11.0,22.64
+Cañas,Guanacaste,2016,1.0,
+Cañas,Guanacaste,2017,2.0,
+Cañas,Guanacaste,2018,1.0,
+Cañas,Guanacaste,2019,2.0,
+Cañas,Guanacaste,2023,6.0,18.53
+Abangares,Guanacaste,2016,6.0,
+Abangares,Guanacaste,2017,2.0,
+Abangares,Guanacaste,2018,1.0,
+Abangares,Guanacaste,2019,1.0,
+Abangares,Guanacaste,2023,5.0,24.97
+Tilarán,Guanacaste,2016,0.0,
+Tilarán,Guanacaste,2017,1.0,
+Tilarán,Guanacaste,2018,2.0,
+Tilarán,Guanacaste,2019,0.0,
+Tilarán,Guanacaste,2023,2.0,8.08
+Nandayure,Guanacaste,2016,0.0,
+Nandayure,Guanacaste,2017,0.0,
+Nandayure,Guanacaste,2018,0.0,
+Nandayure,Guanacaste,2019,5.0,
+Nandayure,Guanacaste,2023,1.0,8.72
+La Cruz,Guanacaste,2016,6.0,
+La Cruz,Guanacaste,2017,10.0,
+La Cruz,Guanacaste,2018,3.0,
+La Cruz,Guanacaste,2019,15.0,
+La Cruz,Guanacaste,2023,4.0,14.58
+Hojancha,Guanacaste,2016,0.0,
+Hojancha,Guanacaste,2017,0.0,
+Hojancha,Guanacaste,2018,0.0,
+Hojancha,Guanacaste,2019,0.0,
+Hojancha,Guanacaste,2023,0.0,0.0
+Puntarenas,Puntarenas,2016,21.0,
+Puntarenas,Puntarenas,2017,20.0,
+Puntarenas,Puntarenas,2018,21.0,
+Puntarenas,Puntarenas,2019,30.0,
+Puntarenas,Puntarenas,2023,68.0,47.88
+Esparza,Puntarenas,2016,1.0,
+Esparza,Puntarenas,2017,1.0,
+Esparza,Puntarenas,2018,4.0,
+Esparza,Puntarenas,2019,6.0,
+Esparza,Puntarenas,2023,5.0,14.37
+Buenos Aires,Puntarenas,2016,1.0,
+Buenos Aires,Puntarenas,2017,2.0,
+Buenos Aires,Puntarenas,2018,0.0,
+Buenos Aires,Puntarenas,2019,3.0,
+Buenos Aires,Puntarenas,2023,1.0,1.84
+Montes de Oro,Puntarenas,2016,1.0,
+Montes de Oro,Puntarenas,2017,0.0,
+Montes de Oro,Puntarenas,2018,0.0,
+Montes de Oro,Puntarenas,2019,0.0,
+Montes de Oro,Puntarenas,2023,3.0,20.24
+Osa,Puntarenas,2016,4.0,
+Osa,Puntarenas,2017,0.0,
+Osa,Puntarenas,2018,3.0,
+Osa,Puntarenas,2019,1.0,
+Osa,Puntarenas,2023,5.0,16.94
+Quepos,Puntarenas,2016,6.0,
+Quepos,Puntarenas,2017,3.0,
+Quepos,Puntarenas,2018,1.0,
+Quepos,Puntarenas,2019,6.0,
+Quepos,Puntarenas,2023,15.0,43.63
+Golfito,Puntarenas,2016,6.0,
+Golfito,Puntarenas,2017,4.0,
+Golfito,Puntarenas,2018,11.0,
+Golfito,Puntarenas,2019,8.0,
+Golfito,Puntarenas,2023,5.0,15.61
+Coto Brus,Puntarenas,2016,0.0,
+Coto Brus,Puntarenas,2017,1.0,
+Coto Brus,Puntarenas,2018,0.0,
+Coto Brus,Puntarenas,2019,1.0,
+Coto Brus,Puntarenas,2023,2.0,5.57
+Parrita,Puntarenas,2016,0.0,
+Parrita,Puntarenas,2017,3.0,
+Parrita,Puntarenas,2018,3.0,
+Parrita,Puntarenas,2019,5.0,
+Parrita,Puntarenas,2023,17.0,77.41
+Corredores,Puntarenas,2016,11.0,
+Corredores,Puntarenas,2017,9.0,
+Corredores,Puntarenas,2018,9.0,
+Corredores,Puntarenas,2019,10.0,
+Corredores,Puntarenas,2023,16.0,30.24
+Garabito,Puntarenas,2016,5.0,
+Garabito,Puntarenas,2017,1.0,
+Garabito,Puntarenas,2018,7.0,
+Garabito,Puntarenas,2019,6.0,
+Garabito,Puntarenas,2023,13.0,46.89
+Monte Verde,Puntarenas,2016,0.0,
+Monte Verde,Puntarenas,2017,0.0,
+Monte Verde,Puntarenas,2018,0.0,
+Monte Verde,Puntarenas,2019,0.0,
+Monte Verde,Puntarenas,2023,0.0,0.0
+Puerto Jiménez,Puntarenas,2016,0.0,
+Puerto Jiménez,Puntarenas,2017,0.0,
+Puerto Jiménez,Puntarenas,2018,0.0,
+Puerto Jiménez,Puntarenas,2019,0.0,
+Puerto Jiménez,Puntarenas,2023,0.0,0.0
+Limón,Limón,2016,56.0,
+Limón,Limón,2017,44.0,
+Limón,Limón,2018,58.0,
+Limón,Limón,2019,42.0,
+Limón,Limón,2023,91.0,98.32
+Pococí,Limón,2016,30.0,
+Pococí,Limón,2017,44.0,
+Pococí,Limón,2018,32.0,
+Pococí,Limón,2019,33.0,
+Pococí,Limón,2023,31.0,20.14
+Siquirres,Limón,2016,10.0,
+Siquirres,Limón,2017,7.0,
+Siquirres,Limón,2018,21.0,
+Siquirres,Limón,2019,10.0,
+Siquirres,Limón,2023,21.0,36.85
+Talamanca,Limón,2016,8.0,
+Talamanca,Limón,2017,8.0,
+Talamanca,Limón,2018,5.0,
+Talamanca,Limón,2019,8.0,
+Talamanca,Limón,2023,10.0,22.19
+Matina,Limón,2016,18.0,
+Matina,Limón,2017,11.0,
+Matina,Limón,2018,10.0,
+Matina,Limón,2019,12.0,
+Matina,Limón,2023,50.0,110.92
+Guácimo,Limón,2016,10.0,
+Guácimo,Limón,2017,13.0,
+Guácimo,Limón,2018,10.0,
+Guácimo,Limón,2019,11.0,
+Guácimo,Limón,2023,10.0,17.35
