@@ -12,4 +12,6 @@ https://raw.githubusercontent.com/econsacs-code/panel-cr/main/panel.json
 
 La carpeta `dashboard/` trae los mismos datos en el formato que usa el dashboard del proyecto: `series.csv` (indicador, fecha, valor), `indicadores.csv` (catálogo con fuente, código y último dato), `cantones.csv` (homicidios por cantón) y `panel_meta.json` (fecha del panel). Se generan cada lunes a partir de `panel.json`.
 
+Si una fuente no responde en una corrida, sus series no desaparecen: se copian de la corrida anterior y llevan en `panel.json` el campo `"conservada_desde"` (la fecha de la corrida de la que salen los datos) y una `"nota_conservacion"` corta; en `dashboard/indicadores.csv`, las columnas `conservada_desde` y `nota_conservacion`. La lista `"avisos"` de `panel.json` dice qué falló y qué se conservó en cada corrida.
+
 Los datos son de las instituciones citadas. Cualquier error de procesamiento es nuestro y se agradece el aviso.
